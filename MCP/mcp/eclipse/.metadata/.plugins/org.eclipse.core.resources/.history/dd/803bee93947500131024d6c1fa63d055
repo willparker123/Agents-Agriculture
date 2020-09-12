@@ -1,0 +1,1202 @@
+
+package agentsmod;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.src.ModLoader;
+import net.minecraft.util.DamageSource;
+import net.minecraftforge.common.Configuration;
+import net.minecraftforge.common.MinecraftForge;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.Init;
+import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.Mod.PostInit;
+import cpw.mods.fml.common.Mod.PreInit;
+import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
+
+@Mod(modid="ModBlocks", name="Agent's Mod", version="Alpha")
+@NetworkMod(clientSideRequired=true, serverSideRequired=false)
+public class ModBlocks {
+	
+	
+	public static final String modid = "ModBlocks";
+	
+	public static Item blockchanger;
+	
+	public static int hayID;
+	public static int saltID;
+	public static int cheesemoldID;
+	public static int cheesemoldSetID;
+	public static int cheesemoldFilledID;
+	public static int cheesewheelID;
+	public static int jellyblockID;
+	public static int jellyblockAppleID;
+	public static int jellyblockStrawberryID;
+	public static int jellyblockLemonID;
+	public static int jellyblockGrapeID;
+	public static int jellyblockCherryID;
+	public static int jellyblockOrangeID;
+	public static int jellyblockBlackcurrantID;
+	public static int jellyblockRaspberryID;
+	public static int jellyblockBRaspberryID;
+
+	public static int squeezerID;
+	public static int squeezerBottleID;
+	public static int squeezerOliveID;
+	public static int squeezerSeedID;
+	public static int squeezerWhaleID;
+	public static int potionmakerID;
+	public static int potionmaker2ID;
+	public static int potionmaker3ID;
+	public static int potionmaker4ID;
+	public static int fermenterID;
+	public static int fermenterWaterID;
+	public static int fermenterBarleyID;
+	public static int fermenterBarleyDoneID;
+	public static int fermenterSpiderEyeID;
+	public static int fermenterSpiderEyeDoneID;
+	public static int brewerID;
+	public static int brewerWaterID;
+	public static int brewerBeerID;
+	public static int brewerBeerDoneID;
+	public static int brewerBeerStrongDoneID;
+	public static int brewerAleID;
+	public static int brewerAleDoneID;
+	public static int brewerAleStrongDoneID;
+	public static int brewerCiderID;
+	public static int brewerCiderDoneID;
+	public static int brewerCiderStrongDoneID;
+	public static int brewerEggNogID;
+	public static int brewerEggNogDoneID;
+
+	public static int brewerWineID;
+	public static int brewerWineDoneID;
+	public static int brewerWineStrongDoneID;
+	public static int brewerWineWhiteID;
+	public static int brewerWineWhiteDoneID;
+	public static int brewerWineWhiteStrongDoneID;
+	public static int brewerWineRedID;
+	public static int brewerWineRedDoneID;
+	public static int brewerWineRedStrongDoneID;
+
+	public static int brewerVodkaID;
+	public static int brewerVodkaDoneID;
+
+	public static int fryerID;
+	public static int fryerbID;
+	public static int fryercID;
+	public static int fryerdID;
+	public static int fryereID;
+	public static int fryerfID;
+	public static int fryerbetterID;
+	public static int fryerbetterbID;
+	public static int fryerbettercID;
+	public static int fryerbetterdID;
+	public static int fryerbettereID;
+	public static int fryerbetterfID;
+	public static int fryerbettergID;
+	public static int fryerbetterhID;
+	public static int fryerbetteriID;
+	public static int fryerbetterjID;
+	public static int fryerbetterkID;
+
+	public static int rackID;
+	public static int rackbID;
+	public static int rackWeedID;
+	public static int rackWeedbID;
+	public static int rackWeedDryID;
+	public static int rackWeedDrybID;
+	public static int rackTobaccoID;
+	public static int rackTobaccobID;
+	public static int rackTobaccoDryID;
+	public static int rackTobaccoDrybID;
+	public static int rackPigskinID;
+	public static int rackPigskinbID;
+	public static int rackLeatherID;
+	public static int rackLeatherbID;
+	public static int rackSeaweedID;
+	public static int rackSeaweedbID;
+	public static int rackSeaweedDryID;
+	public static int rackSeaweedDrybID;
+
+	public static int gumballID;
+	public static int gumballbID;
+	public static int gumballcID;
+	public static int gumballdID;
+	public static int gumballeID;
+	public static int gumballfID;
+	public static int gumballgID;
+	public static int gumballhID;
+
+	public static int lemonPlanksID;
+	public static int orangePlanksID;
+	public static int cherryPlanksID;
+	public static int olivePlanksID;
+	public static int chiclePlanksID;
+
+	public static int vinerackID;
+	public static int vinerackbID;
+	public static int vinerackcID;
+	public static int vinerackdID;
+
+	public static int cigarboxID;
+	public static int cigarboxbID;
+	public static int cigarboxcID;
+	public static int cigarboxdID;
+	public static int cigarboxeID;
+
+	public static int cigarbox2ID;
+	public static int cigarbox2bID;
+	public static int cigarbox2cID;
+	public static int cigarbox2dID;
+	public static int cigarbox2eID;
+
+	public static int cigarbox3ID;
+	public static int cigarbox3bID;
+	public static int cigarbox3cID;
+	public static int cigarbox3dID;
+	public static int cigarbox3eID;
+
+	public static int cigarbox4ID;
+	public static int cigarbox4bID;
+	public static int cigarbox4cID;
+	public static int cigarbox4dID;
+	public static int cigarbox4eID;
+	
+	public static Block hay;
+	public static Block salt;
+	public static Block cheesemold;
+	public static Block cheesemoldSet;
+	public static Block cheesemoldFilled;
+	public static Block blockcheesewheel;
+	public static Block jellyblock;
+	public static Block jellyblockApple;
+	public static Block jellyblockStrawberry;
+	public static Block jellyblockLemon;
+	public static Block jellyblockGrape;
+	public static Block jellyblockCherry;
+	public static Block jellyblockOrange;
+	public static Block jellyblockBlackcurrant;
+	public static Block jellyblockRaspberry;
+	public static Block jellyblockBRaspberry;
+	
+	public static Block squeezer;
+	public static Block squeezerBottle;
+	public static Block squeezerOlive;
+	public static Block squeezerSeed;
+	public static Block squeezerWhale;
+	public static Block potionmaker;
+	public static Block potionmaker2;
+	public static Block potionmaker3;
+	public static Block potionmaker4;
+	public static Block fermenter;
+	public static Block fermenterWater;
+	public static Block fermenterBarley;
+	public static Block fermenterBarleyDone;
+	public static Block fermenterSpiderEye;
+	public static Block fermenterSpiderEyeDone;
+	public static Block brewer;
+	public static Block brewerWater;
+	public static Block brewerBeer;
+	public static Block brewerBeerDone;
+	public static Block brewerBeerStrongDone;
+	public static Block brewerAle;
+	public static Block brewerAleDone;
+	public static Block brewerAleStrongDone;
+	public static Block brewerCider;
+	public static Block brewerCiderDone;
+	public static Block brewerCiderStrongDone;
+	public static Block brewerEggNog;
+	public static Block brewerEggNogDone;
+	
+	public static Block brewerWine;
+	public static Block brewerWineDone;
+	public static Block brewerWineStrongDone;
+	public static Block brewerWineWhite;
+	public static Block brewerWineWhiteDone;
+	public static Block brewerWineWhiteStrongDone;
+	public static Block brewerWineRed;
+	public static Block brewerWineRedDone;
+	public static Block brewerWineRedStrongDone;
+	
+	public static Block brewerVodka;
+	public static Block brewerVodkaDone;
+	
+	public static Block fryer;
+	public static Block fryerb;
+	public static Block fryerc;
+	public static Block fryerd;
+	public static Block fryere;
+	public static Block fryerf;
+	public static Block fryerbetter;
+	public static Block fryerbetterb;
+	public static Block fryerbetterc;
+	public static Block fryerbetterd;
+	public static Block fryerbettere;
+	public static Block fryerbetterf;
+	public static Block fryerbetterg;
+	public static Block fryerbetterh;
+	public static Block fryerbetteri;
+	public static Block fryerbetterj;
+	public static Block fryerbetterk;
+	
+	public static Block rack;
+	public static Block rackb;
+	public static Block rackWeed;
+	public static Block rackWeedb;
+	public static Block rackWeedDry;
+	public static Block rackWeedDryb;
+	public static Block rackTobacco;
+	public static Block rackTobaccob;
+	public static Block rackTobaccoDry;
+	public static Block rackTobaccoDryb;
+	public static Block rackPigskin;
+	public static Block rackPigskinb;
+	public static Block rackLeather;
+	public static Block rackLeatherb;
+	public static Block rackSeaweed;
+	public static Block rackSeaweedb;
+	public static Block rackSeaweedDry;
+	public static Block rackSeaweedDryb;
+
+	public static Block gumball;
+	public static Block gumballb;
+	public static Block gumballc;
+	public static Block gumballd;
+	public static Block gumballe;
+	public static Block gumballf;
+	public static Block gumballg;
+	public static Block gumballh;
+	
+	public static Block lemonPlanks;
+	public static Block orangePlanks;
+	public static Block cherryPlanks;
+	public static Block olivePlanks;
+	public static Block chiclePlanks;
+	
+	public static Block vinerack;
+	public static Block vinerackb;
+	public static Block vinerackc;
+	public static Block vinerackd;
+	
+	public static Block cigarbox;
+	public static Block cigarboxb;
+	public static Block cigarboxc;
+	public static Block cigarboxd;
+	public static Block cigarboxe;
+	
+	public static Block cigarbox2;
+	public static Block cigarbox2b;
+	public static Block cigarbox2c;
+	public static Block cigarbox2d;
+	public static Block cigarbox2e;
+	
+	public static Block cigarbox3;
+	public static Block cigarbox3b;
+	public static Block cigarbox3c;
+	public static Block cigarbox3d;
+	public static Block cigarbox3e;
+	
+	public static Block cigarbox4;
+	public static Block cigarbox4b;
+	public static Block cigarbox4c;
+	public static Block cigarbox4d;
+	public static Block cigarbox4e;
+	
+	
+	
+	public static Block DNAextractor1;
+	public static Block DNAextractor2;
+	public static Block elementextractor;
+	
+	public static int DNAextractor1ID;
+	public static int DNAextractor2ID;
+	public static int elementextractorID;
+	
+	
+	
+	public static Block seedextractorIdle;
+	public static Block seedextractorActive;
+	public static int seedextractorIdleID;
+	public static int seedextractorActiveID;
+    public static final int guiIdSeedExtractor = 0;
+    
+	public static Block dnaextractorIdle;
+	public static Block dnaextractorActive;
+	public static int dnaextractorIdleID;
+	public static int dnaextractorActiveID;
+    public static final int guiIdDnaExtractor = 1;
+	
+	
+	
+        // The instance of your mod that Forge uses.
+@Instance("ModBlocks")
+public static ModBlocks instance;
+// This loads up your common and client proxies. change the location of the proxies and the public static to fit your setup
+@SidedProxy(clientSide="agentsmod.ClientProxy", serverSide="agentsmod.CommonProxy")
+public static CommonProxy proxy;
+
+@PreInit
+public void preInit(FMLPreInitializationEvent event) {
+
+	//Sided Textures -
+	
+	//0 = bottom
+	//1 = top
+	//2 = front
+	//3 = back
+	//4 = right
+    //5 = left
+	//2,4,3,5
+	
+	blockchanger = new ItemBlockChanger(5542).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("blockchanger");
+	LanguageRegistry.instance().addName(blockchanger, "Block Changer");
+	
+	
+	
+				//hay
+				hay = new BlockHay(853, Material.grass).setStepSound(Block.soundGrassFootstep).setHardness(0.7F).setResistance(0.5F).setUnlocalizedName("hay");
+				GameRegistry.registerBlock(hay);
+				LanguageRegistry.addName(hay, "Straw Bale");
+				
+				//salt
+				salt = new BlockSalt(854, Material.sand).setStepSound(Block.soundSandFootstep).setHardness(0.5F).setResistance(0.8F).setUnlocalizedName("salt");
+				GameRegistry.registerBlock(salt);
+				LanguageRegistry.addName(salt, "Salty Sand");
+				
+				//Cheese Mold
+				cheesemold = new BlockCheeseMold(855, Material.rock).setStepSound(Block.soundStoneFootstep).setHardness(1.5F).setResistance(2.8F).setUnlocalizedName("cheesemold");
+				GameRegistry.registerBlock(cheesemold);
+				LanguageRegistry.addName(cheesemold, "Cheese Mould");
+				
+				//Cheese Mold Filled
+				cheesemoldFilled = new BlockCheeseMoldFilled(856, Material.rock).setStepSound(Block.soundStoneFootstep).setHardness(1.5F).setResistance(2.8F).setUnlocalizedName("cheesemoldFilled");
+				GameRegistry.registerBlock(cheesemoldFilled);
+				LanguageRegistry.addName(cheesemoldFilled, "Cheese Mould (Filled)");
+				
+				//Cheese Mold Set
+				cheesemoldSet = new BlockCheeseMoldSet(857, Material.cloth).setStepSound(Block.soundStoneFootstep).setHardness(1.5F).setResistance(2.8F).setUnlocalizedName("cheesemoldSet");
+				GameRegistry.registerBlock(cheesemoldSet);
+				LanguageRegistry.addName(cheesemoldSet, "Cheese Mould (Set)");
+				
+				//Cheese
+				blockcheesewheel = new BlockCheeseWheel(858, Material.cloth).setStepSound(Block.soundClothFootstep).setHardness(0.5F).setResistance(1.0F).setUnlocalizedName("blockcheesewheel");
+				GameRegistry.registerBlock(blockcheesewheel);
+				LanguageRegistry.addName(blockcheesewheel, "Cheese Wheel");
+				
+			  //Potion Maker
+				potionmaker = new BlockPotionMaker(1020, Material.rock).setStepSound(Block.soundStoneFootstep).setHardness(0.8F).setResistance(4.0F).setUnlocalizedName("potionmaker");
+				GameRegistry.registerBlock(potionmaker);
+				LanguageRegistry.addName(potionmaker, "Potion Mixer");
+				//Potion Maker
+				potionmaker2 = new BlockPotionMaker2(1021, Material.rock).setStepSound(Block.soundStoneFootstep).setHardness(0.8F).setResistance(4.0F).setUnlocalizedName("potionmaker2");
+				GameRegistry.registerBlock(potionmaker2);
+				LanguageRegistry.addName(potionmaker2, "Potion Mixer");
+				//Potion Maker
+				potionmaker3 = new BlockPotionMaker3(1022, Material.rock).setStepSound(Block.soundStoneFootstep).setHardness(0.8F).setResistance(4.0F).setUnlocalizedName("potionmaker3");
+				GameRegistry.registerBlock(potionmaker3);
+				LanguageRegistry.addName(potionmaker3, "Potion Mixer");
+				//Potion Maker
+				potionmaker4 = new BlockPotionMaker4(1023, Material.rock).setStepSound(Block.soundStoneFootstep).setHardness(0.8F).setResistance(4.0F).setUnlocalizedName("potionmaker4");
+				GameRegistry.registerBlock(potionmaker4);
+				LanguageRegistry.addName(potionmaker4, "Potion Mixer");
+				
+				//Fermenter
+				fermenter = new BlockFermenter(1025, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(1.6F).setResistance(3.0F).setUnlocalizedName("fermenter");
+				GameRegistry.registerBlock(fermenter);
+				LanguageRegistry.addName(fermenter, "Fermenting Barrel");
+				//Fermenter - Water
+				fermenterWater = new BlockFermenterWater(1026, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(1.8F).setResistance(4.0F).setUnlocalizedName("fermenterWater");
+				GameRegistry.registerBlock(fermenterWater);
+				LanguageRegistry.addName(fermenterWater, "Fermenting Barrel");
+				//Fermenter - Barley
+				fermenterBarley = new BlockFermenterBarley(1027, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(1.6F).setResistance(3.0F).setUnlocalizedName("fermenterBarley");
+				GameRegistry.registerBlock(fermenterBarley);
+				LanguageRegistry.addName(fermenterBarley, "Fermenting Barrel");
+				//Fermenter - Barley Done
+				fermenterBarleyDone = new BlockFermenterBarleyDone(1028, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(1.6F).setResistance(3.0F).setUnlocalizedName("fermenterBarleyDone");
+				GameRegistry.registerBlock(fermenterBarleyDone);
+				LanguageRegistry.addName(fermenterBarleyDone, "Fermenting Barrel");
+				//Fermenter - SpiderEye
+				fermenterSpiderEye = new BlockFermenterSpiderEye(1037, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(1.6F).setResistance(3.0F).setUnlocalizedName("fermenterSpiderEye");
+				GameRegistry.registerBlock(fermenterSpiderEye);
+				LanguageRegistry.addName(fermenterSpiderEye, "Fermenting Barrel");
+				//Fermenter - SpiderEye Done
+				fermenterSpiderEyeDone = new BlockFermenterSpiderEyeDone(1038, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(1.6F).setResistance(3.0F).setUnlocalizedName("fermenterSpiderEyeDone");
+				GameRegistry.registerBlock(fermenterSpiderEyeDone);
+				LanguageRegistry.addName(fermenterSpiderEyeDone, "Fermenting Barrel");
+				
+				//Brewing 
+				brewer = new BlockBrewer(1029, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.0F).setResistance(5.0F).setUnlocalizedName("brewer");
+				GameRegistry.registerBlock(brewer);
+				LanguageRegistry.addName(brewer, "Brewing Barrel");
+				//Brewing 
+				brewerWater = new BlockBrewerWater(1030, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerWater");
+				GameRegistry.registerBlock(brewerWater);
+				LanguageRegistry.addName(brewerWater, "Brewing Barrel");
+				//Brewing 
+				brewerBeer = new BlockBrewerBeer(1031, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerBeer");
+				GameRegistry.registerBlock(brewerBeer);
+				LanguageRegistry.addName(brewerBeer, "Brewing Barrel");
+				//Brewing 
+				brewerBeerDone = new BlockBrewerBeerDone(1032, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerBeerDone");
+				GameRegistry.registerBlock(brewerBeerDone);
+				LanguageRegistry.addName(brewerBeerDone, "Brewing Barrel");
+				//Brewing 
+				brewerAle = new BlockBrewerAle(1039, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerAle");
+				GameRegistry.registerBlock(brewerAle);
+				LanguageRegistry.addName(brewerAle, "Brewing Barrel");
+				//Brewing 
+				brewerAleDone = new BlockBrewerAleDone(1040, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerAleDone");
+				GameRegistry.registerBlock(brewerAleDone);
+				LanguageRegistry.addName(brewerAleDone, "Brewing Barrel");
+				//Brewing 
+				brewerCider = new BlockBrewerCider(1041, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerCider");
+				GameRegistry.registerBlock(brewerCider);
+				LanguageRegistry.addName(brewerCider, "Brewing Barrel");
+				//Brewing 
+				brewerCiderDone = new BlockBrewerCiderDone(1042, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerCiderDone");
+				GameRegistry.registerBlock(brewerCiderDone);
+				LanguageRegistry.addName(brewerCiderDone, "Brewing Barrel");
+				//Brewing 
+				brewerBeerStrongDone = new BlockBrewerBeerStrongDone(1043, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerBeerStrongDone");
+				GameRegistry.registerBlock(brewerBeerStrongDone);
+				LanguageRegistry.addName(brewerBeerStrongDone, "Brewing Barrel");
+				//Brewing 
+				brewerAleStrongDone = new BlockBrewerAleStrongDone(1044, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerAleStrongDone");
+				GameRegistry.registerBlock(brewerAleStrongDone);
+				LanguageRegistry.addName(brewerAleStrongDone, "Brewing Barrel");
+				//Brewing 
+				brewerCiderStrongDone = new BlockBrewerCiderStrongDone(1045, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerCiderStrongDone");
+				GameRegistry.registerBlock(brewerCiderStrongDone);
+				LanguageRegistry.addName(brewerCiderStrongDone, "Brewing Barrel");
+				//Brewing 
+				brewerEggNog = new BlockBrewerEggNog(1046, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerEggNog");
+				GameRegistry.registerBlock(brewerEggNog);
+				LanguageRegistry.addName(brewerEggNog, "Brewing Barrel");
+				//Brewing 
+				brewerEggNogDone = new BlockBrewerEggNogDone(1047, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerEggNogDone");
+				GameRegistry.registerBlock(brewerEggNogDone);
+				LanguageRegistry.addName(brewerEggNogDone, "Brewing Barrel");
+				
+				
+				
+				//Brewing 
+				brewerWine = new BlockBrewerWine(1033, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerWine");
+				GameRegistry.registerBlock(brewerWine);
+				LanguageRegistry.addName(brewerWine, "Brewing Barrel");
+				//Brewing 
+				brewerWineDone = new BlockBrewerWineDone(1034, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerWineDone");
+				GameRegistry.registerBlock(brewerWineDone);
+				LanguageRegistry.addName(brewerWineDone, "Brewing Barrel");
+				//Brewing 
+				brewerWineStrongDone = new BlockBrewerWineStrongDone(1052, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerWineStrongDone");
+				GameRegistry.registerBlock(brewerWineStrongDone);
+				LanguageRegistry.addName(brewerWineStrongDone, "Brewing Barrel");
+				//Brewing 
+				brewerWineWhite = new BlockBrewerWineWhite(1053, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerWineWhite");
+				GameRegistry.registerBlock(brewerWineWhite);
+				LanguageRegistry.addName(brewerWineWhite, "Brewing Barrel");
+				//Brewing 
+				brewerWineWhiteDone = new BlockBrewerWineWhiteDone(1054, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerWineWhiteDone");
+				GameRegistry.registerBlock(brewerWineWhiteDone);
+				LanguageRegistry.addName(brewerWineWhiteDone, "Brewing Barrel");
+				//Brewing 
+				brewerWineWhiteStrongDone = new BlockBrewerWineWhiteStrongDone(1055, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerWineWhiteStrongDone");
+				GameRegistry.registerBlock(brewerWineWhiteStrongDone);
+				LanguageRegistry.addName(brewerWineWhiteStrongDone, "Brewing Barrel");
+				//Brewing 
+				brewerWineRed = new BlockBrewerWineRed(1056, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerWineRed");
+				GameRegistry.registerBlock(brewerWineRed);
+				LanguageRegistry.addName(brewerWineRed, "Brewing Barrel");
+				//Brewing 
+				brewerWineRedDone = new BlockBrewerWineRedDone(1057, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerWineRedDone");
+				GameRegistry.registerBlock(brewerWineRedDone);
+				LanguageRegistry.addName(brewerWineRedDone, "Brewing Barrel");
+				//Brewing 
+				brewerWineRedStrongDone = new BlockBrewerWineRedStrongDone(1058, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerWineRedStrongDone");
+				GameRegistry.registerBlock(brewerWineRedStrongDone);
+				LanguageRegistry.addName(brewerWineRedStrongDone, "Brewing Barrel");
+				
+				
+				
+				//Brewing 
+				brewerVodka = new BlockBrewerVodka(1035, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerVodka");
+				GameRegistry.registerBlock(brewerVodka);
+				LanguageRegistry.addName(brewerVodka, "Brewing Barrel");
+				//Brewing 
+				brewerVodkaDone = new BlockBrewerVodkaDone(1036, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.2F).setResistance(6.0F).setUnlocalizedName("brewerVodkaDone");
+				GameRegistry.registerBlock(brewerVodkaDone);
+				LanguageRegistry.addName(brewerVodkaDone, "Brewing Barrel");
+				
+				
+				
+				//Drying rack
+				rack = new BlockDryingRack(908, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.0F).setResistance(3.0F).setUnlocalizedName("rack");
+				GameRegistry.registerBlock(rack);
+			    LanguageRegistry.addName(rack, "Drying Rack");
+			    
+				rackb = new BlockDryingRack2(909, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.0F).setResistance(3.0F).setUnlocalizedName("rackb");
+				GameRegistry.registerBlock(rackb);
+			    LanguageRegistry.addName(rackb, "Drying Rack");
+			    
+			    rackPigskin = new BlockDryingRackPigskin(910, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.0F).setResistance(3.0F).setUnlocalizedName("rackPigskin");
+				GameRegistry.registerBlock(rackPigskin);
+			    LanguageRegistry.addName(rackPigskin, "Drying Rack");
+			    
+			    rackPigskinb = new BlockDryingRackPigskin2(911, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.0F).setResistance(3.0F).setUnlocalizedName("rackPigskinb");
+				GameRegistry.registerBlock(rackPigskinb);
+			    LanguageRegistry.addName(rackPigskinb, "Drying Rack");
+			    
+			    rackLeather = new BlockDryingRackLeather(912, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.0F).setResistance(3.0F).setUnlocalizedName("rackLeather");
+				GameRegistry.registerBlock(rackLeather);
+			    LanguageRegistry.addName(rackLeather, "Drying Rack");
+			    
+			    rackLeatherb = new BlockDryingRackLeather2(913, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.0F).setResistance(3.0F).setUnlocalizedName("rackLeatherb");
+				GameRegistry.registerBlock(rackLeatherb);
+			    LanguageRegistry.addName(rackLeatherb, "Drying Rack");
+			    
+			    rackWeed = new BlockDryingRackWeed(914, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.0F).setResistance(3.0F).setUnlocalizedName("rackWeed");
+				GameRegistry.registerBlock(rackWeed);
+			    LanguageRegistry.addName(rackWeed, "Drying Rack");
+			    
+			    rackWeedb = new BlockDryingRackWeed2(915, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.0F).setResistance(3.0F).setUnlocalizedName("rackWeedb");
+				GameRegistry.registerBlock(rackWeedb);
+			    LanguageRegistry.addName(rackWeedb, "Drying Rack");
+			    
+			    rackWeedDry = new BlockDryingRackWeedDry(916, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.0F).setResistance(3.0F).setUnlocalizedName("rackWeedDry");
+				GameRegistry.registerBlock(rackWeedDry);
+			    LanguageRegistry.addName(rackWeedDry, "Drying Rack");
+			    
+			    rackWeedDryb = new BlockDryingRackWeedDry2(917, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.0F).setResistance(3.0F).setUnlocalizedName("rackWeedDryb");
+				GameRegistry.registerBlock(rackWeedDryb);
+			    LanguageRegistry.addName(rackWeedDryb, "Drying Rack");
+			    
+			    rackTobacco = new BlockDryingRackTobacco(918, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.0F).setResistance(3.0F).setUnlocalizedName("rackTobacco");
+				GameRegistry.registerBlock(rackTobacco);
+			    LanguageRegistry.addName(rackTobacco, "Drying Rack");
+			    
+			    rackTobaccob = new BlockDryingRackTobacco2(919, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.0F).setResistance(3.0F).setUnlocalizedName("rackTobaccob");
+				GameRegistry.registerBlock(rackTobaccob);
+			    LanguageRegistry.addName(rackTobaccob, "Drying Rack");
+			    
+			    rackTobaccoDry = new BlockDryingRackTobaccoDry(920, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.0F).setResistance(3.0F).setUnlocalizedName("rackTobaccoDry");
+				GameRegistry.registerBlock(rackTobaccoDry);
+			    LanguageRegistry.addName(rackTobaccoDry, "Drying Rack");
+			    
+			    rackTobaccoDryb = new BlockDryingRackTobaccoDry2(921, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.0F).setResistance(3.0F).setUnlocalizedName("rackTobaccoDryb");
+				GameRegistry.registerBlock(rackTobaccoDryb);
+			    LanguageRegistry.addName(rackTobaccoDryb, "Drying Rack");
+
+			    
+			    
+			    
+			  //Lemon Planks
+				lemonPlanks = new BlockBasic(922, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.4F).setResistance(5.5F).setUnlocalizedName("lemonPlanks");
+				GameRegistry.registerBlock(lemonPlanks);
+				LanguageRegistry.addName(lemonPlanks, "Lemon Wood Planks");
+				
+				  //Orange Planks
+					orangePlanks = new BlockBasic(923, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.4F).setResistance(5.5F).setUnlocalizedName("orangePlanks");
+					GameRegistry.registerBlock(orangePlanks);
+					LanguageRegistry.addName(orangePlanks, "Orange Wood Planks");
+					
+					  //Cherry Planks
+					cherryPlanks = new BlockBasic(924, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(1.2F).setResistance(4.0F).setUnlocalizedName("cherryPlanks");
+					GameRegistry.registerBlock(cherryPlanks);
+					LanguageRegistry.addName(cherryPlanks, "Cherry Wood Planks");
+					
+					  //Olive Planks
+					olivePlanks = new BlockBasic(925, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(1.8F).setResistance(5.5F).setUnlocalizedName("olivePlanks");
+					GameRegistry.registerBlock(olivePlanks);
+					LanguageRegistry.addName(olivePlanks, "Olive Wood Planks");
+					
+					//Chicle Planks
+					chiclePlanks = new BlockBasic(958, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.5F).setResistance(7.0F).setUnlocalizedName("chiclePlanks");
+					GameRegistry.registerBlock(chiclePlanks);
+					LanguageRegistry.addName(chiclePlanks, "Chicle Wood Planks");
+					
+				
+					
+					//vine rack
+					vinerack = new BlockLattice(926, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(1.6F).setResistance(2.5F).setUnlocalizedName("vinerack");
+					GameRegistry.registerBlock(vinerack);
+					LanguageRegistry.addName(vinerack, "Wooden Lattice");
+					
+					vinerackb = new BlockLattice2(927, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(1.6F).setResistance(2.5F).setUnlocalizedName("vinerackb");
+					GameRegistry.registerBlock(vinerackb);
+					LanguageRegistry.addName(vinerackb, "Wooden Lattice");
+					
+					vinerackc = new BlockLattice3(928, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(1.6F).setResistance(2.5F).setUnlocalizedName("vinerackc");
+					GameRegistry.registerBlock(vinerackc);
+					LanguageRegistry.addName(vinerackc, "Wooden Lattice");
+					
+					vinerackd = new BlockLattice4(929, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(1.6F).setResistance(2.5F).setUnlocalizedName("vinerackd");
+					GameRegistry.registerBlock(vinerackd);
+					LanguageRegistry.addName(vinerackd, "Wooden Lattice");
+				
+					
+					
+					//squeezer
+					squeezer = new BlockSqueezer(934, Material.rock).setStepSound(Block.soundStoneFootstep).setHardness(3.0F).setResistance(8.0F).setUnlocalizedName("squeezer");
+					GameRegistry.registerBlock(squeezer);
+					LanguageRegistry.addName(squeezer, "Squeezer");
+					
+					squeezerBottle = new BlockSqueezerBottle(935, Material.rock).setStepSound(Block.soundStoneFootstep).setHardness(3.0F).setResistance(8.0F).setUnlocalizedName("squeezerBottle");
+					GameRegistry.registerBlock(squeezerBottle);
+					LanguageRegistry.addName(squeezerBottle, "Squeezer");
+					
+					squeezerSeed = new BlockSqueezerSeed(936, Material.rock).setStepSound(Block.soundStoneFootstep).setHardness(3.0F).setResistance(8.0F).setUnlocalizedName("squeezerSeed");
+					GameRegistry.registerBlock(squeezerSeed);
+					LanguageRegistry.addName(squeezerSeed, "Squeezer");
+					
+					squeezerOlive = new BlockSqueezerOlive(937, Material.rock).setStepSound(Block.soundStoneFootstep).setHardness(3.0F).setResistance(8.0F).setUnlocalizedName("squeezerOlive");
+					GameRegistry.registerBlock(squeezerOlive);
+					LanguageRegistry.addName(squeezerOlive, "Squeezer");
+					
+					squeezerWhale = new BlockSqueezerWhale(938, Material.rock).setStepSound(Block.soundStoneFootstep).setHardness(3.0F).setResistance(8.0F).setUnlocalizedName("squeezerWhale");
+					GameRegistry.registerBlock(squeezerWhale);
+					LanguageRegistry.addName(squeezerWhale, "Squeezer");
+					
+					
+					
+					
+					//fryer
+					fryer = new BlockFryer(939, Material.rock).setStepSound(Block.soundStoneFootstep).setHardness(2.0F).setResistance(6.0F).setUnlocalizedName("fryer");
+					GameRegistry.registerBlock(fryer);
+					LanguageRegistry.addName(fryer, "Fryer");
+					fryerb = new BlockFryer2(940, Material.rock).setLightValue(0.2F).setStepSound(Block.soundStoneFootstep).setHardness(2.0F).setResistance(6.0F).setUnlocalizedName("fryerb");
+					GameRegistry.registerBlock(fryerb);
+					LanguageRegistry.addName(fryerb, "Fryer");
+					fryerc = new BlockFryer3(941, Material.rock).setLightValue(0.4F).setStepSound(Block.soundStoneFootstep).setHardness(2.0F).setResistance(6.0F).setUnlocalizedName("fryerc");
+					GameRegistry.registerBlock(fryerc);
+					LanguageRegistry.addName(fryerc, "Fryer");
+					fryerd = new BlockFryer4(942, Material.rock).setLightValue(0.6F).setStepSound(Block.soundStoneFootstep).setHardness(2.0F).setResistance(6.0F).setUnlocalizedName("fryerd");
+					GameRegistry.registerBlock(fryerd);
+					LanguageRegistry.addName(fryerd, "Fryer");
+					fryere = new BlockFryer5(943, Material.rock).setLightValue(0.8F).setStepSound(Block.soundStoneFootstep).setHardness(2.0F).setResistance(6.0F).setUnlocalizedName("fryere");
+					GameRegistry.registerBlock(fryere);
+					LanguageRegistry.addName(fryere, "Fryer");
+					fryerf = new BlockFryer6(944, Material.rock).setLightValue(1.0F).setStepSound(Block.soundStoneFootstep).setHardness(2.0F).setResistance(6.0F).setUnlocalizedName("fryerf");
+					GameRegistry.registerBlock(fryerf);
+					LanguageRegistry.addName(fryerf, "Fryer");
+					
+					//fryer
+					fryerbetter = new BlockFryerBetter(990, Material.iron).setStepSound(Block.soundMetalFootstep).setHardness(4.0F).setResistance(8.0F).setUnlocalizedName("fryerbetter");
+					GameRegistry.registerBlock(fryerbetter);
+					LanguageRegistry.addName(fryerbetter, "Advanced Fryer");
+					fryerbetterb = new BlockFryerBetter2(991, Material.iron).setLightValue(0.1F).setStepSound(Block.soundMetalFootstep).setHardness(4.0F).setResistance(8.0F).setUnlocalizedName("fryerbetterb");
+					GameRegistry.registerBlock(fryerbetterb);
+					LanguageRegistry.addName(fryerbetterb, "Advanced Fryer");
+					fryerbetterc = new BlockFryerBetter3(992, Material.iron).setLightValue(0.2F).setStepSound(Block.soundMetalFootstep).setHardness(4.0F).setResistance(8.0F).setUnlocalizedName("fryerbetterc");
+					GameRegistry.registerBlock(fryerbetterc);
+					LanguageRegistry.addName(fryerbetterc, "Advanced Fryer");
+					fryerbetterd = new BlockFryerBetter4(993, Material.iron).setLightValue(0.3F).setStepSound(Block.soundMetalFootstep).setHardness(4.0F).setResistance(8.0F).setUnlocalizedName("fryerbetterd");
+					GameRegistry.registerBlock(fryerbetterd);
+					LanguageRegistry.addName(fryerbetterd, "Advanced Fryer");
+					fryerbettere = new BlockFryerBetter5(994, Material.iron).setLightValue(0.4F).setStepSound(Block.soundMetalFootstep).setHardness(4.0F).setResistance(8.0F).setUnlocalizedName("fryerbettere");
+					GameRegistry.registerBlock(fryerbettere);
+					LanguageRegistry.addName(fryerbettere, "Advanced Fryer");
+					fryerbetterf = new BlockFryerBetter6(995, Material.iron).setLightValue(0.5F).setStepSound(Block.soundMetalFootstep).setHardness(4.0F).setResistance(8.0F).setUnlocalizedName("fryerbetterf");
+					GameRegistry.registerBlock(fryerbetterf);
+					LanguageRegistry.addName(fryerbetterf, "Advanced Fryer");
+					fryerbetterg = new BlockFryerBetter7(996, Material.iron).setLightValue(0.6F).setStepSound(Block.soundMetalFootstep).setHardness(4.0F).setResistance(8.0F).setUnlocalizedName("fryerbetterg");
+					GameRegistry.registerBlock(fryerbetterg);
+					LanguageRegistry.addName(fryerbetterg, "Advanced Fryer");
+					fryerbetterh = new BlockFryerBetter8(997, Material.iron).setLightValue(0.7F).setStepSound(Block.soundMetalFootstep).setHardness(4.0F).setResistance(8.0F).setUnlocalizedName("fryerbetterh");
+					GameRegistry.registerBlock(fryerbetterh);
+					LanguageRegistry.addName(fryerbetterh, "Advanced Fryer");
+					fryerbetteri = new BlockFryerBetter9(998, Material.iron).setLightValue(0.8F).setStepSound(Block.soundMetalFootstep).setHardness(4.0F).setResistance(8.0F).setUnlocalizedName("fryerbetteri");
+					GameRegistry.registerBlock(fryerbetteri);
+					LanguageRegistry.addName(fryerbetteri, "Advanced Fryer");
+					fryerbetterj = new BlockFryerBetter10(999, Material.iron).setLightValue(0.9F).setStepSound(Block.soundMetalFootstep).setHardness(4.0F).setResistance(8.0F).setUnlocalizedName("fryerbetterj");
+					GameRegistry.registerBlock(fryerbetterj);
+					LanguageRegistry.addName(fryerbetterj, "Advanced Fryer");
+					fryerbetterk = new BlockFryerBetter11(1000, Material.iron).setLightValue(1.0F).setStepSound(Block.soundMetalFootstep).setHardness(4.0F).setResistance(8.0F).setUnlocalizedName("fryerbetterk");
+					GameRegistry.registerBlock(fryerbetterk);
+					LanguageRegistry.addName(fryerbetterk, "Advanced Fryer");
+					
+				  //Element extractor
+					elementextractor = new BlockElementExtractor(1061, Material.iron).setStepSound(Block.soundStoneFootstep).setHardness(4.0F).setResistance(12.0F).setUnlocalizedName("elementextractor");
+					GameRegistry.registerBlock(elementextractor);
+				    LanguageRegistry.addName(elementextractor, "Chemical Extractor");
+				    
+				  //jelly
+					jellyblock = new BlockJelly(947, Material.cloth).setStepSound(Block.soundPowderFootstep).setHardness(0.8F).setResistance(4.0F).setUnlocalizedName("jellyblock");
+					GameRegistry.registerBlock(jellyblock);
+					LanguageRegistry.addName(jellyblock, "Jelly Block");
+					//jelly
+					jellyblockApple = new BlockJelly(948, Material.cloth).setStepSound(Block.soundPowderFootstep).setHardness(0.8F).setResistance(4.0F).setUnlocalizedName("jellyblockApple");
+					GameRegistry.registerBlock(jellyblockApple);
+					LanguageRegistry.addName(jellyblockApple, "Jelly Block");
+					//jelly
+					jellyblockStrawberry = new BlockJelly(949, Material.cloth).setStepSound(Block.soundPowderFootstep).setHardness(0.8F).setResistance(4.0F).setUnlocalizedName("jellyblockStrawberry");
+					GameRegistry.registerBlock(jellyblockStrawberry);
+					LanguageRegistry.addName(jellyblockStrawberry, "Jelly Block");
+					//jelly
+					jellyblockLemon = new BlockJelly(950, Material.cloth).setStepSound(Block.soundPowderFootstep).setHardness(0.8F).setResistance(4.0F).setUnlocalizedName("jellyblockLemon");
+					GameRegistry.registerBlock(jellyblockLemon);
+					LanguageRegistry.addName(jellyblockLemon, "Jelly Block");
+					//jelly
+					jellyblockGrape = new BlockJelly(951, Material.cloth).setStepSound(Block.soundPowderFootstep).setHardness(0.8F).setResistance(4.0F).setUnlocalizedName("jellyblockGrape");
+					GameRegistry.registerBlock(jellyblockGrape);
+					LanguageRegistry.addName(jellyblockGrape, "Jelly Block");
+					//jelly
+					jellyblockCherry = new BlockJelly(952, Material.cloth).setStepSound(Block.soundPowderFootstep).setHardness(0.8F).setResistance(4.0F).setUnlocalizedName("jellyblockCherry");
+					GameRegistry.registerBlock(jellyblockCherry);
+					LanguageRegistry.addName(jellyblockCherry, "Jelly Block");
+					//jelly
+					jellyblockOrange = new BlockJelly(953, Material.cloth).setStepSound(Block.soundPowderFootstep).setHardness(0.8F).setResistance(4.0F).setUnlocalizedName("jellyblockOrange");
+					GameRegistry.registerBlock(jellyblockOrange);
+					LanguageRegistry.addName(jellyblockOrange, "Jelly Block");
+					//jelly
+					jellyblockBlackcurrant = new BlockJelly(1010, Material.cloth).setStepSound(Block.soundPowderFootstep).setHardness(0.8F).setResistance(4.0F).setUnlocalizedName("jellyblockBlackcurrant");
+					GameRegistry.registerBlock(jellyblockBlackcurrant);
+					LanguageRegistry.addName(jellyblockBlackcurrant, "Jelly Block");
+					//jelly
+					jellyblockRaspberry = new BlockJelly(1011, Material.cloth).setStepSound(Block.soundPowderFootstep).setHardness(0.8F).setResistance(4.0F).setUnlocalizedName("jellyblockRaspberry");
+					GameRegistry.registerBlock(jellyblockRaspberry);
+					LanguageRegistry.addName(jellyblockRaspberry, "Jelly Block");
+					//jelly
+					jellyblockBRaspberry = new BlockJelly(1012, Material.cloth).setStepSound(Block.soundPowderFootstep).setHardness(0.8F).setResistance(4.0F).setUnlocalizedName("jellyblockBRaspberry");
+					GameRegistry.registerBlock(jellyblockBRaspberry);
+					LanguageRegistry.addName(jellyblockBRaspberry, "Jelly Block");
+					
+				
+					//gumball
+					gumball = new BlockGumball(960, Material.rock).setStepSound(Block.soundStoneFootstep).setHardness(2.0F).setResistance(6.0F).setUnlocalizedName("gumball");
+					GameRegistry.registerBlock(gumball);
+					LanguageRegistry.addName(gumball, "Gumball Machine");
+					gumballb = new BlockGumball2(961, Material.rock).setLightValue(0.6F).setStepSound(Block.soundStoneFootstep).setHardness(3.0F).setResistance(10.0F).setUnlocalizedName("gumballb");
+					GameRegistry.registerBlock(gumballb);
+					LanguageRegistry.addName(gumballb, "Gumball Machine");
+					gumballc = new BlockGumball3(962, Material.rock).setLightValue(0.6F).setStepSound(Block.soundStoneFootstep).setHardness(3.0F).setResistance(10.0F).setUnlocalizedName("gumballc");
+					GameRegistry.registerBlock(gumballc);
+					LanguageRegistry.addName(gumballc, "Gumball Machine");
+					gumballd = new BlockGumball4(963, Material.rock).setLightValue(0.6F).setStepSound(Block.soundStoneFootstep).setHardness(3.0F).setResistance(10.0F).setUnlocalizedName("gumballd");
+					GameRegistry.registerBlock(gumballd);
+					LanguageRegistry.addName(gumballd, "Gumball Machine");
+					gumballe = new BlockGumball5(964, Material.rock).setLightValue(0.6F).setStepSound(Block.soundStoneFootstep).setHardness(3.0F).setResistance(10.0F).setUnlocalizedName("gumballe");
+					GameRegistry.registerBlock(gumballe);
+					LanguageRegistry.addName(gumballe, "Gumball Machine");
+					gumballf = new BlockGumball6(965, Material.rock).setLightValue(0.6F).setStepSound(Block.soundStoneFootstep).setHardness(3.0F).setResistance(10.0F).setUnlocalizedName("gumballf");
+					GameRegistry.registerBlock(gumballf);
+					LanguageRegistry.addName(gumballf, "Gumball Machine");
+					gumballg = new BlockGumball7(966, Material.rock).setLightValue(0.6F).setStepSound(Block.soundStoneFootstep).setHardness(3.0F).setResistance(10.0F).setUnlocalizedName("gumballg");
+					GameRegistry.registerBlock(gumballg);
+					LanguageRegistry.addName(gumballg, "Gumball Machine");
+					gumballh = new BlockGumball8(967, Material.rock).setLightValue(0.6F).setStepSound(Block.soundStoneFootstep).setHardness(3.0F).setResistance(10.0F).setUnlocalizedName("gumballh");
+					GameRegistry.registerBlock(gumballh);
+					LanguageRegistry.addName(gumballh, "Gumball Machine (Filled)");
+					
+					
+					
+					//cigarbox
+					cigarbox = new BlockCigarbox(968, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.4F).setResistance(5.5F).setUnlocalizedName("cigarbox");
+					GameRegistry.registerBlock(cigarbox);
+					LanguageRegistry.addName(cigarbox, "Cigar Box");
+					cigarboxb = new BlockCigarbox2(969, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.4F).setResistance(5.5F).setUnlocalizedName("cigarboxb");
+					GameRegistry.registerBlock(cigarboxb);
+					LanguageRegistry.addName(cigarboxb, "Cigar Box (1 Cigar)");
+					cigarboxc = new BlockCigarbox3(970, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.4F).setResistance(5.5F).setUnlocalizedName("cigarboxc");
+					GameRegistry.registerBlock(cigarboxc);
+					LanguageRegistry.addName(cigarboxc, "Cigar Box (2 Cigars)");
+					cigarboxd = new BlockCigarbox4(971, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.4F).setResistance(5.5F).setUnlocalizedName("cigarboxd");
+					GameRegistry.registerBlock(cigarboxd);
+					LanguageRegistry.addName(cigarboxd, "Cigar Box (3 Cigars)");
+					cigarboxe = new BlockCigarbox5(972, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.4F).setResistance(5.5F).setUnlocalizedName("cigarboxe");
+					GameRegistry.registerBlock(cigarboxe);
+					LanguageRegistry.addName(cigarboxe, "Cigar Box (4 Cigars)");
+					
+					//cigarbox2
+					cigarbox2 = new BlockCigarboxB(973, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.4F).setResistance(5.5F).setUnlocalizedName("cigarbox2");
+					GameRegistry.registerBlock(cigarbox2);
+					LanguageRegistry.addName(cigarbox2, "Cigar Box");
+					cigarbox2b = new BlockCigarboxB2(974, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.4F).setResistance(5.5F).setUnlocalizedName("cigarbox2b");
+					GameRegistry.registerBlock(cigarbox2b);
+					LanguageRegistry.addName(cigarbox2b, "Cigar Box (1 Cigar)");
+					cigarbox2c = new BlockCigarboxB3(975, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.4F).setResistance(5.5F).setUnlocalizedName("cigarbox2c");
+					GameRegistry.registerBlock(cigarbox2c);
+					LanguageRegistry.addName(cigarbox2c, "Cigar Box (2 Cigars)");
+					cigarbox2d = new BlockCigarboxB4(976, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.4F).setResistance(5.5F).setUnlocalizedName("cigarbox2d");
+					GameRegistry.registerBlock(cigarbox2d);
+					LanguageRegistry.addName(cigarbox2d, "Cigar Box (3 Cigars)");
+					cigarbox2e = new BlockCigarboxB5(977, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.4F).setResistance(5.5F).setUnlocalizedName("cigarbox2e");
+					GameRegistry.registerBlock(cigarbox2e);
+					LanguageRegistry.addName(cigarbox2e, "Cigar Box (4 Cigars)");
+					
+					//cigarbox3
+					cigarbox3 = new BlockCigarboxC(978, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.4F).setResistance(5.5F).setUnlocalizedName("cigarbox3");
+					GameRegistry.registerBlock(cigarbox3);
+					LanguageRegistry.addName(cigarbox3, "Cigar Box");
+					cigarbox3b = new BlockCigarboxC2(979, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.4F).setResistance(5.5F).setUnlocalizedName("cigarbox3b");
+					GameRegistry.registerBlock(cigarbox3b);
+					LanguageRegistry.addName(cigarbox3b, "Cigar Box (1 Cigar)");
+					cigarbox3c = new BlockCigarboxC3(980, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.4F).setResistance(5.5F).setUnlocalizedName("cigarbox3c");
+					GameRegistry.registerBlock(cigarbox3c);
+					LanguageRegistry.addName(cigarbox3c, "Cigar Box (2 Cigars)");
+					cigarbox3d = new BlockCigarboxC4(981, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.4F).setResistance(5.5F).setUnlocalizedName("cigarbox3d");
+					GameRegistry.registerBlock(cigarbox3d);
+					LanguageRegistry.addName(cigarbox3d, "Cigar Box (3 Cigars)");
+					cigarbox3e = new BlockCigarboxC5(982, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.4F).setResistance(5.5F).setUnlocalizedName("cigarbox3e");
+					GameRegistry.registerBlock(cigarbox3e);
+					LanguageRegistry.addName(cigarbox3e, "Cigar Box (4 Cigars)");
+					
+					//cigarbox4
+					cigarbox4 = new BlockCigarboxD(983, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.4F).setResistance(5.5F).setUnlocalizedName("cigarbox4");
+					GameRegistry.registerBlock(cigarbox4);
+					LanguageRegistry.addName(cigarbox4, "Cigar Box");
+					cigarbox4b = new BlockCigarboxD2(984, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.4F).setResistance(5.5F).setUnlocalizedName("cigarbox4b");
+					GameRegistry.registerBlock(cigarbox4b);
+					LanguageRegistry.addName(cigarbox4b, "Cigar Box (1 Cigar)");
+					cigarbox4c = new BlockCigarboxD3(985, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.4F).setResistance(5.5F).setUnlocalizedName("cigarbox4c");
+					GameRegistry.registerBlock(cigarbox4c);
+					LanguageRegistry.addName(cigarbox4c, "Cigar Box (2 Cigars)");
+					cigarbox4d = new BlockCigarboxD4(986, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.4F).setResistance(5.5F).setUnlocalizedName("cigarbox4d");
+					GameRegistry.registerBlock(cigarbox4d);
+					LanguageRegistry.addName(cigarbox4d, "Cigar Box (3 Cigars)");
+					cigarbox4e = new BlockCigarboxD5(987, Material.wood).setStepSound(Block.soundWoodFootstep).setHardness(2.4F).setResistance(5.5F).setUnlocalizedName("cigarbox4e");
+					GameRegistry.registerBlock(cigarbox4e);
+					LanguageRegistry.addName(cigarbox4e, "Cigar Box (4 Cigars)");
+					
+					
+					
+					//seed extractor
+					seedextractorIdle = new BlockSeedExtractor(1063, false).setStepSound(Block.soundStoneFootstep).setCreativeTab(CreativeTabs.tabBlock).setHardness(1.0F).setResistance(3.0F).setUnlocalizedName("seedextractorIdle");
+					seedextractorActive = new BlockSeedExtractor(1064, true).setStepSound(Block.soundStoneFootstep).setHardness(1.0F).setResistance(3.0F).setLightValue(0.8F).setUnlocalizedName("seedextractorActive");
+					GameRegistry.registerBlock(seedextractorIdle);
+					GameRegistry.registerBlock(seedextractorActive);
+					LanguageRegistry.addName(seedextractorIdle, "Seed Extractor");
+					LanguageRegistry.addName(seedextractorActive, "Seed Extractor");
+					GameRegistry.registerTileEntity(TileEntitySeedExtractor.class, "tileEntitySeedExtractor");
+					LanguageRegistry.instance().addStringLocalization("container.seedExtractor", "Seed Extractor");
+					
+					//dna extractor
+					dnaextractorIdle = new BlockDnaExtractor(1065, false).setStepSound(Block.soundStoneFootstep).setCreativeTab(CreativeTabs.tabBlock).setHardness(1.5F).setResistance(4.0F).setUnlocalizedName("dnaextractorIdle");
+					dnaextractorActive = new BlockDnaExtractor(1066, true).setStepSound(Block.soundStoneFootstep).setHardness(1.5F).setResistance(4.0F).setLightValue(0.8F).setUnlocalizedName("dnaextractorActive");
+					GameRegistry.registerBlock(dnaextractorIdle);
+					GameRegistry.registerBlock(dnaextractorActive);
+					LanguageRegistry.addName(dnaextractorIdle, "DNA Extractor");
+					LanguageRegistry.addName(dnaextractorActive, "DNA Extractor");
+					GameRegistry.registerTileEntity(TileEntityDnaExtractor.class, "tileEntityDnaExtractor");
+					LanguageRegistry.instance().addStringLocalization("container.dnaExtractor", "DNA Extractor");
+					
+					
+					
+					//DNA extractor
+					DNAextractor1 = new BlockDNAExtractor1(896, Material.iron).setStepSound(Block.soundStoneFootstep).setHardness(1.0F).setResistance(3.0F).setUnlocalizedName("DNAextractor1");
+					GameRegistry.registerBlock(DNAextractor1);
+				    LanguageRegistry.addName(DNAextractor1, "DNA Extractor");
+				    
+				  //DNA Fabricator
+					DNAextractor2 = new BlockDNAFabricator(945, Material.iron).setStepSound(Block.soundStoneFootstep).setHardness(3.0F).setResistance(8.0F).setUnlocalizedName("DNAextractor2");
+					GameRegistry.registerBlock(DNAextractor2);
+				    LanguageRegistry.addName(DNAextractor2, "DNA Fabricator");
+
+					
+					
+					
+					Configuration config = new Configuration(event.getSuggestedConfigurationFile());
+					config.load();
+
+					//myFirstBlockID = config.getBlock("myFirstBlock", 538).getInt();
+					//myFirstItemID = config.getItem("myFirstItem", 900).getInt();
+					//tutorialBool = config.get(config.CATEGORY_GENERAL, "doesRandomBlockHurtYou", false).getBoolean(false);
+
+					hayID = config.getItem("hay", 853).getInt();
+					saltID = config.getItem("saltblock", 854).getInt();
+					cheesemoldID = config.getItem("cheesemold", 855).getInt();
+					cheesemoldSetID = config.getItem("cheesemoldSet", 856).getInt();
+					cheesemoldFilledID = config.getItem("cheesemoldFilled", 857).getInt();
+					cheesewheelID = config.getItem("cheesewheel", 858).getInt();
+					jellyblockID = config.getItem("jellyblock", 859).getInt();
+					jellyblockAppleID = config.getItem("jellyblockApple", 860).getInt();
+					jellyblockStrawberryID = config.getItem("jellyblockStrawberry", 861).getInt();
+					jellyblockLemonID = config.getItem("jellyblockLemon", 862).getInt();
+					jellyblockGrapeID = config.getItem("jellyblockGrape", 863).getInt();
+					jellyblockCherryID = config.getItem("jellyblockCherry", 864).getInt();
+					jellyblockOrangeID = config.getItem("jellyblockOrange", 865).getInt();
+					jellyblockBlackcurrantID = config.getItem("jellyblockBlackcurrant", 866).getInt();
+					jellyblockRaspberryID = config.getItem("jellyblockRaspberry", 867).getInt();
+					jellyblockBRaspberryID = config.getItem("jellyblockBRaspberry", 868).getInt();
+
+					DNAextractor1ID = config.getItem("DNAextractor", 870).getInt();
+					DNAextractor2ID = config.getItem("DNAfabricator", 871).getInt();
+					elementextractorID = config.getItem("elementextractor", 1061).getInt();
+					squeezerID = config.getItem("squeezer", 872).getInt();
+					squeezerBottleID = config.getItem("squeezerBottle", 873).getInt();
+					squeezerOliveID = config.getItem("squeezerOlive", 874).getInt();
+					squeezerSeedID = config.getItem("squeezerSeed", 875).getInt();
+					squeezerWhaleID = config.getItem("squeezerWhale", 876).getInt();
+					potionmakerID = config.getItem("potionmaker", 877).getInt();
+					potionmaker2ID = config.getItem("potionmaker2", 878).getInt();
+					potionmaker3ID = config.getItem("potionmaker3", 879).getInt();
+					potionmaker4ID = config.getItem("potionmaker4", 880).getInt();
+					fermenterID = config.getItem("fermenter", 881).getInt();
+					fermenterWaterID = config.getItem("fermenterWater", 882).getInt();
+					fermenterBarleyID = config.getItem("fermenterBarley", 883).getInt();
+					fermenterBarleyDoneID = config.getItem("fermenterBarleyDone", 884).getInt();
+					fermenterSpiderEyeID = config.getItem("fermenterSpiderEye", 885).getInt();
+					fermenterSpiderEyeDoneID = config.getItem("fermenterSpiderEyeDone", 886).getInt();
+					brewerID = config.getItem("brewer", 887).getInt();
+					brewerWaterID = config.getItem("brewerWater", 888).getInt();
+					brewerBeerID = config.getItem("brewerBeer", 889).getInt();
+					brewerBeerDoneID = config.getItem("brewerBeerDone", 890).getInt();
+					brewerBeerStrongDoneID = config.getItem("brewerBeerStrongDone", 891).getInt();
+					brewerAleID = config.getItem("brewerAle", 892).getInt();
+					brewerAleDoneID = config.getItem("brewerAleDone", 893).getInt();
+					brewerAleStrongDoneID = config.getItem("brewerAleStrongDone", 894).getInt();
+					brewerCiderID = config.getItem("brewerCider", 895).getInt();
+					brewerCiderDoneID = config.getItem("brewerCiderDone", 896).getInt();
+					brewerCiderStrongDoneID = config.getItem("brewerCiderStrongDone", 897).getInt();
+					brewerEggNogID = config.getItem("brewerEggNog", 898).getInt();
+					brewerEggNogDoneID = config.getItem("brewerEggNogDone", 899).getInt();
+
+					brewerWineID = config.getItem("brewerWine", 900).getInt();
+					brewerWineDoneID = config.getItem("brewerWineDone", 901).getInt();
+					brewerWineStrongDoneID = config.getItem("brewerWineStrongDone", 902).getInt();
+					brewerWineWhiteID = config.getItem("brewerWineWhite", 903).getInt();
+					brewerWineWhiteDoneID = config.getItem("brewerWineWhiteDone", 904).getInt();
+					brewerWineWhiteStrongDoneID = config.getItem("brewerWineWhiteStrongDone", 905).getInt();
+					brewerWineRedID = config.getItem("brewerWineRed", 906).getInt();
+					brewerWineRedDoneID = config.getItem("brewerWineRedDone", 907).getInt();
+					brewerWineRedStrongDoneID = config.getItem("brewerWineRedStrongDone", 908).getInt();
+
+					brewerVodkaID = config.getItem("brewerVodka", 909).getInt();
+					brewerVodkaDoneID = config.getItem("brewerVodkaDone", 910).getInt();
+
+					fryerID = config.getItem("fryer", 911).getInt();
+					fryerbID = config.getItem("fryerb", 912).getInt();
+					fryercID = config.getItem("fryerc", 913).getInt();
+					fryerdID = config.getItem("fryerd", 914).getInt();
+					fryereID = config.getItem("fryere", 915).getInt();
+					fryerfID = config.getItem("fryerf", 916).getInt();
+					fryerbetterID = config.getItem("fryerbetter", 917).getInt();
+					fryerbetterbID = config.getItem("fryerbetterb", 918).getInt();
+					fryerbettercID = config.getItem("fryerbetterc", 919).getInt();
+					fryerbetterdID = config.getItem("fryerbetterd", 920).getInt();
+					fryerbettereID = config.getItem("fryerbettere", 921).getInt();
+					fryerbetterfID = config.getItem("fryerbetterf", 922).getInt();
+					fryerbettergID = config.getItem("fryerbetterg", 923).getInt();
+					fryerbetterhID = config.getItem("fryerbetterh", 924).getInt();
+					fryerbetteriID = config.getItem("fryerbetteri", 925).getInt();
+					fryerbetterjID = config.getItem("fryerbetterj", 926).getInt();
+					fryerbetterkID = config.getItem("fryerbetterk", 927).getInt();
+
+					rackID = config.getItem("rack", 928).getInt();
+					rackbID = config.getItem("rackb", 929).getInt();
+					rackPigskinID = config.getItem("rackPigskin", 930).getInt();
+					rackPigskinbID = config.getItem("rackPigskinb", 931).getInt();
+					rackLeatherID = config.getItem("rackLeather", 932).getInt();
+					rackLeatherbID= config.getItem("rackLeatherb", 933).getInt();
+					rackWeedID = config.getItem("rackWeed", 934).getInt();
+					rackWeedbID = config.getItem("rackWeedb", 935).getInt();
+					rackWeedDryID = config.getItem("rackWeedDry", 936).getInt();
+					rackWeedDrybID = config.getItem("rackWeedDryb", 937).getInt();
+					rackTobaccoID = config.getItem("rackTobacco", 938).getInt();
+					rackTobaccobID = config.getItem("rackTobaccob", 939).getInt();
+					rackTobaccoDryID = config.getItem("rackTobaccoDry", 940).getInt();
+					rackTobaccoDrybID = config.getItem("rackTobaccoDryb", 941).getInt();
+
+					gumballID = config.getItem("gumball", 942).getInt();
+					gumballbID = config.getItem("gumballb", 943).getInt();
+					gumballcID = config.getItem("gumballc", 944).getInt();
+					gumballdID = config.getItem("gumballd", 945).getInt();
+					gumballeID = config.getItem("gumballe", 946).getInt();
+					gumballfID = config.getItem("gumballf", 947).getInt();
+					gumballgID = config.getItem("gumballg", 948).getInt();
+					gumballhID = config.getItem("gumballh", 949).getInt();
+
+					lemonPlanksID = config.getItem("lemonPlanks", 950).getInt();
+					orangePlanksID = config.getItem("orangePlanks", 951).getInt();
+					cherryPlanksID = config.getItem("cherryPlanks", 952).getInt();
+					olivePlanksID = config.getItem("olivePlanks", 953).getInt();
+					chiclePlanksID = config.getItem("chiclePlanks", 954).getInt();
+
+					vinerackID = config.getItem("vinerack", 955).getInt();
+					vinerackbID = config.getItem("vinerackb", 956).getInt();
+					vinerackcID = config.getItem("vinerackc", 957).getInt();
+					vinerackdID = config.getItem("vinerackd", 958).getInt();
+
+					cigarboxID = config.getItem("cigarbox", 959).getInt();
+					cigarboxbID = config.getItem("cigarboxb", 960).getInt();
+					cigarboxcID = config.getItem("cigarboxc", 961).getInt();
+					cigarboxdID = config.getItem("cigarboxd", 962).getInt();
+					cigarboxeID = config.getItem("cigarboxe", 963).getInt();
+
+					cigarbox2ID = config.getItem("cigarbox2", 964).getInt();
+					cigarbox2bID = config.getItem("cigarbox2b", 965).getInt();
+					cigarbox2cID = config.getItem("cigarbox2c", 966).getInt();
+					cigarbox2dID = config.getItem("cigarbox2d", 967).getInt();
+					cigarbox2eID = config.getItem("cigarbox2e", 968).getInt();
+
+					cigarbox3ID = config.getItem("cigarbox3", 969).getInt();
+					cigarbox3bID = config.getItem("cigarbox3b", 970).getInt();
+					cigarbox3cID = config.getItem("cigarbox3c", 971).getInt();
+					cigarbox3dID = config.getItem("cigarbox3d", 972).getInt();
+					cigarbox3eID = config.getItem("cigarbox3e", 973).getInt();
+
+					cigarbox4ID = config.getItem("cigarbox4", 974).getInt();
+					cigarbox4bID = config.getItem("cigarbox4b", 975).getInt();
+					cigarbox4cID = config.getItem("cigarbox4c", 976).getInt();
+					cigarbox4dID = config.getItem("cigarbox4d", 977).getInt();
+					cigarbox4eID = config.getItem("cigarbox4e", 978).getInt();
+
+					
+					
+					seedextractorIdleID = config.getItem("seedextractorIdle", 1063).getInt();
+					seedextractorActiveID = config.getItem("seedextractorActive", 1064).getInt();
+					dnaextractorIdleID = config.getItem("dnaextractorIdle", 1065).getInt();
+					dnaextractorActiveID = config.getItem("dnaextractorActive", 1066).getInt();
+					config.save();
+					
+					GuiHandler guiHandler = new GuiHandler();
+}
+@Init
+public void load (FMLInitializationEvent event) {
+	
+	GameRegistry.addRecipe(new ItemStack(ModBlocks.hay, 1), new Object[] {"XXX", "XXX", "XXX", 'X', new ItemStack(ModFood.straw,1)});
+	GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.salt, 1), new Object[]{new ItemStack(Block.sand, 1), new ItemStack(ModFood.salt), new ItemStack(ModFood.salt), new ItemStack(ModFood.salt)});
+	GameRegistry.addRecipe(new ItemStack(ModBlocks.seedextractorIdle, 1), new Object[] {"YZY", "YXY", "YYY", 'X', Item.seeds, 'Y', Block.cobblestone,  'Z', new ItemStack(ModTools.grindingmech,1)});
+	GameRegistry.addRecipe(new ItemStack(ModBlocks.DNAextractor1, 1), new Object[] {"YZY", "YXY", "YYY", 'Z', new ItemStack(ModTools.core,1), 'Y', Block.cobblestone,  'X', ModBlocks.seedextractorIdle});
+	GameRegistry.addRecipe(new ItemStack(ModBlocks.DNAextractor2, 1), new Object[] {"YSY", "YZY", "YXY", 'Z', new ItemStack(ModTools.core2,1), 'Y', Item.ingotIron,  'X', ModBlocks.seedextractorIdle,  'S', Block.glass});
+	GameRegistry.addRecipe(new ItemStack(ModBlocks.elementextractor, 1), new Object[] {"YPY", "GDG", "YEY", 'E', new ItemStack(ModBlocks.DNAextractor1,1), 'D', Item.diamond,  'P', new ItemStack(Item.potion,1,0),  'G', Block.glowStone,  'Y', Item.ingotIron});
+	GameRegistry.addRecipe(new ItemStack(ModBlocks.rack, 2), new Object[] {"YYY", "XZX", "X X", 'Y', Block.wood, 'X', Item.stick, 'Z', Block.cloth});
+	GameRegistry.addRecipe(new ItemStack(ModBlocks.blockchanger, 1), new Object[] {"Y Y", " Y ", " Y ", 'Y', Item.stick});
+	GameRegistry.addRecipe(new ItemStack(ModBlocks.squeezer, 1), new Object[] {"YZY", "YXY", "YYY", 'X', Block.glass, 'Y', Block.cobblestone,  'Z', Block.obsidian});
+	GameRegistry.addRecipe(new ItemStack(ModBlocks.fryer, 1), new Object[] {"YYY", "XGX", "XHX", 'X', Block.cobblestone, 'Y', Block.fenceIron,  'G', Block.furnaceIdle,  'H', Item.redstone});
+	GameRegistry.addRecipe(new ItemStack(ModBlocks.fryerbetter, 1), new Object[] {"YYY", "XGX", "XHX", 'X', Item.ingotIron, 'Y', Block.fenceIron,  'G', fryer,  'H', Block.glowStone});
+	GameRegistry.addRecipe(new ItemStack(ModBlocks.gumball, 1), new Object[] {" X ", "YGY", "YZY", 'Z', new ItemStack(Block.dropper,1), 'Y', Item.ingotIron,  'X', Block.glass,  'G', Block.glowStone});
+	GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.gumballh, 1), new Object[]{new ItemStack(gumball, 1), new ItemStack(ModFood.gumApple), new ItemStack(ModFood.gumStrawberry), new ItemStack(ModFood.gumLemon), new ItemStack(ModFood.gumGrape), new ItemStack(ModFood.gumCherry), new ItemStack(ModFood.gumOrange), new ItemStack(ModFood.gumMelon)});
+	GameRegistry.addRecipe(new ItemStack(ModBlocks.cigarbox, 2), new Object[] {"XXX", "Y Y", "YYY", 'Y', new ItemStack(Block.wood,1), 'X', Block.planks});
+	GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.cigarboxe, 1), new Object[]{new ItemStack(cigarbox, 1), new ItemStack(ModFruits.tobaccoCigar), new ItemStack(ModFruits.tobaccoCigar), new ItemStack(ModFruits.tobaccoCigar), new ItemStack(ModFruits.tobaccoCigar)});
+	GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.cigarboxd, 1), new Object[]{new ItemStack(cigarbox, 1), new ItemStack(ModFruits.tobaccoCigar), new ItemStack(ModFruits.tobaccoCigar), new ItemStack(ModFruits.tobaccoCigar)});
+	GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.cigarboxc, 1), new Object[]{new ItemStack(cigarbox, 1), new ItemStack(ModFruits.tobaccoCigar), new ItemStack(ModFruits.tobaccoCigar)});
+	GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.cigarboxb, 1), new Object[]{new ItemStack(cigarbox, 1), new ItemStack(ModFruits.tobaccoCigar)});
+	
+	GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.lemonPlanks, 4), new Object[]{new ItemStack(ModCrops.lemonLog)});
+	GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.orangePlanks, 4), new Object[]{new ItemStack(ModCrops.orangeLog)});
+	GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.cherryPlanks, 4), new Object[]{new ItemStack(ModCrops.cherryLog)});
+	GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.olivePlanks, 3), new Object[]{new ItemStack(ModCrops.oliveLog)});
+	GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.chiclePlanks, 4), new Object[]{new ItemStack(ModCrops.chicleLog)});
+	GameRegistry.addRecipe(new ItemStack(Item.stick, 4), new Object[] {"Y", "Y", 'Y', new ItemStack(ModBlocks.lemonPlanks)});
+	GameRegistry.addRecipe(new ItemStack(Item.stick, 4), new Object[] {"Y", "Y", 'Y', new ItemStack(ModBlocks.orangePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Item.stick, 3), new Object[] {"Y", "Y", 'Y', new ItemStack(ModBlocks.cherryPlanks)});
+	GameRegistry.addRecipe(new ItemStack(Item.stick, 5), new Object[] {"Y", "Y", 'Y', new ItemStack(ModBlocks.olivePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Item.stick, 4), new Object[] {"Y", "Y", 'Y', new ItemStack(ModBlocks.chiclePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.workbench, 1), new Object[] {"YY", "YY", 'Y', new ItemStack(ModBlocks.lemonPlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.workbench, 1), new Object[] {"YY", "YY", 'Y', new ItemStack(ModBlocks.orangePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.workbench, 1), new Object[] {"YY", "YY", 'Y', new ItemStack(ModBlocks.cherryPlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.workbench, 1), new Object[] {"YY", "YY", 'Y', new ItemStack(ModBlocks.olivePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.workbench, 1), new Object[] {"YY", "YY", 'Y', new ItemStack(ModBlocks.chiclePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.doorWood, 1), new Object[] {"YY", "YY", "YY", 'Y', new ItemStack(ModBlocks.lemonPlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.doorWood, 1), new Object[] {"YY", "YY", "YY", 'Y', new ItemStack(ModBlocks.orangePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.doorWood, 1), new Object[] {"YY", "YY", "YY", 'Y', new ItemStack(ModBlocks.cherryPlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.doorWood, 1), new Object[] {"YY", "YY", "YY", 'Y', new ItemStack(ModBlocks.olivePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.doorWood, 1), new Object[] {"YY", "YY", "YY", 'Y', new ItemStack(ModBlocks.chiclePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.trapdoor, 1), new Object[] {"YYY", "YYY", 'Y', new ItemStack(ModBlocks.lemonPlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.trapdoor, 1), new Object[] {"YYY", "YYY", 'Y', new ItemStack(ModBlocks.orangePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.trapdoor, 1), new Object[] {"YYY", "YYY", 'Y', new ItemStack(ModBlocks.cherryPlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.trapdoor, 1), new Object[] {"YYY", "YYY", 'Y', new ItemStack(ModBlocks.olivePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.trapdoor, 1), new Object[] {"YYY", "YYY", 'Y', new ItemStack(ModBlocks.chiclePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.woodenButton, 1), new Object[] {"Y", 'Y', new ItemStack(ModBlocks.lemonPlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.woodenButton, 1), new Object[] {"Y", 'Y', new ItemStack(ModBlocks.orangePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.woodenButton, 1), new Object[] {"Y", 'Y', new ItemStack(ModBlocks.cherryPlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.woodenButton, 1), new Object[] {"Y", 'Y', new ItemStack(ModBlocks.olivePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.woodenButton, 1), new Object[] {"Y", 'Y', new ItemStack(ModBlocks.chiclePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.pressurePlatePlanks, 1), new Object[] {"YY", 'Y', new ItemStack(ModBlocks.lemonPlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.pressurePlatePlanks, 1), new Object[] {"YY", 'Y', new ItemStack(ModBlocks.orangePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.pressurePlatePlanks, 1), new Object[] {"YY", 'Y', new ItemStack(ModBlocks.cherryPlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.pressurePlatePlanks, 1), new Object[] {"YY", 'Y', new ItemStack(ModBlocks.olivePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.pressurePlatePlanks, 1), new Object[] {"YY", 'Y', new ItemStack(ModBlocks.chiclePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Item.boat, 1), new Object[] {"Y Y", "YYY", 'Y', new ItemStack(ModBlocks.lemonPlanks)});
+	GameRegistry.addRecipe(new ItemStack(Item.boat, 1), new Object[] {"Y Y", "YYY", 'Y', new ItemStack(ModBlocks.orangePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Item.boat, 1), new Object[] {"Y Y", "YYY", 'Y', new ItemStack(ModBlocks.cherryPlanks)});
+	GameRegistry.addRecipe(new ItemStack(Item.boat, 1), new Object[] {"Y Y", "YYY", 'Y', new ItemStack(ModBlocks.olivePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Item.boat, 1), new Object[] {"Y Y", "YYY", 'Y', new ItemStack(ModBlocks.chiclePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.chest, 1), new Object[] {"YYY", "Y Y", "YYY", 'Y', new ItemStack(ModBlocks.lemonPlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.chest, 1), new Object[] {"YYY", "Y Y", "YYY", 'Y', new ItemStack(ModBlocks.orangePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.chest, 1), new Object[] {"YYY", "Y Y", "YYY", 'Y', new ItemStack(ModBlocks.cherryPlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.chest, 1), new Object[] {"YYY", "Y Y", "YYY", 'Y', new ItemStack(ModBlocks.olivePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.chest, 1), new Object[] {"YYY", "Y Y", "YYY", 'Y', new ItemStack(ModBlocks.chiclePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Block.music, 1), new Object[] {"YYY", "YRY", "YYY", 'Y', new ItemStack(ModBlocks.lemonPlanks), 'R', new ItemStack(Item.redstone)});
+	GameRegistry.addRecipe(new ItemStack(Block.music, 1), new Object[] {"YYY", "YRY", "YYY", 'Y', new ItemStack(ModBlocks.orangePlanks), 'R', new ItemStack(Item.redstone)});
+	GameRegistry.addRecipe(new ItemStack(Block.music, 1), new Object[] {"YYY", "YRY", "YYY", 'Y', new ItemStack(ModBlocks.cherryPlanks), 'R', new ItemStack(Item.redstone)});
+	GameRegistry.addRecipe(new ItemStack(Block.music, 1), new Object[] {"YYY", "YRY", "YYY", 'Y', new ItemStack(ModBlocks.olivePlanks), 'R', new ItemStack(Item.redstone)});
+	GameRegistry.addRecipe(new ItemStack(Block.music, 1), new Object[] {"YYY", "YRY", "YYY", 'Y', new ItemStack(ModBlocks.chiclePlanks), 'R', new ItemStack(Item.redstone)});
+	GameRegistry.addRecipe(new ItemStack(Block.jukebox, 1), new Object[] {"YYY", "YRY", "YYY", 'Y', new ItemStack(ModBlocks.lemonPlanks), 'R', new ItemStack(Item.diamond)});
+	GameRegistry.addRecipe(new ItemStack(Block.jukebox, 1), new Object[] {"YYY", "YRY", "YYY", 'Y', new ItemStack(ModBlocks.orangePlanks), 'R', new ItemStack(Item.diamond)});
+	GameRegistry.addRecipe(new ItemStack(Block.jukebox, 1), new Object[] {"YYY", "YRY", "YYY", 'Y', new ItemStack(ModBlocks.cherryPlanks), 'R', new ItemStack(Item.diamond)});
+	GameRegistry.addRecipe(new ItemStack(Block.jukebox, 1), new Object[] {"YYY", "YRY", "YYY", 'Y', new ItemStack(ModBlocks.olivePlanks), 'R', new ItemStack(Item.diamond)});
+	GameRegistry.addRecipe(new ItemStack(Block.jukebox, 1), new Object[] {"YYY", "YRY", "YYY", 'Y', new ItemStack(ModBlocks.chiclePlanks), 'R', new ItemStack(Item.diamond)});
+	GameRegistry.addRecipe(new ItemStack(Item.sign, 1), new Object[] {"YYY", "YYY", " X ", 'Y', new ItemStack(ModBlocks.lemonPlanks), 'X', new ItemStack(Item.stick)});
+	GameRegistry.addRecipe(new ItemStack(Item.sign, 1), new Object[] {"YYY", "YYY", " X ", 'Y', new ItemStack(ModBlocks.orangePlanks), 'X', new ItemStack(Item.stick)});
+	GameRegistry.addRecipe(new ItemStack(Item.sign, 1), new Object[] {"YYY", "YYY", " X ", 'Y', new ItemStack(ModBlocks.cherryPlanks), 'X', new ItemStack(Item.stick)});
+	GameRegistry.addRecipe(new ItemStack(Item.sign, 1), new Object[] {"YYY", "YYY", " X ", 'Y', new ItemStack(ModBlocks.olivePlanks), 'X', new ItemStack(Item.stick)});
+	GameRegistry.addRecipe(new ItemStack(Item.sign, 1), new Object[] {"YYY", "YYY", " X ", 'Y', new ItemStack(ModBlocks.chiclePlanks), 'X', new ItemStack(Item.stick)});
+	GameRegistry.addRecipe(new ItemStack(Block.fenceGate, 1), new Object[] {"XYX", "XYX", 'Y', new ItemStack(ModBlocks.lemonPlanks), 'X', new ItemStack(Item.stick)});
+	GameRegistry.addRecipe(new ItemStack(Block.fenceGate, 1), new Object[] {"XYX", "XYX", 'Y', new ItemStack(ModBlocks.orangePlanks), 'X', new ItemStack(Item.stick)});
+	GameRegistry.addRecipe(new ItemStack(Block.fenceGate, 1), new Object[] {"XYX", "XYX", 'Y', new ItemStack(ModBlocks.cherryPlanks), 'X', new ItemStack(Item.stick)});
+	GameRegistry.addRecipe(new ItemStack(Block.fenceGate, 1), new Object[] {"XYX", "XYX", 'Y', new ItemStack(ModBlocks.olivePlanks), 'X', new ItemStack(Item.stick)});
+	GameRegistry.addRecipe(new ItemStack(Block.fenceGate, 1), new Object[] {"XYX", "XYX", 'Y', new ItemStack(ModBlocks.chiclePlanks), 'X', new ItemStack(Item.stick)});
+	GameRegistry.addRecipe(new ItemStack(Item.bowlEmpty, 1), new Object[] {"Y Y", " Y ", 'Y', new ItemStack(ModBlocks.lemonPlanks)});
+	GameRegistry.addRecipe(new ItemStack(Item.bowlEmpty, 1), new Object[] {"Y Y", " Y ", 'Y', new ItemStack(ModBlocks.orangePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Item.bowlEmpty, 1), new Object[] {"Y Y", " Y ", 'Y', new ItemStack(ModBlocks.cherryPlanks)});
+	GameRegistry.addRecipe(new ItemStack(Item.bowlEmpty, 1), new Object[] {"Y Y", " Y ", 'Y', new ItemStack(ModBlocks.olivePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Item.bowlEmpty, 1), new Object[] {"Y Y", " Y ", 'Y', new ItemStack(ModBlocks.chiclePlanks)});
+	GameRegistry.addRecipe(new ItemStack(Item.bed, 1), new Object[] {"XXX", "YYY", 'Y', new ItemStack(ModBlocks.lemonPlanks), 'X', Block.cloth});
+	GameRegistry.addRecipe(new ItemStack(Item.bed, 1), new Object[] {"XXX", "YYY", 'Y', new ItemStack(ModBlocks.orangePlanks), 'X', Block.cloth});
+	GameRegistry.addRecipe(new ItemStack(Item.bed, 1), new Object[] {"XXX", "YYY", 'Y', new ItemStack(ModBlocks.cherryPlanks), 'X', Block.cloth});
+	GameRegistry.addRecipe(new ItemStack(Item.bed, 1), new Object[] {"XXX", "YYY", 'Y', new ItemStack(ModBlocks.olivePlanks), 'X', Block.cloth});
+	GameRegistry.addRecipe(new ItemStack(Item.bed, 1), new Object[] {"XXX", "YYY", 'Y', new ItemStack(ModBlocks.chiclePlanks), 'X', Block.cloth});
+	GameRegistry.addRecipe(new ItemStack(Block.pistonBase, 1), new Object[] {"YYY", "XIX", "XRX", 'Y', new ItemStack(ModBlocks.lemonPlanks), 'X', Block.cobblestone, 'I', Item.ingotIron, 'R', Item.redstone});
+	GameRegistry.addRecipe(new ItemStack(Block.pistonBase, 1), new Object[] {"YYY", "XIX", "XRX", 'Y', new ItemStack(ModBlocks.orangePlanks), 'X', Block.cobblestone, 'I', Item.ingotIron, 'R', Item.redstone});
+	GameRegistry.addRecipe(new ItemStack(Block.pistonBase, 1), new Object[] {"YYY", "XIX", "XRX", 'Y', new ItemStack(ModBlocks.cherryPlanks), 'X', Block.cobblestone, 'I', Item.ingotIron, 'R', Item.redstone});
+	GameRegistry.addRecipe(new ItemStack(Block.pistonBase, 1), new Object[] {"YYY", "XIX", "XRX", 'Y', new ItemStack(ModBlocks.olivePlanks), 'X', Block.cobblestone, 'I', Item.ingotIron, 'R', Item.redstone});
+	GameRegistry.addRecipe(new ItemStack(Block.pistonBase, 1), new Object[] {"YYY", "XIX", "XRX", 'Y', new ItemStack(ModBlocks.chiclePlanks), 'X', Block.cobblestone, 'I', Item.ingotIron, 'R', Item.redstone});
+	GameRegistry.addRecipe(new ItemStack(Block.bookShelf, 1), new Object[] {"YYY", "XXX", "YYY", 'Y', new ItemStack(ModBlocks.lemonPlanks), 'X', Item.book});
+	GameRegistry.addRecipe(new ItemStack(Block.bookShelf, 1), new Object[] {"YYY", "XXX", "YYY", 'Y', new ItemStack(ModBlocks.orangePlanks), 'X', Item.book});
+	GameRegistry.addRecipe(new ItemStack(Block.bookShelf, 1), new Object[] {"YYY", "XXX", "YYY", 'Y', new ItemStack(ModBlocks.cherryPlanks), 'X', Item.book});
+	GameRegistry.addRecipe(new ItemStack(Block.bookShelf, 1), new Object[] {"YYY", "XXX", "YYY", 'Y', new ItemStack(ModBlocks.olivePlanks), 'X', Item.book});
+	GameRegistry.addRecipe(new ItemStack(Block.bookShelf, 1), new Object[] {"YYY", "XXX", "YYY", 'Y', new ItemStack(ModBlocks.chiclePlanks), 'X', Item.book});
+	GameRegistry.addRecipe(new ItemStack(ModTools.woodcog, 1), new Object[] {" Y ", "Y Y", " Y ", 'Y', new ItemStack(ModBlocks.lemonPlanks)});
+	GameRegistry.addRecipe(new ItemStack(ModTools.woodcog, 1), new Object[] {" Y ", "Y Y", " Y ", 'Y', new ItemStack(ModBlocks.orangePlanks)});
+	GameRegistry.addRecipe(new ItemStack(ModTools.woodcog, 1), new Object[] {" Y ", "Y Y", " Y ", 'Y', new ItemStack(ModBlocks.cherryPlanks)});
+	GameRegistry.addRecipe(new ItemStack(ModTools.woodcog, 1), new Object[] {" Y ", "Y Y", " Y ", 'Y', new ItemStack(ModBlocks.olivePlanks)});
+	GameRegistry.addRecipe(new ItemStack(ModTools.woodcog, 1), new Object[] {" Y ", "Y Y", " Y ", 'Y', new ItemStack(ModBlocks.chiclePlanks)});
+	
+	GameRegistry.addRecipe(new ItemStack(ModBlocks.vinerack, 4), new Object[] {"YYY", "YYY", "XYX", 'Y', Item.stick, 'X', Block.planks});
+	GameRegistry.addRecipe(new ItemStack(ModBlocks.vinerack, 4), new Object[] {"YYY", "YYY", "XYX", 'Y', Item.stick, 'X', ModBlocks.lemonPlanks});
+	GameRegistry.addRecipe(new ItemStack(ModBlocks.vinerack, 4), new Object[] {"YYY", "YYY", "XYX", 'Y', Item.stick, 'X', ModBlocks.orangePlanks});
+	GameRegistry.addRecipe(new ItemStack(ModBlocks.vinerack, 4), new Object[] {"YYY", "YYY", "XYX", 'Y', Item.stick, 'X', ModBlocks.cherryPlanks});
+	GameRegistry.addRecipe(new ItemStack(ModBlocks.vinerack, 5), new Object[] {"YYY", "YYY", "XYX", 'Y', Item.stick, 'X', ModBlocks.olivePlanks});
+
+	GameRegistry.addRecipe(new ItemStack(jellyblock, 1), new Object[] {"YYY", "YYY", "YYY", 'Y', new ItemStack(ModFood.jelly)});
+	GameRegistry.addRecipe(new ItemStack(jellyblockApple, 1), new Object[] {"YYY", "YYY", "YYY", 'Y', new ItemStack(ModFood.jellyApple)});
+	GameRegistry.addRecipe(new ItemStack(jellyblockStrawberry, 1), new Object[] {"YYY", "YYY", "YYY", 'Y', new ItemStack(ModFood.jellyStrawberry)});
+	GameRegistry.addRecipe(new ItemStack(jellyblockLemon, 1), new Object[] {"YYY", "YYY", "YYY", 'Y', new ItemStack(ModFood.jellyLemon)});
+	GameRegistry.addRecipe(new ItemStack(jellyblockGrape, 1), new Object[] {"YYY", "YYY", "YYY", 'Y', new ItemStack(ModFood.jellyGrape)});
+	GameRegistry.addRecipe(new ItemStack(jellyblockCherry, 1), new Object[] {"YYY", "YYY", "YYY", 'Y', new ItemStack(ModFood.jellyCherry)});
+	GameRegistry.addRecipe(new ItemStack(jellyblockOrange, 1), new Object[] {"YYY", "YYY", "YYY", 'Y', new ItemStack(ModFood.jellyOrange)});
+	GameRegistry.addRecipe(new ItemStack(jellyblockBlackcurrant, 1), new Object[] {"YYY", "YYY", "YYY", 'Y', new ItemStack(ModFood.jellyBlackcurrant)});
+	GameRegistry.addRecipe(new ItemStack(jellyblockRaspberry, 1), new Object[] {"YYY", "YYY", "YYY", 'Y', new ItemStack(ModFood.jellyRaspberry)});
+	GameRegistry.addRecipe(new ItemStack(jellyblockBRaspberry, 1), new Object[] {"YYY", "YYY", "YYY", 'Y', new ItemStack(ModFood.jellyBRaspberry)});
+
+	GameRegistry.addRecipe(new ItemStack(fermenter, 1), new Object[] {"Y Y", "YYY", "YYY", 'Y', new ItemStack(Block.wood)});
+	GameRegistry.addRecipe(new ItemStack(brewer, 1), new Object[] {"YYY", "ZXZ", "YYY", 'Y', new ItemStack(Block.wood), 'Z', new ItemStack(Item.ingotIron), 'X', new ItemStack(ModBlocks.fermenter)});
+	GameRegistry.addRecipe(new ItemStack(potionmaker, 1), new Object[] {"YXY", "SZS", "SSS", 'Y', new ItemStack(Item.ingotIron), 'X', new ItemStack(Item.glassBottle), 'Z', new ItemStack(Item.brewingStand), 'S', new ItemStack(Block.stone),});
+}
+@PostInit
+public void postInit(FMLPostInitializationEvent event) {
+// this is the post initialization.
+}
+}

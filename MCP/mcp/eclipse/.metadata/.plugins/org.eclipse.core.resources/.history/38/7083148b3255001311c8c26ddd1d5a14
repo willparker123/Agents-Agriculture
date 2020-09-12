@@ -1,0 +1,495 @@
+
+package agentsmod;
+
+import java.util.Map;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockVine;
+import net.minecraft.entity.passive.EntityPig;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemSeedFood;
+import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraftforge.common.MinecraftForge;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.Init;
+import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.Mod.PostInit;
+import cpw.mods.fml.common.Mod.PreInit;
+import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.EntityRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
+
+@Mod(modid="ModFruits", name="Agent's Mod", version="Alpha")
+@NetworkMod(clientSideRequired=true, serverSideRequired=false)
+public class ModFruits {
+	
+	public static final String modid = "ModFruits";
+
+	public static Item strawberrySeed;
+	public static Item strawberry;
+	public static Item tomatoSeed;
+	public static Item tomato;
+	public static Item lemon;
+	public static Item lemonSeed;
+	public static Item orange;
+	public static Item orangeSeed;
+	public static Item cherry;
+	public static Item cherrySeed;
+	public static Item lettuceSeed;
+	public static Item lettuce;
+	public static Item cornSeed;
+	public static Item corn;
+	public static Item pepperSeed;
+	public static Item riceSeed;
+	public static Item rice;
+	public static Item barleySeed;
+	public static Item barley;
+	public static Item cottonSeed;
+	public static Item cotton;
+	public static Item onion;
+	public static Item olive;
+	public static Item oliveSeed;
+	public static Item lavenderSeed;
+	public static Item parsleySeed;
+	public static Item pepperGreen;
+	public static Item pepperYellow;
+	public static Item pepperRed;
+	public static Item peppersSeed;
+	public static Item walnut;
+	public static Item walnutHard;
+	public static Item walnutHarder;
+	public static Item walnutGold;
+	public static Item walnutDiamond;
+	public static Item grape;
+	public static Item grapeSeed;
+	public static Item garlic;
+	public static Item chicle;
+	public static Item chicleSeed;
+	public static Item peanut;
+	public static Item mint;
+	public static Item mintSeed;
+	public static Item truffle;
+	public static Item truffleWhite;
+	public static Item raspberrySeed;
+	public static Item raspberry;
+	public static Item braspberrySeed;
+	public static Item braspberry;
+	public static Item blackcurrantSeed;
+	public static Item blackcurrant;
+	public static Item blueberrySeed;
+	public static Item blueberry;
+	
+	public static Item roseSeed;
+	public static Item dandelionSeed;
+	
+	public static Item weedSeed;
+	public static Item weed;
+	public static Item weedDry;
+	public static Item weedCrushed;
+	public static Item weedPaper;
+	public static Item weedInPaper;
+	public static Item weedJoint;
+	public static Item weedLitJoint;
+	
+	public static Item tobaccoSeed;
+	public static Item tobacco;
+	public static Item tobaccoDry;
+	public static Item tobaccoCrushed;
+	public static Item tobaccoInPaper;
+	public static Item tobaccoCigarette;
+	public static Item tobaccoLitCigarette;
+	public static Item tobaccoCigaretteFilter;
+	public static Item tobaccoLitCigaretteFilter;
+	public static Item tobaccoCigar;
+	public static Item tobaccoLitCigar;
+	public static Item filter;
+	
+	public static Item walnutshell;
+	public static Item walnutshellHard;
+	public static Item walnutshellHarder;
+	public static Item walnutshellGold;
+	public static Item walnutshellDiamond;
+	public static Item walnutshellCluster;
+	public static Item walnutshellClusterHard;
+	public static Item walnutshellClusterHarder;
+	public static Item walnutshellClusterGold;
+	public static Item walnutshellClusterDiamond;
+	public static Item walnutshellFire;
+	public static Item walnutshellFireCluster;
+	public static Item walnutshellElectric;
+	public static Item walnutshellElectricCluster;
+	public static Item walnutshellIce;
+	public static Item walnutshellIceCluster;
+	public static Item walnutshellPoison;
+	public static Item walnutshellPoisonCluster;
+	public static Item walnutshellBomb;
+	public static Item walnutshellBombCluster;
+	public static Item walnutshellBigBomb;
+	public static Item walnutshellBigBombCluster;
+	public static Item walnutshellNuke;
+	public static Item walnutshellNukeCluster;
+	public static Item walnutshellWB;
+	public static Item walnutshellWBCluster;
+	
+	public static Item fertiliser;
+	public static Item ash;
+	
+	
+	
+	public static final int WILDCARD_VALUE = Short.MAX_VALUE;
+
+	// The instance of your mod that Forge uses.
+	@Instance("ModFruits")
+	public static ModFruits instance;
+	// This loads up your common and client proxies. change the location of the proxies and the public static to fit your setup
+	@SidedProxy(clientSide="agentsmod.ClientProxy", serverSide="agentsmod.CommonProxy")
+	public static CommonProxy proxy;
+	@PreInit
+	public void preInit(FMLPreInitializationEvent event) {
+		
+		MinecraftForge.EVENT_BUS.register(new FertiliserEvent(null, null, 0, 0, 0, 0));
+		
+		MinecraftForge.EVENT_BUS.register(new CropEventStrawberry());
+		MinecraftForge.EVENT_BUS.register(new CropEventTomato());
+		MinecraftForge.EVENT_BUS.register(new CropEventLemonCrop());
+		MinecraftForge.EVENT_BUS.register(new CropEventOrangeCrop());
+		MinecraftForge.EVENT_BUS.register(new CropEventCherryCrop());
+		MinecraftForge.EVENT_BUS.register(new CropEventLettuce());
+		MinecraftForge.EVENT_BUS.register(new CropEventPepper());
+		MinecraftForge.EVENT_BUS.register(new CropEventRice());
+		MinecraftForge.EVENT_BUS.register(new CropEventCotton());
+		MinecraftForge.EVENT_BUS.register(new CropEventOnion());
+		MinecraftForge.EVENT_BUS.register(new CropEventOliveCrop());
+		MinecraftForge.EVENT_BUS.register(new CropEventOliveTree());
+		MinecraftForge.EVENT_BUS.register(new CropEventRose());
+		MinecraftForge.EVENT_BUS.register(new CropEventDandelion());
+		MinecraftForge.EVENT_BUS.register(new CropEventWeed());
+		MinecraftForge.EVENT_BUS.register(new CropEventCorn());
+		MinecraftForge.EVENT_BUS.register(new CropEventBarley());
+		MinecraftForge.EVENT_BUS.register(new CropEventLavender());
+		MinecraftForge.EVENT_BUS.register(new CropEventParsley());
+		MinecraftForge.EVENT_BUS.register(new CropEventPeppers());
+		MinecraftForge.EVENT_BUS.register(new CropEventTobacco());
+		MinecraftForge.EVENT_BUS.register(new CropEventWalnut());
+		MinecraftForge.EVENT_BUS.register(new CropEventWalnutHarder());
+		MinecraftForge.EVENT_BUS.register(new CropEventWalnutHard());
+		MinecraftForge.EVENT_BUS.register(new CropEventPeanut());
+		MinecraftForge.EVENT_BUS.register(new CropEventGrape());
+		MinecraftForge.EVENT_BUS.register(new CropEventGrape2());
+		MinecraftForge.EVENT_BUS.register(new CropEventGrape3());
+		MinecraftForge.EVENT_BUS.register(new CropEventGrape4());
+		MinecraftForge.EVENT_BUS.register(new CropEventGarlic());
+		MinecraftForge.EVENT_BUS.register(new CropEventChicle());
+		MinecraftForge.EVENT_BUS.register(new CropEventChicleCrop());
+		MinecraftForge.EVENT_BUS.register(new CropEventMint());
+		MinecraftForge.EVENT_BUS.register(new CropEventRaspberry());
+		MinecraftForge.EVENT_BUS.register(new CropEventBRaspberry());
+		MinecraftForge.EVENT_BUS.register(new CropEventBlackcurrant());
+		MinecraftForge.EVENT_BUS.register(new CropEventBlueberry());
+		MinecraftForge.EVENT_BUS.register(new CropEventWalnutGold());
+		MinecraftForge.EVENT_BUS.register(new CropEventWalnutDiamond());
+		
+		
+		
+		fertiliser = new ItemFertiliser(5434).setUnlocalizedName("fertiliser");
+		LanguageRegistry.addName(fertiliser, "Plant Fertiliser");
+		
+		ash = new ItemMiscItem2(5435).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("ash");
+		LanguageRegistry.addName(ash, "Ash");
+
+		strawberry = new ItemFruit2(5436, 1, false).setPotionEffect(Potion.regeneration.id, 2, 1, 0.4F).setPotionEffect2(Potion.regeneration.id, 0, 0, 0F).setUnlocalizedName("strawberry");
+		LanguageRegistry.addName(strawberry, "Strawberry");
+		strawberrySeed = new ItemSeed(5437, ModCrops.strawberryCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("strawberrySeed");
+		LanguageRegistry.addName(strawberrySeed, "Strawberry Seeds");
+		tomato = new ItemFruit2(5438, 1, false).setPotionEffect(Potion.regeneration.id, 0, 0, 0F).setPotionEffect2(Potion.regeneration.id, 0, 0, 0F).setUnlocalizedName("tomato");
+		LanguageRegistry.addName(tomato, "Tomato");
+		tomatoSeed = new ItemSeed(5439, ModCrops.tomatoCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("tomatoSeed");
+		LanguageRegistry.addName(tomatoSeed, "Tomato Seeds");
+		lemon = new ItemFruit2(5440, 1, false).setPotionEffect(Potion.regeneration.id, 0, 0, 0F).setPotionEffect2(Potion.regeneration.id, 0, 0, 0F).setUnlocalizedName("lemon");
+		LanguageRegistry.addName(lemon, "Lemon");
+		lemonSeed = new ItemSeed(5441, ModCrops.lemonCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("lemonSeed");
+		LanguageRegistry.addName(lemonSeed, "Lemon Seeds");
+		orange = new ItemFruit2(5442, 2, false).setPotionEffect(Potion.regeneration.id, 0, 0, 0F).setPotionEffect2(Potion.regeneration.id, 0, 0, 0F).setUnlocalizedName("orange");
+		LanguageRegistry.addName(orange, "Orange");
+		orangeSeed = new ItemSeed(5443, ModCrops.orangeCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("orangeSeed");
+		LanguageRegistry.addName(orangeSeed, "Orange Pips");
+		cherry = new ItemFruit2(5444, 1, false).setPotionEffect(Potion.digSpeed.id, 6, 2, 1F).setPotionEffect2(Potion.regeneration.id, 0, 0, 0F).setUnlocalizedName("cherry");
+		LanguageRegistry.addName(cherry, "Cherry");
+		cherrySeed = new ItemSeed(5445, ModCrops.cherryCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("cherrySeed");
+		LanguageRegistry.addName(cherrySeed, "Cherry Pips");
+		lettuce = new ItemFruit2(5446, 3, false).setPotionEffect(Potion.regeneration.id, 0, 0, 0F).setPotionEffect2(Potion.regeneration.id, 0, 0, 0F).setUnlocalizedName("lettuce");
+		LanguageRegistry.addName(lettuce, "Lettuce");
+		lettuceSeed = new ItemSeed(5447, ModCrops.lettuceCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("lettuceSeed");
+		LanguageRegistry.addName(lettuceSeed, "Lettuce Seeds");
+		corn = new ItemFruit2(5448, 2, false).setPotionEffect(Potion.regeneration.id, 0, 0, 0F).setPotionEffect2(Potion.regeneration.id, 0, 0, 0F).setUnlocalizedName("corn");
+		LanguageRegistry.addName(corn, "Corn Cob");
+		cornSeed = new ItemSeed(5449, ModCrops.cornCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("cornSeed");
+		LanguageRegistry.addName(cornSeed, "Corn Kernels");
+		pepperSeed = new ItemSeed(5450, ModCrops.pepperCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("pepperSeed");
+		LanguageRegistry.addName(pepperSeed, "Pepper Corns");
+		barley = new ItemFruit(5451).setUnlocalizedName("barley");
+		LanguageRegistry.addName(barley, "Barley");
+		barleySeed = new ItemSeed(5452, ModCrops.barleyCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("barleySeed");
+		LanguageRegistry.addName(barleySeed, "Barley Seeds");
+		rice = new ItemFruit2(5453, 2, false).setUnlocalizedName("rice");
+		LanguageRegistry.addName(rice, "Rice");
+		riceSeed = new ItemSeed(5454, ModCrops.riceCrop.blockID, ModCrops.wetClay.blockID).setUnlocalizedName("riceSeed");
+		LanguageRegistry.addName(riceSeed, "Rice Seeds");
+		cottonSeed = new ItemSeed(5455, ModCrops.cottonCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("cottonSeed");
+		LanguageRegistry.addName(cottonSeed, "Cotton Seeds");
+		cotton = new ItemFruit(5456).setUnlocalizedName("cotton");
+		LanguageRegistry.addName(cotton, "Cotton");
+		onion = new ItemSeedFood2(5457, 1, 0.2F, ModCrops.onionCrop.blockID, Block.tilledField.blockID).setPotionEffect(Potion.confusion.id, 10, 1, 1F).setCreativeTab(ModCreativeTabs.tabPlants).setUnlocalizedName("onion");
+		LanguageRegistry.addName(onion, "Onion");
+		olive = new ItemFruit2(5458, 1, 0.1F, false).setPotionEffect(Potion.confusion.id, 8, 1, 1F).setPotionEffect2(Potion.regeneration.id, 0, 0, 0F).setUnlocalizedName("olive");
+		LanguageRegistry.addName(olive, "Olive");
+		oliveSeed = new ItemSeed(5459, ModCrops.oliveCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("oliveSeed");
+		LanguageRegistry.addName(oliveSeed, "Olive Tree Seeds");
+		lavenderSeed = new ItemSeed(5520, ModCrops.lavenderCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("lavenderSeed");
+		LanguageRegistry.addName(lavenderSeed, "Lavender Seeds");
+		parsleySeed = new ItemSeed(5521, ModCrops.parsleyCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("parsleySeed");
+		LanguageRegistry.addName(parsleySeed, "Parsley Seeds");
+		walnut = new ItemSeedFood2(5522, 1, 0.0F, ModCrops.walnutCrop.blockID, Block.tilledField.blockID).setCreativeTab(ModCreativeTabs.tabPlants).setUnlocalizedName("walnut");
+		LanguageRegistry.addName(walnut, "Walnut");
+		walnutHard = new ItemSeedFood2(5664, 2, 0.3F, ModCrops.walnutHardCrop.blockID, Block.tilledField.blockID).setCreativeTab(ModCreativeTabs.tabPlants).setUnlocalizedName("walnutHard");
+		LanguageRegistry.addName(walnutHard, "Hardened Walnut");
+		walnutHarder = new ItemSeedFood2(5665, 2, 0.3F, ModCrops.walnutHarderCrop.blockID, Block.tilledField.blockID).setCreativeTab(ModCreativeTabs.tabPlants).setUnlocalizedName("walnutHarder");
+		LanguageRegistry.addName(walnutHarder, "Iron Walnut");
+		walnutGold = new ItemSeedFood2(5805, 3, 0.6F, ModCrops.walnutGoldCrop.blockID, Block.tilledField.blockID).setPotionEffect(Potion.resistance.id, 2, 30, 1F).setCreativeTab(ModCreativeTabs.tabPlants).setUnlocalizedName("walnutGold");
+		LanguageRegistry.addName(walnutGold, "Golden Walnut");
+		walnutDiamond = new ItemSeedFood2(5843, 4, 0.8F, ModCrops.walnutDiamondCrop.blockID, Block.tilledField.blockID).setPotionEffect(Potion.resistance.id, 3, 60, 1F).setCreativeTab(ModCreativeTabs.tabPlants).setUnlocalizedName("walnutDiamond");
+		LanguageRegistry.addName(walnutDiamond, "Diamond Walnut");
+		peanut = new ItemSeedFood2(5697, 1, 0.6F, ModCrops.peanutCrop.blockID, Block.tilledField.blockID).setCreativeTab(ModCreativeTabs.tabPlants).setUnlocalizedName("peanut");
+		LanguageRegistry.addName(peanut, "Peanut");
+		pepperGreen = new ItemFruit2(5525, 3, false).setUnlocalizedName("pepperGreen");
+		LanguageRegistry.addName(pepperGreen, "Green Bell Pepper");
+		pepperYellow = new ItemFruit2(5526, 4, false).setUnlocalizedName("pepperYellow");
+		LanguageRegistry.addName(pepperYellow, "Yellow Bell Pepper");
+		pepperRed = new ItemFruit2(5527, 5, false).setPotionEffect(Potion.fireResistance.id, 10, 1, 1F).setUnlocalizedName("pepperRed");
+		LanguageRegistry.addName(pepperRed, "Red Bell Pepper");
+		peppersSeed = new ItemSeed(5528, ModCrops.peppersCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("peppersSeed");
+		LanguageRegistry.addName(peppersSeed, "Bell Pepper Seeds");
+		grape = new ItemFruit2(5554, 2, 0.0F, false).setUnlocalizedName("grape");
+		LanguageRegistry.addName(grape, "Grapes");
+		grapeSeed = new ItemFruit(5555).setCreativeTab(ModCreativeTabs.tabPlants).setUnlocalizedName("grapeSeed");
+		LanguageRegistry.addName(grapeSeed, "Grape Seeds");
+		garlic = new ItemSeedFood2(5593, 1, 0.0F, ModCrops.garlicCrop.blockID, Block.tilledField.blockID).setPotionEffect(Potion.confusion.id, 12, 1, 1F).setCreativeTab(ModCreativeTabs.tabPlants).setUnlocalizedName("garlic");
+		LanguageRegistry.addName(garlic, "Garlic");
+		chicle = new ItemFruit2(5637, 1, 0.0F, false).setUnlocalizedName("chicle");
+		LanguageRegistry.addName(chicle, "Chicle");
+		chicleSeed = new ItemSeed(5638, ModCrops.chicleCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("chicleSeed");
+		LanguageRegistry.addName(chicleSeed, "Chicle Tree Seeds");
+		mint = new ItemFruit(5736).setUnlocalizedName("mint");
+		LanguageRegistry.addName(mint, "Mint Leaf");
+		mintSeed = new ItemSeed(5737, ModCrops.mintCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("mintSeed");
+		LanguageRegistry.addName(mintSeed, "Mint Seeds");
+		truffle = new ItemFruit2(5773, 2, 0.8F, true).setPotionEffect(Potion.invisibility.id, 30, 1, 1F).setPotionEffect2(Potion.regeneration.id, 0, 0, 0F).setCreativeTab(ModCreativeTabs.tabFood).setUnlocalizedName("truffle");
+		LanguageRegistry.addName(truffle, "Black Truffle");
+		truffleWhite = new ItemFruit2(5774, 2, 0.8F, true).setPotionEffect(Potion.invisibility.id, 30, 1, 1F).setPotionEffect2(Potion.regeneration.id, 0, 0, 0F).setCreativeTab(ModCreativeTabs.tabFood).setUnlocalizedName("truffleWhite");
+		LanguageRegistry.addName(truffleWhite, "White Truffle");
+		raspberry = new ItemFruit2(5775, 1, false).setPotionEffect(Potion.regeneration.id, 4, 1, 0.3F).setPotionEffect2(Potion.regeneration.id, 0, 0, 0F).setUnlocalizedName("raspberry");
+		LanguageRegistry.addName(raspberry, "Raspberry");
+		raspberrySeed = new ItemSeed(5776, ModCrops.raspberryCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("raspberrySeed");
+		LanguageRegistry.addName(raspberrySeed, "Raspberry Seeds");
+		braspberry = new ItemFruit2(5777, 1, false).setPotionEffect(Potion.regeneration.id, 4, 1, 0.4F).setPotionEffect2(Potion.regeneration.id, 0, 0, 0F).setUnlocalizedName("braspberry");
+		LanguageRegistry.addName(braspberry, "Blue Raspberry");
+		braspberrySeed = new ItemSeed(5778, ModCrops.braspberryCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("braspberrySeed");
+		LanguageRegistry.addName(braspberrySeed, "Blue Raspberry Seeds");
+		blackcurrant = new ItemFruit2(5783, 1, true).setPotionEffect(Potion.regeneration.id, 3, 0, 0.4F).setPotionEffect2(Potion.moveSpeed.id, 6, 1, 0.8F).setUnlocalizedName("blackcurrant");
+		LanguageRegistry.addName(blackcurrant, "Blackcurrant");
+		blackcurrantSeed = new ItemSeed(5784, ModCrops.blackcurrantCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("blackcurrantSeed");
+		LanguageRegistry.addName(blackcurrantSeed, "Blackcurrant Seeds");
+		blueberry = new ItemFruit2(5785, 1, true).setPotionEffect(Potion.regeneration.id, 3, 0, 0.4F).setPotionEffect2(Potion.digSpeed.id, 6, 1, 0.8F).setUnlocalizedName("blueberry");
+		LanguageRegistry.addName(blueberry, "Blueberry");
+		blueberrySeed = new ItemSeed(5786, ModCrops.blueberryCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("blueberrySeed");
+		LanguageRegistry.addName(blueberrySeed, "Blueberry Seeds");
+		
+		
+		
+		roseSeed = new ItemSeed(5460, ModCrops.roseCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("roseSeed");
+		LanguageRegistry.addName(roseSeed, "Rose Seeds");
+		dandelionSeed = new ItemSeed(5461, ModCrops.dandelionCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("dandelionSeed");
+		LanguageRegistry.addName(dandelionSeed, "Dandelion Seeds");
+		
+		
+
+		weed = new ItemFruit(5462).setUnlocalizedName("weed");
+		LanguageRegistry.addName(weed, "Cannabis Leaf");
+		weedSeed = new ItemSeed(5463, ModCrops.weedCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("weedSeed");
+		LanguageRegistry.addName(weedSeed, "Cannabis Seeds");
+		weedDry = new ItemFruit(5464).setUnlocalizedName("weedDry");
+		LanguageRegistry.addName(weedDry, "Dried Cannabis Leaf");
+		weedCrushed = new ItemFruit(5465).setUnlocalizedName("weedCrushed");
+		LanguageRegistry.addName(weedCrushed, "Crushed Cannabis Leaves");
+		weedPaper = new ItemFruit(5466).setUnlocalizedName("weedPaper");
+		LanguageRegistry.addName(weedPaper, "Smoking Paper");
+		weedInPaper = new ItemFruit(5467).setUnlocalizedName("weedInPaper");
+		LanguageRegistry.addName(weedInPaper, "Smoking Paper (Cannabis)");
+		weedJoint = new ItemFruit(5468).setUnlocalizedName("weedJoint");
+		LanguageRegistry.addName(weedJoint, "Cannabis Cigarette");
+		weedLitJoint = new ItemJoint(5469, 1, false).setPotionEffect(Potion.regeneration.id, 10, 1, 1F).setPotionEffect3(Potion.confusion.id, 45, 10, 1F).setPotionEffect4(Potion.moveSlowdown.id, 30, 2, 1F).setPotionEffect5(Potion.digSlowdown.id, 35, 4, 1F).setPotionEffect2(Potion.damageBoost.id, 40, 2, 1F).setUnlocalizedName("weedLitJoint");
+		LanguageRegistry.addName(weedLitJoint, "Cannabis Cigarette");
+		
+		
+		
+		tobacco = new ItemFruit(5523).setUnlocalizedName("tobacco");
+		LanguageRegistry.addName(tobacco, "Tobacco Leaf");
+		tobaccoSeed = new ItemSeed(5524, ModCrops.tobaccoCrop.blockID, Block.tilledField.blockID).setUnlocalizedName("tobaccoSeed");
+		LanguageRegistry.addName(tobaccoSeed, "Tobacco Seeds");
+		tobaccoDry = new ItemFruit(5543).setUnlocalizedName("tobaccoDry");
+		LanguageRegistry.addName(tobaccoDry, "Dried Tobacco Leaf");
+		tobaccoCrushed = new ItemFruit(5544).setUnlocalizedName("tobaccoCrushed");
+		LanguageRegistry.addName(tobaccoCrushed, "Crushed Tobacco Leaves");
+		tobaccoInPaper = new ItemFruit(5621).setUnlocalizedName("tobaccoInPaper");
+		LanguageRegistry.addName(tobaccoInPaper, "Smoking Paper (Tobacco)");
+		tobaccoCigarette = new ItemFruit(5622).setUnlocalizedName("tobaccoCigarette");
+		LanguageRegistry.addName(tobaccoCigarette, "Cigarette");
+		tobaccoCigaretteFilter = new ItemFruit(5624).setUnlocalizedName("tobaccoCigaretteFilter");
+		LanguageRegistry.addName(tobaccoCigaretteFilter, "Cigarette (With Filter)");
+		tobaccoLitCigarette = new ItemJoint(5623, 0, false).setPotionEffect(Potion.regeneration.id, 6, 1, 1F).setPotionEffect3(Potion.confusion.id, 20, 1, 1F).setPotionEffect4(Potion.moveSlowdown.id, 30, 2, 1F).setPotionEffect5(Potion.digSlowdown.id, 50, 4, 1F).setPotionEffect2(Potion.damageBoost.id, 22, 3, 1F).setUnlocalizedName("tobaccoLitCigarette");
+		LanguageRegistry.addName(tobaccoLitCigarette, "Cigarette");
+		tobaccoLitCigaretteFilter = new ItemJoint(5625, 0, false).setPotionEffect(Potion.regeneration.id, 8, 1, 1F).setPotionEffect3(Potion.confusion.id, 14, 0, 1F).setPotionEffect4(Potion.moveSlowdown.id, 20, 2, 1F).setPotionEffect5(Potion.digSlowdown.id, 35, 4, 1F).setPotionEffect2(Potion.damageBoost.id, 24, 3, 1F).setUnlocalizedName("tobaccoLitCigaretteFilter");
+		LanguageRegistry.addName(tobaccoLitCigaretteFilter, "Cigarette (With Filter)");
+		tobaccoCigar = new ItemFruit(5627).setUnlocalizedName("tobaccoCigar");
+		LanguageRegistry.addName(tobaccoCigar, "Cigar");
+		tobaccoLitCigar = new ItemJoint(5628, 2, false).setPotionEffect(Potion.regeneration.id, 20, 1, 1F).setPotionEffect3(Potion.confusion.id, 32, 0, 1F).setPotionEffect4(Potion.moveSlowdown.id, 80, 2, 1F).setPotionEffect5(Potion.digSlowdown.id, 60, 4, 1F).setPotionEffect2(Potion.damageBoost.id, 35, 4, 1F).setUnlocalizedName("tobaccoLitCigar");
+		LanguageRegistry.addName(tobaccoLitCigar, "Cigar");
+		filter = new ItemFruit(5626).setUnlocalizedName("filter");
+		LanguageRegistry.addName(filter, "Filter Paper");
+		
+		walnutshell = new ItemWalnutShell(5541).setUnlocalizedName("walnutshell");
+		LanguageRegistry.addName(walnutshell, "Walnut Shell");
+		walnutshellCluster = new ItemWalnutShellCluster(5650).setUnlocalizedName("walnutshellCluster");
+		LanguageRegistry.addName(walnutshellCluster, "Walnut Shell Cluster");
+		walnutshellHard = new ItemWalnutShellHard(5649).setUnlocalizedName("walnutshellHard");
+		LanguageRegistry.addName(walnutshellHard, "Hard Walnut Shell");
+		walnutshellClusterHard = new ItemWalnutShellClusterHard(5651).setUnlocalizedName("walnutshellClusterHard");
+		LanguageRegistry.addName(walnutshellClusterHard, "Hard Walnut Shell Cluster");
+		walnutshellHarder = new ItemWalnutShellHarder(5667).setUnlocalizedName("walnutshellHarder");
+		LanguageRegistry.addName(walnutshellHarder, "Iron Walnut Shell");
+		walnutshellClusterHarder = new ItemWalnutShellClusterHarder(5668).setUnlocalizedName("walnutshellClusterHarder");
+		LanguageRegistry.addName(walnutshellClusterHarder, "Iron Walnut Shell Cluster");
+		walnutshellGold = new ItemWalnutShellGold(5803).setUnlocalizedName("walnutshellGold");
+		LanguageRegistry.addName(walnutshellGold, "Golden Walnut Shell");
+		walnutshellClusterGold = new ItemWalnutShellClusterGold(5804).setUnlocalizedName("walnutshellClusterGold");
+		LanguageRegistry.addName(walnutshellClusterGold, "Golden Walnut Shell Cluster");
+		walnutshellDiamond = new ItemWalnutShellDiamond(5844).setUnlocalizedName("walnutshellDiamond");
+		LanguageRegistry.addName(walnutshellDiamond, "Diamond Walnut Shell");
+		walnutshellClusterDiamond = new ItemWalnutShellClusterDiamond(5845).setUnlocalizedName("walnutshellClusterDiamond");
+		LanguageRegistry.addName(walnutshellClusterDiamond, "Diamond Walnut Shell Cluster");
+		walnutshellFire = new ItemWalnutShellFire(5652).setUnlocalizedName("walnutshellFire");
+		LanguageRegistry.addName(walnutshellFire, "Inferno Shell");
+		walnutshellFireCluster = new ItemWalnutShellFireCluster(5653).setUnlocalizedName("walnutshellFireCluster");
+		LanguageRegistry.addName(walnutshellFireCluster, "Inferno Shell Cluster");
+		walnutshellElectric = new ItemWalnutShellElectric(5654).setUnlocalizedName("walnutshellElectric");
+		LanguageRegistry.addName(walnutshellElectric, "Electric Shell");
+		walnutshellElectricCluster = new ItemWalnutShellElectricCluster(5655).setUnlocalizedName("walnutshellElectricCluster");
+		LanguageRegistry.addName(walnutshellElectricCluster, "Electric Shell Cluster");
+		walnutshellBomb = new ItemWalnutShellBomb(5656).setUnlocalizedName("walnutshellBomb");
+		LanguageRegistry.addName(walnutshellBomb, "Explosive Walnut Shell");
+		walnutshellBombCluster = new ItemWalnutShellBombCluster(5657).setUnlocalizedName("walnutshellBombCluster");
+		LanguageRegistry.addName(walnutshellBombCluster, "Explosive Walnut Shell Cluster");
+		walnutshellBigBomb = new ItemWalnutShellBigBomb(5658).setUnlocalizedName("walnutshellBigBomb");
+		LanguageRegistry.addName(walnutshellBigBomb, "Large Explosive Walnut Shell");
+		walnutshellBigBombCluster = new ItemWalnutShellBigBombCluster(5659).setUnlocalizedName("walnutshellBigBombCluster");
+		LanguageRegistry.addName(walnutshellBigBombCluster, "Large Explosive Walnut Shell Cluster");
+		walnutshellNuke = new ItemWalnutShellNuke(5660).setUnlocalizedName("walnutshellNuke");
+		LanguageRegistry.addName(walnutshellNuke, "\247eNuclear Walnut Shell");
+		walnutshellNukeCluster = new ItemWalnutShellNukeCluster(5661).setUnlocalizedName("walnutshellNukeCluster");
+		LanguageRegistry.addName(walnutshellNukeCluster, "\247eNuclear Walnut Shell Cluster");
+		walnutshellWB = new ItemWalnutShellWB(5671).setUnlocalizedName("walnutshellWB");
+		LanguageRegistry.addName(walnutshellWB, "\247cCataclysm Walnut Shell");
+		walnutshellWBCluster = new ItemWalnutShellWBCluster(5672).setUnlocalizedName("walnutshellWBCluster");
+		LanguageRegistry.addName(walnutshellWBCluster, "\247cCataclysm Walnut Shell Cluster");
+		
+		
+
+
+	}
+
+	@Init
+	public void load (FMLInitializationEvent event) {
+		
+		
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.weedCrushed, 1), new Object[]{new ItemStack(ModFood.foodgrinder, 1, WILDCARD_VALUE), new ItemStack(ModFruits.weedDry)}); 
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.tobaccoCrushed, 1), new Object[]{new ItemStack(ModFood.foodgrinder, 1, WILDCARD_VALUE), new ItemStack(ModFruits.tobaccoDry)}); 
+		
+		GameRegistry.addRecipe(new ItemStack(weedPaper, 4), new Object[] {"XXX", 'X', Item.paper});
+		GameRegistry.addRecipe(new ItemStack(weedInPaper), new Object[] {"X", "Y", 'X', weedCrushed, 'Y', weedPaper});
+		GameRegistry.addRecipe(new ItemStack(weedJoint), new Object[] {"X", 'X', weedInPaper});
+		GameRegistry.addShapelessRecipe(new ItemStack(weedLitJoint, 1), new Object[]{new ItemStack(weedJoint), new ItemStack(Item.flintAndSteel)}); 
+		GameRegistry.addRecipe(new ItemStack(tobaccoInPaper), new Object[] {"X", "Y", 'X', tobaccoCrushed, 'Y', weedPaper});
+		GameRegistry.addRecipe(new ItemStack(tobaccoCigarette), new Object[] {"X", 'X', tobaccoInPaper});
+		GameRegistry.addShapelessRecipe(new ItemStack(tobaccoLitCigarette, 1), new Object[]{new ItemStack(tobaccoCigarette), new ItemStack(Item.flintAndSteel)}); 
+		GameRegistry.addRecipe(new ItemStack(tobaccoCigaretteFilter), new Object[] {"X", "Y", 'X', tobaccoInPaper, 'Y', filter});
+		GameRegistry.addShapelessRecipe(new ItemStack(tobaccoLitCigaretteFilter, 1), new Object[]{new ItemStack(tobaccoCigaretteFilter), new ItemStack(Item.flintAndSteel)}); 
+		GameRegistry.addRecipe(new ItemStack(tobaccoCigar), new Object[] {"YYY", "XXX","YYY", 'X', tobaccoCrushed, 'Y', weedPaper});
+		GameRegistry.addShapelessRecipe(new ItemStack(tobaccoLitCigar, 1), new Object[]{new ItemStack(tobaccoCigar), new ItemStack(Item.flintAndSteel)}); 
+		GameRegistry.addRecipe(new ItemStack(filter, 4), new Object[] {"YYY", "YXY", "YYY", 'X', new ItemStack(Item.dyePowder,1,3), 'Y', Item.paper});
+		GameRegistry.addRecipe(new ItemStack(Block.cloth), new Object[] {"XX", "XX", 'X', ModFruits.cotton});
+		
+		GameRegistry.addSmelting(Block.planks.blockID, new ItemStack(ModFruits.ash), 0.4f);
+		GameRegistry.addSmelting(Block.woodSingleSlab.blockID, new ItemStack(ModFruits.ash), 0.2f);
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.oliveSeed, 1), new Object[]{new ItemStack(ModFruits.olive)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.lemonSeed, 1), new Object[]{new ItemStack(ModFruits.lemon)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.orangeSeed, 1), new Object[]{new ItemStack(ModFruits.orange)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.cherrySeed, 1), new Object[]{new ItemStack(ModFruits.cherry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.cottonSeed, 1), new Object[]{new ItemStack(ModFruits.cotton)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.cornSeed, 2), new Object[]{new ItemStack(ModFruits.corn)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.strawberrySeed, 1), new Object[]{new ItemStack(ModFruits.strawberry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.tomatoSeed, 1), new Object[]{new ItemStack(ModFruits.tomato)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.lavenderSeed, 1), new Object[]{new ItemStack(ModCrops.lavenderPlant)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.parsleySeed, 1), new Object[]{new ItemStack(ModCrops.parsleyPlant)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.peppersSeed, 1), new Object[]{new ItemStack(ModFruits.pepperGreen)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.peppersSeed, 1), new Object[]{new ItemStack(ModFruits.pepperYellow)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.peppersSeed, 1), new Object[]{new ItemStack(ModFruits.pepperRed)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.grapeSeed, 1), new Object[]{new ItemStack(ModFruits.grape)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.chicleSeed, 1), new Object[]{new ItemStack(ModFruits.chicle)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.raspberrySeed, 1), new Object[]{new ItemStack(ModFruits.raspberry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.braspberrySeed, 1), new Object[]{new ItemStack(ModFruits.braspberry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.blackcurrantSeed, 1), new Object[]{new ItemStack(ModFruits.blackcurrant)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.blueberrySeed, 1), new Object[]{new ItemStack(ModFruits.blueberry)});
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutshell, 1), new Object[]{new ItemStack(ModFruits.walnut)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutshellHard, 1), new Object[]{new ItemStack(ModFruits.walnutshell), new ItemStack(Item.slimeBall)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutshellHarder, 1), new Object[]{new ItemStack(ModFruits.walnutHarder)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutshellGold, 1), new Object[]{new ItemStack(ModFruits.walnutGold)});	
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutshellHard, 1), new Object[]{new ItemStack(ModFruits.walnutHard)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutshellCluster, 1), new Object[]{new ItemStack(ModFruits.walnutshell), new ItemStack(ModFruits.walnutshell), new ItemStack(ModFruits.walnutshell)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutshellClusterHard, 1), new Object[]{new ItemStack(ModFruits.walnutshellHard), new ItemStack(ModFruits.walnutshellHard), new ItemStack(ModFruits.walnutshellHard)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutshellClusterHarder, 1), new Object[]{new ItemStack(ModFruits.walnutshellHarder), new ItemStack(ModFruits.walnutshellHarder), new ItemStack(ModFruits.walnutshellHarder)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutshellClusterGold, 1), new Object[]{new ItemStack(ModFruits.walnutshellGold), new ItemStack(ModFruits.walnutshellGold), new ItemStack(ModFruits.walnutshellGold)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutshellFire, 1), new Object[]{new ItemStack(ModFruits.walnutshellHard), new ItemStack(Item.fireballCharge)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutshellFireCluster, 1), new Object[]{new ItemStack(ModFruits.walnutshellFire), new ItemStack(ModFruits.walnutshellFire), new ItemStack(ModFruits.walnutshellFire)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutshellElectric, 1), new Object[]{new ItemStack(ModFruits.walnutshellHard), new ItemStack(Item.redstone), new ItemStack(Item.redstone), new ItemStack(Item.redstone), new ItemStack(Item.ingotIron)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutshellElectricCluster, 1), new Object[]{new ItemStack(ModFruits.walnutshellElectric), new ItemStack(ModFruits.walnutshellElectric), new ItemStack(ModFruits.walnutshellElectric)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutshellBomb, 1), new Object[]{new ItemStack(ModFruits.walnutshellHard), new ItemStack(Block.tnt), new ItemStack(Block.tnt), new ItemStack(Block.tnt), new ItemStack(Block.tnt)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutshellBombCluster, 1), new Object[]{new ItemStack(ModFruits.walnutshellBomb), new ItemStack(ModFruits.walnutshellBomb), new ItemStack(ModFruits.walnutshellBomb)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutshellBigBomb, 1), new Object[]{new ItemStack(ModFruits.walnutshellBomb), new ItemStack(Block.tnt), new ItemStack(Block.tnt), new ItemStack(Block.tnt), new ItemStack(Block.tnt), new ItemStack(Block.tnt), new ItemStack(Block.tnt), new ItemStack(Block.tnt), new ItemStack(Block.tnt)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutshellBigBombCluster, 1), new Object[]{new ItemStack(ModFruits.walnutshellBigBomb), new ItemStack(ModFruits.walnutshellBigBomb), new ItemStack(ModFruits.walnutshellBigBomb)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutshellNuke, 1), new Object[]{new ItemStack(ModFruits.walnutshellBigBomb), new ItemStack(Block.tnt), new ItemStack(ModFruits.walnutshellBigBomb), new ItemStack(ModFruits.walnutshellBigBomb), new ItemStack(ModFruits.walnutshellBigBomb), new ItemStack(ModFruits.walnutshellBigBomb), new ItemStack(ModFruits.walnutshellBigBomb), new ItemStack(ModFruits.walnutshellBigBomb), new ItemStack(ModFruits.walnutshellBigBomb)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutshellNukeCluster, 1), new Object[]{new ItemStack(ModFruits.walnutshellNuke), new ItemStack(ModFruits.walnutshellNuke), new ItemStack(ModFruits.walnutshellNuke)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutshellWB, 1), new Object[]{new ItemStack(ModFruits.walnutshellNuke), new ItemStack(ModFruits.walnutshellNuke), new ItemStack(ModFruits.walnutshellNuke), new ItemStack(ModFruits.walnutshellNuke)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutshellWBCluster, 1), new Object[]{new ItemStack(ModFruits.walnutshellWB), new ItemStack(ModFruits.walnutshellWB), new ItemStack(ModFruits.walnutshellWB)});
+		
+        Item.flintAndSteel.setContainerItem(Item.flintAndSteel);
+        
+        GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.grape, 1), new Object[]{new ItemStack(Block.vine,9)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.fertiliser, 2), new Object[]{new ItemStack(Block.dirt), new ItemStack(Block.dirt), new ItemStack(Block.dirt), new ItemStack(Block.dirt), new ItemStack(Item.dyePowder, 1, 15), new ItemStack(Item.dyePowder, 1, 15),  new ItemStack(ModFruits.ash),  new ItemStack(ModFruits.ash)});
+		
+	}
+	@PostInit
+	public void postInit(FMLPostInitializationEvent event) {
+		// this is the post initialization.
+	}
+
+}

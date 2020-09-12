@@ -1,0 +1,309 @@
+package agentsmod;
+
+import net.minecraft.block.Block;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.item.EnumToolMaterial;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.client.MinecraftForgeClient;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.EnumHelper;
+import net.minecraft.src.*;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.Init;
+import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.Mod.PostInit;
+import cpw.mods.fml.common.Mod.PreInit;
+import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
+
+import cpw.mods.fml.common.registry.LanguageRegistry;
+import net.minecraft.*;
+import net.minecraftforge.*;
+import net.minecraftforge.client.MinecraftForgeClient;
+import net.minecraftforge.common.MinecraftForge;
+
+@Mod(modid="ModTools", name="Agent's Mod", version="Alpha")
+@NetworkMod(clientSideRequired=true, serverSideRequired=false)
+public class ModTools {
+
+	public static final String modid = "ModTools";
+	
+	public static  Item baseballbat;
+	
+	public static  Item pironsword;
+	public static  Item pgoldsword;
+	public static  Item pstonesword;
+	public static  Item pwoodsword;
+	public static  Item pdiamondsword;
+	
+	public static  Item watch;
+	public static  Item chain;
+	
+	public static  Item analyser;
+	public static  Item scrollBarley;
+	public static  Item scrollBlackcurrant;
+	public static  Item scrollBlueberry;
+	public static  Item scrollBRaspberry;
+	public static  Item scrollCherry;
+	public static  Item scrollChicle;
+	public static  Item scrollCorn;
+	public static  Item scrollCotton;
+	public static  Item scrollCarrot;
+	public static  Item scrollDandelion;
+	public static  Item scrollGarlic;
+	public static  Item scrollGrape;
+	public static  Item scrollLavender;
+	public static  Item scrollLemon;
+	public static  Item scrollLettuce;
+	public static  Item scrollMint;
+	public static  Item scrollMelon;
+	public static  Item scrollOlive;
+	public static  Item scrollOnion;
+	public static  Item scrollOrange;
+	public static  Item scrollParsley;
+	public static  Item scrollPeanut;
+	public static  Item scrollPepper;
+	public static  Item scrollPeppers;
+	public static  Item scrollPumpkin;
+	public static  Item scrollPotato;
+	public static  Item scrollRaspberry;
+	public static  Item scrollRice;
+	public static  Item scrollRose;
+	public static  Item scrollStrawberry;
+	public static  Item scrollTobacco;
+	public static  Item scrollTomato;
+	public static  Item scrollWalnut;
+	public static  Item scrollWalnutHard;
+	public static  Item scrollWalnutHarder;
+	public static  Item scrollWalnutGold;
+	public static  Item scrollWalnutDiamond;
+	public static  Item scrollWeed;
+	public static  Item scrollWheat;
+	
+	public static  Item moneyone;
+	public static  Item moneytwo;
+	public static  Item moneythree;
+	public static  Item moneyfour;
+	public static  Item moneyfive;
+	public static  Item moneysix;
+	public static  Item moneyseven;
+	public static  Item moneyeight;
+	public static  Item moneynine;
+	public static  Item moneyten;
+	public static  Item moneyeleven;
+	public static  Item moneytwelve;
+	public static  Item moneythirteen;
+	
+	static EnumToolMaterial CHEF = EnumHelper.addToolMaterial("CHEF", 1, 50, 5.3F, 3, 0);
+	static EnumToolMaterial GRINDER = EnumHelper.addToolMaterial("GRINDER", 0, 50, 0.2F, 0, 0);
+	static EnumToolMaterial TAIL = EnumHelper.addToolMaterial("TAIL", 0, 1, 0.0F, 6, 14);
+	static EnumToolMaterial BASEBALL = EnumHelper.addToolMaterial("BASEBALL", 0, 1, 0.0F, 200, 200);
+	
+	// The instance of your mod that Forge uses.
+	@Instance("ModTools")
+	public static ModTools instance;
+	// This loads up your common and client proxies. change the location of the proxies and the public static to fit your setup
+
+
+	@SidedProxy(clientSide="agentsmod.ClientProxy", serverSide="agentsmod.CommonProxy")
+	public static CommonProxy proxy;
+
+	@PreInit
+	public void preInit(FMLPreInitializationEvent event) {
+
+		baseballbat = (new ItemBaseballBat(5723)).setUnlocalizedName("baseballbat");
+		
+		chain = new ItemTool2(5545).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("chain");
+		LanguageRegistry.instance().addName(chain, "Iron Chain");
+		
+		watch = new ItemWatch(5546).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("watch");
+		LanguageRegistry.instance().addName(watch, "\2475Hypnotising Watch");
+		
+		analyser = new ItemAnalyser(5807).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("analyser");
+		LanguageRegistry.instance().addName(analyser, "\247eSeed Analyser");
+		
+		scrollBarley = new ItemScrollBarley(5808).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollBarley");
+		LanguageRegistry.instance().addName(scrollBarley, "Fact File (Barley)");
+		scrollBlackcurrant = new ItemScrollBlackcurrant(5809).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollBlackcurrant");
+		LanguageRegistry.instance().addName(scrollBlackcurrant, "Fact File (Blackcurrant)");
+		scrollBlueberry = new ItemScrollBlueberry(5810).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollBlueberry");
+		LanguageRegistry.instance().addName(scrollBlueberry, "Fact File (Blueberry)");
+		scrollBRaspberry = new ItemScrollBRaspberry(5811).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollBRaspberry");
+		LanguageRegistry.instance().addName(scrollBRaspberry, "Fact File (Blue Raspberry)");
+		scrollCherry = new ItemScrollCherry(5812).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollCherry");
+		LanguageRegistry.instance().addName(scrollCherry, "Fact File (Cherry)");
+		scrollChicle = new ItemScrollChicle(5813).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollChicle");
+		LanguageRegistry.instance().addName(scrollChicle, "Fact File (Chicle)");
+		scrollLemon = new ItemScrollLemon(5814).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollLemon");
+		LanguageRegistry.instance().addName(scrollLemon, "Fact File (Lemon)");
+		scrollOlive = new ItemScrollOlive(5815).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollOlive");
+		LanguageRegistry.instance().addName(scrollOlive, "Fact File (Olive)");
+		scrollOrange = new ItemScrollOrange(5816).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollOrange");
+		LanguageRegistry.instance().addName(scrollOrange, "Fact File (Orange)");
+		scrollCorn = new ItemScrollCorn(5817).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollCorn");
+		LanguageRegistry.instance().addName(scrollCorn, "Fact File (Corn)");
+		scrollCotton = new ItemScrollCotton(5818).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollCotton");
+		LanguageRegistry.instance().addName(scrollCotton, "Fact File (Cotton)");
+		scrollDandelion = new ItemScrollDandelion(5819).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollDandelion");
+		LanguageRegistry.instance().addName(scrollDandelion, "Fact File (Dandelion)");
+		scrollGarlic = new ItemScrollGarlic(5820).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollGarlic");
+		LanguageRegistry.instance().addName(scrollGarlic, "Fact File (Garlic)");
+		scrollGrape = new ItemScrollGrape(5821).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollGrape");
+		LanguageRegistry.instance().addName(scrollGrape, "Fact File (Grape)");
+		scrollLavender = new ItemScrollLavender(5822).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollLavender");
+		LanguageRegistry.instance().addName(scrollLavender, "Fact File (Lavender)");
+		scrollLettuce = new ItemScrollLettuce(5823).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollLettuce");
+		LanguageRegistry.instance().addName(scrollLettuce, "Fact File (Lettuce)");
+		scrollMint = new ItemScrollMint(5824).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollMint");
+		LanguageRegistry.instance().addName(scrollMint, "Fact File (Mint)");
+		scrollOnion = new ItemScrollOnion(5825).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollOnion");
+		LanguageRegistry.instance().addName(scrollOnion, "Fact File (Onion)");
+		scrollParsley = new ItemScrollParsley(5826).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollParsley");
+		LanguageRegistry.instance().addName(scrollParsley, "Fact File (Parsley)");
+		scrollPeanut = new ItemScrollPeanut(5827).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollPeanut");
+		LanguageRegistry.instance().addName(scrollPeanut, "Fact File (Peanut)");
+		scrollPepper = new ItemScrollPepper(5828).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollPepper");
+		LanguageRegistry.instance().addName(scrollPepper, "Fact File (Pepper)");
+		scrollPeppers = new ItemScrollPeppers(5829).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollPeppers");
+		LanguageRegistry.instance().addName(scrollPeppers, "Fact File (Bell Peppers)");
+		scrollRaspberry = new ItemScrollRaspberry(5830).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollRaspberry");
+		LanguageRegistry.instance().addName(scrollRaspberry, "Fact File (Raspberry)");
+		scrollRice = new ItemScrollRice(5831).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollRice");
+		LanguageRegistry.instance().addName(scrollRice, "Fact File (Rice)");
+		scrollRose = new ItemScrollRose(5832).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollRose");
+		LanguageRegistry.instance().addName(scrollRose, "Fact File (Rose)");
+		scrollStrawberry = new ItemScrollStrawberry(5833).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollStrawberry");
+		LanguageRegistry.instance().addName(scrollStrawberry, "Fact File (Strawberry)");
+		scrollTobacco = new ItemScrollTobacco(5834).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollTobacco");
+		LanguageRegistry.instance().addName(scrollTobacco, "Fact File (Tobacco)");
+		scrollTomato = new ItemScrollTomato(5835).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollTomato");
+		LanguageRegistry.instance().addName(scrollTomato, "Fact File (Tomato)");
+		scrollWalnut = new ItemScrollWalnut(5836).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollWalnut");
+		LanguageRegistry.instance().addName(scrollWalnut, "Fact File (Walnut)");
+		scrollWalnutHard = new ItemScrollWalnutHard(5837).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollWalnutHard");
+		LanguageRegistry.instance().addName(scrollWalnutHard, "Fact File (Hardened Walnut)");
+		scrollWalnutHarder = new ItemScrollWalnutHarder(5838).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollWalnutHarder");
+		LanguageRegistry.instance().addName(scrollWalnutHarder, "Fact File (Iron Walnut)");
+		scrollWalnutGold = new ItemScrollWalnutGold(5839).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollWalnutGold");
+		LanguageRegistry.instance().addName(scrollWalnutGold, "Fact File (Golden Walnut)");
+		scrollWalnutDiamond = new ItemScrollWalnutDiamond(5846).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollWalnutDiamond");
+		LanguageRegistry.instance().addName(scrollWalnutDiamond, "Fact File (Diamond Walnut)");
+		scrollWeed = new ItemScrollWeed(5840).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("scrollWeed");
+		LanguageRegistry.instance().addName(scrollWeed, "Fact File (Cannabis)");
+		
+		
+pironsword = (new ItemPoisonSword(5515, EnumToolMaterial.IRON)).setUnlocalizedName("pironsword");
+		pgoldsword = (new ItemPoisonSword(5516, EnumToolMaterial.GOLD)).setUnlocalizedName("pgoldsword");
+		pdiamondsword = (new ItemPoisonSword(5517, EnumToolMaterial.EMERALD)).setUnlocalizedName("pdiamondsword");
+		pstonesword = (new ItemPoisonSword(5518, EnumToolMaterial.STONE)).setUnlocalizedName("pstonesword");
+		pwoodsword = (new ItemPoisonSword(5519, EnumToolMaterial.WOOD)).setUnlocalizedName("pwoodsword");
+		
+		moneyone = new ItemTool2(5760).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("moneyone");
+		LanguageRegistry.instance().addName(moneyone, "$1 Coin");
+		moneytwo = new ItemTool2(5761).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("moneytwo");
+		LanguageRegistry.instance().addName(moneytwo, "$5 Coin");
+		moneythree = new ItemTool2(5762).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("moneythree");
+		LanguageRegistry.instance().addName(moneythree, "$10 Coin");
+		moneyfour = new ItemTool2(5763).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("moneyfour");
+		LanguageRegistry.instance().addName(moneyfour, "$50 Coin");
+		moneyfive = new ItemTool2(5764).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("moneyfive");
+		LanguageRegistry.instance().addName(moneyfive, "$100 Coin");
+		moneysix = new ItemTool2(5765).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("moneysix");
+		LanguageRegistry.instance().addName(moneysix, "$500 Note");
+		moneyseven = new ItemTool2(5766).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("moneyseven");
+		LanguageRegistry.instance().addName(moneyseven, "$1000 Note");
+		moneyeight = new ItemTool2(5767).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("moneyeight");
+		LanguageRegistry.instance().addName(moneyeight, "$5000 Note");
+		moneynine = new ItemTool2(5768).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("moneynine");
+		LanguageRegistry.instance().addName(moneynine, "$10000 Note");
+		moneyten = new ItemTool2(5769).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("moneyten");
+		LanguageRegistry.instance().addName(moneyten, "$50000 Note");
+		moneyeleven = new ItemTool2(5770).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("moneyeleven");
+		LanguageRegistry.instance().addName(moneyeleven, "$100000 Note");
+		moneytwelve = new ItemTool2(5771).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("moneytwelve");
+		LanguageRegistry.instance().addName(moneytwelve, "$500000 Note");
+		moneythirteen = new ItemTool2(5772).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("moneythirteen");
+		LanguageRegistry.instance().addName(moneythirteen, "$1000000 Note");
+		
+		LanguageRegistry.addName(pironsword, "Iron Sword \2472(Poisoned)");	
+		LanguageRegistry.addName(pwoodsword, "Wooden Sword \2472(Poisoned)");
+		LanguageRegistry.addName(pstonesword, "Stone Sword \2472(Poisoned)");
+		LanguageRegistry.addName(pgoldsword, "Golden Sword \2472(Poisoned)");
+		LanguageRegistry.addName(pdiamondsword, "Diamond Sword \2472(Poisoned)");
+		
+		LanguageRegistry.addName(baseballbat, "\247ePeanut-Butter-Jelly-Time Baseball Bat");
+		//\247e
+		
+	}
+
+	@Init
+	public void load (FMLInitializationEvent event) {
+
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.baseballbat, 1), new Object[]{new ItemStack(Item.pocketSundial), new ItemStack(ModFood.peanutbutter), new ItemStack(ModFood.jam)});  
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.pstonesword, 1), new Object[]{new ItemStack(Item.swordStone), new ItemStack(ModFood.poison)});    
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.pwoodsword, 1), new Object[]{new ItemStack(Item.swordWood), new ItemStack(ModFood.poison)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.pironsword, 1), new Object[]{new ItemStack(Item.swordIron), new ItemStack(ModFood.poison)}); 
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.pgoldsword, 1), new Object[]{new ItemStack(Item.swordGold), new ItemStack(ModFood.poison)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.pdiamondsword, 1), new Object[]{new ItemStack(Item.swordDiamond), new ItemStack(ModFood.poison)});  
+	
+		GameRegistry.addRecipe(new ItemStack(Item.saddle, 1), new Object[] {"XXX", "XYX", "VSV", 'Y', new ItemStack(Item.ingotGold), 'X', new ItemStack(Item.leather), 'V', new ItemStack(Item.ingotIron), 'S', new ItemStack(Item.silk)});
+		
+		GameRegistry.addRecipe(new ItemStack(chain, 2), new Object[] {" X ", "X X", " X ", 'X', new ItemStack(Item.ingotIron)});
+		GameRegistry.addRecipe(new ItemStack(Item.helmetChain, 1), new Object[] {"XXX", "X X", 'X', new ItemStack(ModTools.chain)});
+		GameRegistry.addRecipe(new ItemStack(Item.plateChain, 1), new Object[] {"X X", "XXX", "XXX", 'X', new ItemStack(ModTools.chain)});
+		GameRegistry.addRecipe(new ItemStack(Item.legsChain, 1), new Object[] {"XXX", "X X", "X X", 'X', new ItemStack(ModTools.chain)});
+		GameRegistry.addRecipe(new ItemStack(Item.bootsChain, 1), new Object[] {"X X", "X X", 'X', new ItemStack(ModTools.chain)});
+		
+		GameRegistry.addRecipe(new ItemStack(watch, 1), new Object[] {"YXY", "XVX", "YXY", 'X', new ItemStack(Item.ingotGold), 'V', new ItemStack(Item.pocketSundial), 'Y', new ItemStack(chain)});
+		GameRegistry.addRecipe(new ItemStack(analyser, 1), new Object[] {" R ", "IPI", "IGI", 'G', new ItemStack(Item.ingotGold), 'I', new ItemStack(Item.ingotIron), 'R', new ItemStack(Item.redstone), 'P', new ItemStack(Item.paper), 'G', new ItemStack(Block.thinGlass)});
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneyone, 5), new Object[]{new ItemStack(moneytwo)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneytwo, 2), new Object[]{new ItemStack(moneythree)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneythree, 5), new Object[]{new ItemStack(moneyfour)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneyfour, 2), new Object[]{new ItemStack(moneyfive)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneyfive, 5), new Object[]{new ItemStack(moneysix)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneysix, 2), new Object[]{new ItemStack(moneyseven)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneyseven, 5), new Object[]{new ItemStack(moneyeight)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneyeight, 2), new Object[]{new ItemStack(moneynine)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneynine, 5), new Object[]{new ItemStack(moneyten)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneyten, 2), new Object[]{new ItemStack(moneyeleven)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneyeleven, 5), new Object[]{new ItemStack(moneytwelve)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneytwelve, 2), new Object[]{new ItemStack(moneythirteen)});  
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneytwo, 1), new Object[]{new ItemStack(moneyone), new ItemStack(moneyone), new ItemStack(moneyone), new ItemStack(moneyone), new ItemStack(moneyone)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneythree, 1), new Object[]{new ItemStack(moneytwo), new ItemStack(moneytwo)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneyfour, 1), new Object[]{new ItemStack(moneythree), new ItemStack(moneythree), new ItemStack(moneythree), new ItemStack(moneythree), new ItemStack(moneythree)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneyfive, 1), new Object[]{new ItemStack(moneyfour), new ItemStack(moneyfour)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneysix, 1), new Object[]{new ItemStack(moneyfive), new ItemStack(moneyfive), new ItemStack(moneyfive), new ItemStack(moneyfive), new ItemStack(moneyfive)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneyseven, 1), new Object[]{new ItemStack(moneysix), new ItemStack(moneysix)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneyeight, 1), new Object[]{new ItemStack(moneyseven), new ItemStack(moneyseven), new ItemStack(moneyseven), new ItemStack(moneyseven), new ItemStack(moneyseven)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneynine, 1), new Object[]{new ItemStack(moneyeight), new ItemStack(moneyeight)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneyten, 1), new Object[]{new ItemStack(moneynine), new ItemStack(moneynine), new ItemStack(moneynine), new ItemStack(moneynine), new ItemStack(moneynine)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneyeleven, 1), new Object[]{new ItemStack(moneyten), new ItemStack(moneyten)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneytwelve, 1), new Object[]{new ItemStack(moneyeleven), new ItemStack(moneyeleven), new ItemStack(moneyeleven), new ItemStack(moneyeleven), new ItemStack(moneyeleven)});  
+		GameRegistry.addShapelessRecipe(new ItemStack(ModTools.moneythirteen, 1), new Object[]{new ItemStack(moneytwelve), new ItemStack(moneytwelve)});  
+		
+		GameRegistry.addRecipe(new ItemStack(moneyone, 5), new Object[] {" X ", "XXX", " X ", 'X', new ItemStack(Item.ingotIron)});
+		GameRegistry.addRecipe(new ItemStack(moneyfour, 5), new Object[] {" X ", "XXX", " X ", 'X', new ItemStack(Item.ingotGold)});
+		GameRegistry.addRecipe(new ItemStack(moneysix, 1), new Object[] {"YXY", 'X', new ItemStack(Item.diamond), 'Y', new ItemStack(Item.paper)});
+		GameRegistry.addRecipe(new ItemStack(moneyseven, 1), new Object[] {"YXY", 'X', new ItemStack(Item.emerald), 'Y', new ItemStack(Item.paper)});
+		
+	}
+
+
+
+	@PostInit
+	public void postInit(FMLPostInitializationEvent event) {
+		// this is the post initialization.
+	}
+}

@@ -1,0 +1,1383 @@
+
+package agentsmod;
+
+import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.item.EnumToolMaterial;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemReed;
+import net.minecraft.item.ItemSoup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
+import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.potion.Potion;
+import net.minecraftforge.common.MinecraftForge;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.Init;
+import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.Mod.PostInit;
+import cpw.mods.fml.common.Mod.PreInit;
+import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
+
+@Mod(modid="ModFood", name="Agent's Mod", version="Alpha")
+@NetworkMod(clientSideRequired=true, serverSideRequired=false)
+public class ModFood {
+
+	public static final String modid = "ModFood";
+
+	public static Item poison;
+	public static Item scorpiontail;
+	public static Item wolffur;
+	public static Item mammothfur;
+	public static Item stonecog;
+	public static Item woodcog;
+	public static Item grindingmech;
+	public static Item core;
+	public static Item core2;
+	public static Item tusk;
+	public static Item whalefat;
+	public static Item oilseed;
+	public static Item oilolive;
+	public static Item oilwhale;
+	
+	public static Item potionhunger;
+	public static Item potionhungerLong;
+	public static Item potionhungerStrong;
+	public static Item potionvenomLong;
+	public static Item potionvenomStrong;
+
+	public static Item knife;
+	public static Item whisk;
+	public static Item foodgrinder;
+	public static Item destalker;
+	public static Item cheesemold;
+	public static Item cheesemoldFilled;
+	public static Item cheesemoldSet;
+
+	public static Item straw;
+	public static Item stalk;
+	public static Item wheatgrain;
+	public static Item barleygrain;
+	public static Item barleymalt;
+	public static Item flour;
+	public static Item dough;
+	public static Item pasta;
+	public static Item pastry;
+	public static Item doughbread;
+	public static Item magicyeast;
+	public static Item yeast;
+	public static Item cheesecurd;
+	public static Item lard;
+	public static Item butter;
+	public static Item cream;
+	public static Item caramel;
+	public static Item cheese;
+
+	public static Item doughbiscuit;
+	public static Item doughbiscuitchocolate;
+	public static Item doughbiscuitcaramel;
+	public static Item doughbiscuitfruit;
+	public static Item doughbiscuitpeanutbutter;
+	public static Item biscuit;
+	public static Item biscuitchocolate;
+	public static Item biscuitcaramel;
+	public static Item biscuitfruit;
+	public static Item biscuitcream;
+	public static Item biscuitjaffa;
+	public static Item biscuitpeanutbutter;
+	
+	public static Item salt;
+	public static Item pepper;
+	public static Item peppersalt;
+
+	public static Item bakedbread;
+	public static Item burntbread;
+	public static Item buttiepork;
+	public static Item buttiebeef;
+	public static Item buttiefish;
+	public static Item buttiesalami;
+	public static Item buttiecheese;
+	public static Item buttiechicken;
+	public static Item buttielamb;
+	public static Item buttiemammoth;
+	public static Item buttiebacon;
+	public static Item buttieegg;
+	public static Item buttiejam;
+	public static Item buttiemarmalade;
+	public static Item buttiepeanutbutter;
+	public static Item buttiepbj;
+	public static Item jamtoast;
+	public static Item toast;
+
+	public static Item pizzacheese;
+	public static Item pizzacheesestuffed;
+	public static Item pepperonislice;
+	public static Item cheeseslice;
+	public static Item breadslice;
+	public static Item pizzadough;
+	public static Item pizzabase;
+	public static Item pizzadoughstuffed;
+	public static Item pizzabasestuffed;
+	public static Item pizzapepperoni;
+	public static Item pizzapepperonibase;
+	public static Item pizzapepperonistuffed;
+	public static Item pizzapepperonibasestuffed;
+	public static Item pizzacheesy;
+	public static Item pizzacheesybase;
+	public static Item pizzacheesystuffed;
+	public static Item pizzacheesybasestuffed;
+	public static Item pizzameat;
+	public static Item pizzameatbase;
+	public static Item pizzameatstuffed;
+	public static Item pizzameatbasestuffed;
+	public static Item pizzaamerica;
+	public static Item pizzaamericabase;
+	public static Item pizzaamericastuffed;
+	public static Item pizzaamericabasestuffed;
+	public static Item pizzamushroom;
+	public static Item pizzamushroombase;
+	public static Item pizzamushroomstuffed;
+	public static Item pizzamushroombasestuffed;
+	public static Item pizzaveg;
+	public static Item pizzavegbase;
+	public static Item pizzavegstuffed;
+	public static Item pizzavegbasestuffed;
+	public static Item gbreaddough;
+	public static Item gbread;
+
+	public static Item baconRaw;
+	public static Item baconCooked;
+	public static Item ribs;
+	public static Item ribsCooked;
+	public static Item mammothmeatRaw;
+	public static Item mammothmeatCooked;
+	public static Item lambRaw;
+	public static Item lambCooked;
+	public static Item sausage;
+	public static Item sausageCooked;
+	public static Item pepperoni;
+	public static Item pigskin;
+	public static Item porkscratching;
+	public static Item ribsCookedK;
+	public static Item lambCookedK;
+	public static Item chickenCookedK;
+	public static Item porkCookedK;
+	public static Item beefCookedK;
+	public static Item fishCookedK;
+	
+	public static Item cheesewheel;
+	public static Item eggFried;
+	public static Item eggScrambled;
+	public static Item eggBoiled;
+	public static Item salad;
+	public static Item saladChicken;
+	public static Item saladEgg;
+	public static Item saladFruit;
+	public static Item seaweedDry;
+	public static Item sushi;
+	
+	public static Item soupTomato;
+	public static Item soupPumpkin;
+	public static Item soupChicken;
+	public static Item soupBeef;
+	public static Item soupVegetable;
+	public static Item soupCarrot;
+
+	public static Item potatoSlice;
+	public static Item potatoWedge;
+	public static Item crisps;
+	public static Item chips;
+	public static Item svchips;
+	public static Item chippack;
+	public static Item friedfish;
+	public static Item friedsausage;
+	public static Item friedspam;
+	public static Item fishcake;
+	public static Item friedfishcake;
+	public static Item friedchicken;
+	public static Item friedchickenpack;
+	public static Item bun;
+	public static Item burgerRaw;
+	public static Item burgerCooked;
+	public static Item burgerRegular;
+	public static Item burgerChicken;
+	public static Item burgerCheese;
+	public static Item burgerBacon;
+	public static Item burgerBaconCheese;
+	public static Item burgerRegularK;
+	public static Item burgerChickenK;
+	public static Item burgerCheeseK;
+	public static Item burgerBaconK;
+	public static Item burgerBaconCheeseK;
+	public static Item hotdog;
+	public static Item hotdogketchup;
+	
+	public static Item icecream;
+	public static Item cicecream;
+	public static Item cookiedough;
+	public static Item cdicecream;
+	public static Item sicecream;
+	public static Item blueberryicecream;
+	public static Item blackcurranticecream;
+	public static Item raspberryicecream;
+	public static Item braspberryicecream;
+	public static Item micecream;
+	public static Item licecream;
+	public static Item bubblegumicecream;
+	public static Item caramelicecream;
+	public static Item nuticecream;
+	public static Item chicecream;
+	public static Item minticecream;
+	public static Item cminticecream;
+	public static Item chocolate;
+	public static Item wafer;
+	public static Item jelly;
+	public static Item jellyApple;
+	public static Item jellyStrawberry;
+	public static Item jellyLemon;
+	public static Item jellyGrape;
+	public static Item jellyCherry;
+	public static Item jellyOrange;
+	public static Item jellyBlackcurrant;
+	public static Item jellyRaspberry;
+	public static Item jellyBRaspberry;
+	public static Item gum;
+	public static Item gumApple;
+	public static Item gumStrawberry;
+	public static Item gumLemon;
+	public static Item gumGrape;
+	public static Item gumCherry;
+	public static Item gumOrange;
+	public static Item gumMelon;
+	public static Item gumSweet;
+	public static Item gumMint;
+	public static Item gumBlueberry;
+	public static Item gumBlackcurrant;
+	public static Item gumRaspberry;
+	public static Item gumBRaspberry;
+	
+	public static Item pieApple;
+	public static Item pieCherry;
+	public static Item pieCream;
+	public static Item pieChicken;
+	public static Item pieMeat;
+	public static Item piePork;
+	public static Item pieShepherds;
+	public static Item pieAppleCooked;
+	public static Item pieCherryCooked;
+	public static Item pieCreamCooked;
+	public static Item pieChickenCooked;
+	public static Item pieMeatCooked;
+	public static Item piePorkCooked;
+	public static Item pieShepherdsCooked;
+
+	public static Item pack;
+	public static Item cornoncob;
+	public static Item popcorn;
+	public static Item popcornpack;
+	public static Item toffeeapple;
+
+	public static Item cup;
+	public static Item jar;
+	public static Item tankard;
+	public static Item winecup;
+	public static Item mug;
+	public static Item vinegar;
+	public static Item jam;
+	public static Item jamOrange;
+	public static Item peanutbutter;
+	public static Item treacle;
+	public static Item custard;
+	public static Item ketchup;
+	public static Item bbq;
+	public static Item mayo;
+	public static Item garlicsauce;
+	public static Item gravy;
+	public static Item saladcream;
+	public static Item mintsauce;
+	public static Item orangejuice;
+	public static Item applejuice;
+	public static Item lemonjuice;
+	public static Item grapejuice;
+	public static Item melonjuice;
+	public static Item cherryjuice;
+	public static Item blackcurrantjuice;
+	public static Item blueberryjuice;
+	public static Item raspberryjuice;
+	public static Item braspberryjuice;
+	public static Item strawberryjuice;
+	public static Item lemonade;
+	public static Item cherryade;
+	public static Item orangeade;
+	public static Item appleade;
+	public static Item blackcurrantade;
+	public static Item hotchocolatemilk;
+	public static Item chocolatemilk;
+	
+	public static Item beerbasicBucket;
+	public static Item beerbasic;
+	public static Item winebasicBucket;
+	public static Item winebasic;
+	
+	public static Item goldcookie;
+	public static Item co2;
+	
+	public static Item sackWeed;
+	public static Item sackTobacco;
+	public static Item sackYeast;
+	public static Item sackGrapes;
+	public static Item sackHops;
+	public static Item sackBarleyGrain;
+	public static Item sackBarleyMalt;
+
+
+
+	public static final int WILDCARD_VALUE = Short.MAX_VALUE;
+
+
+
+	// The instance of your mod that Forge uses.
+	@Instance("ModFood")
+	public static ModFood instance;
+	// This loads up your common and client proxies. change the location of the proxies and the public static to fit your setup
+	@SidedProxy(clientSide="agentsmod.ClientProxy", serverSide="agentsmod.CommonProxy")
+	public static CommonProxy proxy;
+
+	@PreInit
+	public void preInit(FMLPreInitializationEvent event) {
+
+		scorpiontail = (new ItemScorpionTail(5351)).setUnlocalizedName("scorpiontail").setCreativeTab(ModCreativeTabs.tabOther);
+		poison = (new ItemDrink(5352, 0, true)).setPotionEffect(Potion.poison.id, 60, 5, 1F).setPotionEffect2(Potion.poison.id, 60, 5, 1F).setUnlocalizedName("poison").setCreativeTab(ModCreativeTabs.tabOther);
+		wolffur = new ItemMiscItem(5353).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("wolffur");
+		mammothfur = new ItemMiscItem(5354).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("mammothfur");
+		stonecog = new ItemMiscItem(5355).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("stonecog");
+		woodcog = new ItemMiscItem(5356).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("woodcog");
+		grindingmech = new ItemMiscItem(5357).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("grindingmech");
+		core = new ItemMiscItem(5358).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("core");
+		core2 = new ItemMiscItem(5592).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("core2");
+		tusk = new ItemMiscItem(5513).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("tusk");
+		whalefat = new ItemMiscItem(5514).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("whalefat");
+		oilseed = new ItemMiscItem(5569).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("oilseed");
+		oilolive = new ItemMiscItem(5570).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("oilolive");
+		oilwhale = new ItemMiscItem(5571).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("oilwhale");
+
+		potionhunger = (new ItemPotionGlowing(5853, 0, true)).setPotionEffect(Potion.hunger.id, 60, 2, 1F).setPotionEffect2(Potion.poison.id, 60, 5, 1F).setUnlocalizedName("potionhunger").setCreativeTab(CreativeTabs.tabBrewing);
+		potionhungerLong = (new ItemPotionGlowing(5854, 0, true)).setPotionEffect(Potion.hunger.id, 180, 2, 1F).setPotionEffect2(Potion.poison.id, 0, 0, 1F).setUnlocalizedName("potionhungerLong").setCreativeTab(CreativeTabs.tabBrewing);
+		potionhungerStrong = (new ItemPotionGlowing(5855, 0, true)).setPotionEffect(Potion.hunger.id, 60, 6, 1F).setPotionEffect2(Potion.poison.id, 0, 0, 1F).setUnlocalizedName("potionhungerStrong").setCreativeTab(CreativeTabs.tabBrewing);
+		potionvenomLong = (new ItemPotionGlowing(5856, 0, true)).setPotionEffect(Potion.poison.id, 180, 5, 1F).setPotionEffect2(Potion.poison.id, 0, 0, 1F).setUnlocalizedName("potionvenomLong").setCreativeTab(CreativeTabs.tabBrewing);
+		potionvenomStrong = (new ItemPotionGlowing(5857, 0, true)).setPotionEffect(Potion.poison.id, 60, 8, 1F).setPotionEffect2(Potion.poison.id, 0, 0, 1F).setUnlocalizedName("potionvenomStrong").setCreativeTab(CreativeTabs.tabBrewing);
+		
+		knife = new ItemKnife(5359).setUnlocalizedName("knife");
+		whisk = new ItemWhisk(5360).setUnlocalizedName("whisk");
+		foodgrinder = new ItemFoodGrinder(5361).setUnlocalizedName("foodgrinder");
+		destalker = new ItemDestalker(5362).setUnlocalizedName("destalker");
+		cheesemold = new ItemCheeseMold(5363, ModBlocks.cheesemold).setCreativeTab(CreativeTabs.tabTools).setUnlocalizedName("cheesemold");
+		cheesemoldFilled = new ItemCheeseMold(5364, ModBlocks.cheesemoldFilled).setUnlocalizedName("cheesemoldFilled");
+		cheesemoldSet = new ItemCheeseMold(5365, ModBlocks.cheesemoldSet).setUnlocalizedName("cheesemoldSet");
+
+		straw = new ItemFoodItem(5366).setUnlocalizedName("straw");
+		stalk = new ItemFoodItem(5367).setUnlocalizedName("stalk");
+		wheatgrain = new ItemFoodItem(5368).setUnlocalizedName("wheatgrain");
+		barleygrain = new ItemFoodItem(5556).setUnlocalizedName("barleygrain");
+		barleymalt = new ItemFoodItem(5862).setUnlocalizedName("barleymalt");
+		flour = new ItemFoodItem(5369).setUnlocalizedName("flour");
+		dough = new ItemFoodItem(5370).setUnlocalizedName("dough");
+		pasta = new ItemFoodItem(5371).setUnlocalizedName("pasta");
+		pastry = new ItemFoodItem(5372).setUnlocalizedName("pastry");
+		doughbread = new ItemFoodItem(5373).setUnlocalizedName("doughbread");
+		magicyeast = new ItemMagicYeast(5374).setUnlocalizedName("magicyeast");
+		yeast = new ItemFoodItem(5375).setUnlocalizedName("yeast");
+		cheesecurd = new ItemFoodItem(5376).setUnlocalizedName("cheesecurd");
+		lard = new ItemFoodItem(5377).setUnlocalizedName("lard");
+		butter = new ItemFoodItem(5378).setUnlocalizedName("butter");
+		cream = new ItemFoodItem(5379).setContainerItem(Item.bowlEmpty).setUnlocalizedName("cream");
+		caramel = new ItemFood2(5568, 1, false).setUnlocalizedName("caramel");
+
+		doughbiscuit = new ItemFoodItem(5724).setUnlocalizedName("doughbiscuit");
+		doughbiscuitchocolate = new ItemFoodItem(5725).setUnlocalizedName("doughbiscuitchocolate");
+		doughbiscuitfruit = new ItemFoodItem(5726).setUnlocalizedName("doughbiscuitfruit");
+		doughbiscuitcaramel = new ItemFoodItem(5727).setUnlocalizedName("doughbiscuitcaramel");
+		doughbiscuitpeanutbutter = new ItemFoodItem(5743).setUnlocalizedName("doughbiscuitpeanutbutter");
+		biscuit = new ItemFood2(5728, 3, false).setUnlocalizedName("biscuit");
+		biscuitchocolate = new ItemFood2(5729, 4, false).setUnlocalizedName("biscuitchocolate");
+		biscuitcaramel = new ItemFood2(5730, 4, false).setUnlocalizedName("biscuitcaramel");
+		biscuitfruit = new ItemFood2(5731, 4, false).setUnlocalizedName("biscuitfruit");
+		biscuitcream = new ItemFood2(5732, 7, false).setUnlocalizedName("biscuitcream");
+		biscuitjaffa = new ItemFood2(5733, 7, false).setUnlocalizedName("biscuitjaffa");
+		biscuitpeanutbutter = new ItemFood2(5744, 4, false).setUnlocalizedName("biscuitpeanutbutter");
+
+		salt = new ItemFoodItem(5380).setUnlocalizedName("salt");
+		pepper = new ItemFoodItem(5381).setUnlocalizedName("pepper");
+		peppersalt = new ItemFoodItem(5382).setUnlocalizedName("peppersalt");
+
+		bakedbread = new ItemFood2(5383, 10, true).setUnlocalizedName("bakedbread");
+		burntbread = new ItemEatable(5384, 0, 0F, false).setPotionEffect(Potion.hunger.id, 30, 8, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("burntbread");
+		bun = new ItemFood2(5703, 2, false).setUnlocalizedName("bun");
+		toast = new ItemFood2(5385, 2, false).setUnlocalizedName("toast");
+		buttiepork = new ItemFood2(5386, 12, true).setUnlocalizedName("buttiepork");
+		buttiechicken = new ItemFood2(5387, 12, true).setUnlocalizedName("buttiechicken");
+		buttiebeef = new ItemFood2(5388, 12, true).setUnlocalizedName("buttiebeef");
+		buttiefish = new ItemFood2(5389, 12, false).setUnlocalizedName("buttiefish");
+		buttiesalami = new ItemFood2(5390, 8, true).setUnlocalizedName("buttiesalami");
+		buttiecheese = new ItemFood2(5391, 8, false).setUnlocalizedName("buttiecheese");
+		buttiebacon = new ItemFood2(5392, 8, true).setPotionEffect(Potion.regeneration.id, 4, 1, 0.9F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("buttiebacon");
+		buttielamb = new ItemFood2(5557, 12, true).setUnlocalizedName("buttielamb");
+		buttiemammoth = new ItemFood2(5558, 16, true).setUnlocalizedName("buttiemammoth");
+		buttieegg = new ItemFood2(5573, 9, false).setUnlocalizedName("buttieegg");
+		buttiejam = new ItemFood2(5719, 7, false).setUnlocalizedName("buttiejam");
+		buttiemarmalade = new ItemFood2(5720, 7, false).setUnlocalizedName("buttiemarmalade");
+		buttiepeanutbutter = new ItemFood2(5721, 8, false).setUnlocalizedName("buttiepeanutbutter");
+		buttiepbj = new ItemFood2(5722, 10, false).setUnlocalizedName("buttiepbj");
+		jamtoast = new ItemFood2(5393, 3, false).setPotionEffect(Potion.moveSpeed.id, 20, 1, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("jamtoast");
+
+		pepperonislice = new ItemFoodItem(5396).setUnlocalizedName("pepperonislice");
+		cheeseslice = new ItemFoodItem(5397).setUnlocalizedName("cheeseslice");
+		breadslice = new ItemFoodItem(5398).setUnlocalizedName("breadslice");
+		pizzadough = new ItemFoodItem(5399).setUnlocalizedName("pizzadough");
+		pizzadoughstuffed = new ItemFoodItem(5401).setUnlocalizedName("pizzadoughstuffed");
+		pizzacheese = new ItemFood2(5394, 8, 0.3F, false).setUnlocalizedName("pizzacheese");
+		pizzacheesestuffed = new ItemFood2(5395, 9, 0.4F, false).setPotionEffect(Potion.fireResistance.id, 8, 1, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("pizzacheesestuffed");
+		pizzabase = new ItemFoodItem(5400).setUnlocalizedName("pizzabase");
+		pizzabasestuffed = new ItemFoodItem(5402).setUnlocalizedName("pizzabasestuffed");
+		pizzapepperoni = new ItemFood2(5596, 12, 0.2F, false).setPotionEffect(Potion.fireResistance.id, 12, 1, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("pizzapepperoni");
+		pizzapepperonibase = new ItemFoodItem(5597).setUnlocalizedName("pizzapepperonibase");
+		pizzapepperonistuffed = new ItemFood2(5598, 14, 0.4F, false).setPotionEffect(Potion.fireResistance.id, 15, 1, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("pizzapepperonistuffed");
+		pizzapepperonibasestuffed = new ItemFoodItem(5599).setUnlocalizedName("pizzapepperonibasestuffed");
+		pizzacheesy = new ItemFood2(5600, 14, 0.3F, false).setPotionEffect(Potion.regeneration.id, 6, 0, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("pizzacheesy");
+		pizzacheesybase = new ItemFoodItem(5601).setUnlocalizedName("pizzacheesybase");
+		pizzacheesystuffed = new ItemFood2(5602, 16, 0.5F, false).setPotionEffect(Potion.fireResistance.id, 8, 1, 1F).setPotionEffect2(Potion.regeneration.id, 7, 1, 1F).setUnlocalizedName("pizzacheesystuffed");
+		pizzacheesybasestuffed = new ItemFoodItem(5603).setUnlocalizedName("pizzacheesybasestuffed");
+		pizzameat = new ItemFood2(5604, 17, 0.6F, false).setPotionEffect(Potion.regeneration.id, 4, 0, 1F).setPotionEffect(Potion.fireResistance.id, 10, 1, 1F).setUnlocalizedName("pizzameat");
+		pizzameatbase = new ItemFoodItem(5605).setUnlocalizedName("pizzameatbase");
+		pizzameatstuffed = new ItemFood2(5606, 19, 0.8F, false).setPotionEffect(Potion.fireResistance.id, 14, 1, 1F).setPotionEffect2(Potion.regeneration.id, 4, 0, 1F).setUnlocalizedName("pizzameatstuffed");
+		pizzameatbasestuffed = new ItemFoodItem(5607).setUnlocalizedName("pizzameatbasestuffed");
+		pizzaamerica = new ItemFood2(5608, 17, 0.6F, false).setPotionEffect2(Potion.regeneration.id, 5, 0, 1F).setPotionEffect2(Potion.fireResistance.id, 20, 1, 1F).setUnlocalizedName("pizzaamerica");
+		pizzaamericabase = new ItemFoodItem(5609).setUnlocalizedName("pizzaamericabase");
+		pizzaamericastuffed = new ItemFood2(5610, 19, 0.8F, false).setPotionEffect(Potion.fireResistance.id, 10, 1, 1F).setPotionEffect2(Potion.digSpeed.id, 8, 1, 1F).setPotionEffect(Potion.regeneration.id, 4, 0, 1F).setUnlocalizedName("pizzaamericastuffed");
+		pizzaamericabasestuffed = new ItemFoodItem(5611).setUnlocalizedName("pizzaamericabasestuffed");
+		pizzamushroom = new ItemFood2(5612, 9, 0.2F, false).setPotionEffect(Potion.fireResistance.id, 10, 1, 1F).setPotionEffect2(Potion.nightVision.id, 12, 0, 1F).setUnlocalizedName("pizzamushroom");
+		pizzamushroombase = new ItemFoodItem(5613).setUnlocalizedName("pizzamushroombase");
+		pizzamushroomstuffed = new ItemFood2(5614, 11, 0.4F, false).setPotionEffect(Potion.fireResistance.id, 12, 1, 1F).setPotionEffect2(Potion.nightVision.id, 12, 0, 1F).setUnlocalizedName("pizzamushroomstuffed");
+		pizzamushroombasestuffed = new ItemFoodItem(5615).setUnlocalizedName("pizzamushroombasestuffed");
+		pizzaveg = new ItemFood2(5616, 9, 0.3F, false).setPotionEffect(Potion.fireResistance.id, 8, 1, 1F).setPotionEffect2(Potion.nightVision.id, 8, 0, 1F).setUnlocalizedName("pizzaveg");
+		pizzavegbase = new ItemFoodItem(5617).setUnlocalizedName("pizzavegbase");
+		pizzavegstuffed = new ItemFood2(5618, 11, 0.5F, false).setPotionEffect(Potion.fireResistance.id, 8, 1, 1F).setPotionEffect2(Potion.nightVision.id, 8, 0, 1F).setUnlocalizedName("pizzavegstuffed");
+		pizzavegbasestuffed = new ItemFoodItem(5619).setUnlocalizedName("pizzavegbasestuffed");
+		
+		gbreaddough = new ItemFoodItem(5594).setUnlocalizedName("gbreaddough");
+		gbread = new ItemFood2(5595, 8, 0.4F, false).setUnlocalizedName("gbread");
+		
+		salad = new ItemScrambledEgg(5712, 6, 1.2F, false).setContainerItem(Item.bowlEmpty).setUnlocalizedName("salad");
+		saladChicken = new ItemScrambledEgg(5713, 10, 1.2F, false).setContainerItem(Item.bowlEmpty).setUnlocalizedName("saladChicken");
+		saladEgg = new ItemScrambledEgg(5714, 8, 1.2F, false).setContainerItem(Item.bowlEmpty).setUnlocalizedName("saladEgg");
+		saladFruit = new ItemScrambledEgg(5716, 7, 1.2F, true).setContainerItem(Item.bowlEmpty).setUnlocalizedName("saladFruit");
+		seaweedDry = new ItemFoodItem(5841).setUnlocalizedName("seaweedDry");
+		sushi = new ItemFood2(5842, 4, 0.8F, true).setUnlocalizedName("sushi");
+		
+		soupTomato = new ItemSoup2(5673, 9, 0.6F, false).setContainerItem(Item.bowlEmpty).setUnlocalizedName("soupTomato");
+		soupPumpkin = new ItemSoup2(5674, 8, 0.7F, false).setContainerItem(Item.bowlEmpty).setUnlocalizedName("soupPumpkin");
+		soupChicken = new ItemSoup2(5675, 10, 0.8F, false).setContainerItem(Item.bowlEmpty).setUnlocalizedName("soupChicken");
+		soupBeef = new ItemSoup2(5676, 11, 0.8F, false).setContainerItem(Item.bowlEmpty).setUnlocalizedName("soupBeef");
+		soupVegetable = new ItemSoup2(5677, 8, 0.8F, false).setContainerItem(Item.bowlEmpty).setUnlocalizedName("soupVegetable");
+		soupCarrot = new ItemSoup2(5678, 14, 0.6F, false).setContainerItem(Item.bowlEmpty).setUnlocalizedName("soupCarrot");
+		
+		pieApple = new ItemFood2(5679, 5, 0.5F, false).setPotionEffect2(Potion.damageBoost.id, 30, 1, 1F).setPotionEffect(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("pieApple");
+		pieCherry = new ItemFood2(5680, 5, 0.5F, false).setPotionEffect2(Potion.digSpeed.id, 30, 1, 1F).setPotionEffect(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("pieCherry");
+		pieCream = new ItemFood2(5681, 4, 0.3F, false).setUnlocalizedName("pieCream");
+		pieChicken = new ItemFood2(5682, 8, 0.7F, false).setUnlocalizedName("pieChicken");
+		pieMeat = new ItemFood2(5683, 10, 0.7F, false).setUnlocalizedName("pieMeat");
+		piePork = new ItemFood2(5684, 11, 0.6F, false).setUnlocalizedName("piePork");
+		pieShepherds = new ItemFood2(5685, 13, 0.9F, false).setUnlocalizedName("pieShepherds");
+		pieAppleCooked = new ItemFood2(5688, 7, 1.0F, false).setPotionEffect2(Potion.damageBoost.id, 30, 1, 1F).setPotionEffect(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("pieAppleCooked");
+		pieCherryCooked = new ItemFood2(5689, 7, 1.0F, false).setPotionEffect2(Potion.digSpeed.id, 30, 1, 1F).setPotionEffect(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("pieCherryCooked");
+		pieCreamCooked = new ItemFood2(5690, 6, 0.6F, false).setUnlocalizedName("pieCreamCooked");
+		pieChickenCooked = new ItemFood2(5691, 11, 1.4F, false).setUnlocalizedName("pieChickenCooked");
+		pieMeatCooked = new ItemFood2(5692, 14, 1.4F, false).setUnlocalizedName("pieMeatCooked");
+		piePorkCooked = new ItemFood2(5693, 15, 1.2F, false).setUnlocalizedName("piePorkCooked");
+		pieShepherdsCooked = new ItemFood2(5694, 17, 1.8F, false).setUnlocalizedName("pieShepherdsCooked");
+		
+		cheese = new ItemFood2(5403, 2, true).setUnlocalizedName("cheese");
+		cheesewheel = new ItemCheeseMold(5404, ModBlocks.blockcheesewheel).setCreativeTab(ModCreativeTabs.tabFood).setUnlocalizedName("cheesewheel");
+		eggFried = new ItemFood2(5405, 4, 0.1F, false).setUnlocalizedName("eggFried");
+		eggScrambled = new ItemScrambledEgg(5406, 4, 0.2F, false).setContainerItem(Item.bowlEmpty).setUnlocalizedName("eggScrambled");
+		eggBoiled = new ItemFood2(5572, 3, 0.2F, false).setUnlocalizedName("eggBoiled");
+
+		potatoSlice = new ItemFoodItem(5574).setUnlocalizedName("potatoSlice");
+		potatoWedge = new ItemFood2(5575, 2, 0.1F, false).setUnlocalizedName("potatoWedge");
+		crisps = new ItemFood2(5576, 2, 0.1F, false).setUnlocalizedName("crisps");
+		chips = new ItemFood2(5577, 4, 0.2F, false).setUnlocalizedName("chips");
+		svchips = new ItemFood2(5584, 11, 0.5F, false).setUnlocalizedName("svchips");
+		chippack = new ItemFood2(5579, 9, 0.3F, false).setUnlocalizedName("chippack");
+		friedfish = new ItemFood2(5580, 7, 0.7F, false).setUnlocalizedName("friedfish");
+		friedspam = new ItemFood2(5581, 8, 0.4F, false).setUnlocalizedName("friedspam");
+		friedsausage = new ItemFood2(5582, 5, 0.3F, false).setUnlocalizedName("friedsausage");
+		fishcake = new ItemFood2(5583, 5, 0.3F, false).setUnlocalizedName("fishcake");
+		friedfishcake = new ItemFood2(5585, 8, 0.7F, false).setUnlocalizedName("friedfishcake");
+		friedchicken = new ItemFood2(5669, 8, 0.6F, true).setPotionEffect(Potion.moveSpeed.id, 16, 1, 0.8F).setPotionEffect2(Potion.regeneration.id, 3, 0, 0.8F).setUnlocalizedName("friedchicken");
+		friedchickenpack = new ItemFood2(5670, 18, 2.0F, true).setPotionEffect2(Potion.moveSpeed.id, 48, 1, 0.8F).setPotionEffect(Potion.regeneration.id, 12, 1, 0.8F).setUnlocalizedName("friedchickenpack");
+		baconRaw = new ItemFood2(5407, 2, true).setUnlocalizedName("baconRaw");
+		baconCooked = new ItemFood2(5408, 2, false).setPotionEffect(Potion.regeneration.id, 3, 5, 0.8F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("baconCooked");
+		ribs = new ItemFood2(5409, 4, true).setUnlocalizedName("ribs");
+		ribsCooked = new ItemFood2(5410, 7, true).setUnlocalizedName("ribsCooked");
+		mammothmeatRaw = new ItemFood2(5509, 7, true).setUnlocalizedName("mammothmeatRaw");
+		mammothmeatCooked = new ItemFood2(5510, 10, true).setUnlocalizedName("mammothmeatCooked");
+		lambRaw = new ItemFood2(5536, 5, true).setUnlocalizedName("lambRaw");
+		lambCooked = new ItemFood2(5537, 7, true).setUnlocalizedName("lambCooked");
+		sausage = new ItemFood2(5511, 1, true).setUnlocalizedName("sausage");
+		sausageCooked = new ItemFood2(5512, 3, true).setUnlocalizedName("sausageCooked");
+		pepperoni = new ItemFood2(5411, 4, true).setUnlocalizedName("pepperoni");
+		pigskin = new ItemFoodItem(5412).setUnlocalizedName("pigskin");
+		porkscratching = new ItemFood2(5413, 3, true).setPotionEffect(Potion.digSpeed.id, 25, 1, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("porkscratching");
+		burgerRegular = new ItemFood2(5704, 9, true).setUnlocalizedName("burgerRegular");
+		burgerChicken = new ItemFood2(5747, 10, true).setUnlocalizedName("burgerChicken");
+		burgerCheese = new ItemFood2(5705, 11, false).setUnlocalizedName("burgerCheese");
+		burgerBacon = new ItemFood2(5706, 12, false).setUnlocalizedName("burgerBacon");
+		burgerBaconCheese = new ItemFood2(5707, 14, false).setUnlocalizedName("burgerBaconCheese");
+		burgerRegularK = new ItemFood2(5748, 10, true).setPotionEffect(Potion.fireResistance.id, 8, 1, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("burgerRegularK");
+		burgerChickenK = new ItemFood2(5749, 11, true).setPotionEffect(Potion.fireResistance.id, 8, 1, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("burgerChickenK");
+		burgerCheeseK = new ItemFood2(5750, 12, false).setPotionEffect(Potion.fireResistance.id, 8, 1, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("burgerCheeseK");
+		burgerBaconK = new ItemFood2(5751, 13, false).setPotionEffect(Potion.fireResistance.id, 8, 1, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("burgerBaconK");
+		burgerBaconCheeseK = new ItemFood2(5752, 15, false).setPotionEffect(Potion.fireResistance.id, 8, 1, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("burgerBaconCheeseK");
+		hotdog = new ItemFood2(5708, 8, true).setUnlocalizedName("hotdog");
+		hotdogketchup = new ItemFood2(5709, 11, true).setUnlocalizedName("hotdogketchup");
+		burgerRaw = new ItemFood2(5710, 3, true).setUnlocalizedName("burgerRaw");
+		burgerCooked = new ItemFood2(5711, 5, true).setUnlocalizedName("burgerCooked");
+		ribsCookedK = new ItemFood2(5753, 8, true).setPotionEffect(Potion.resistance.id, 8, 1, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("ribsCookedK");
+		lambCookedK = new ItemFood2(5754, 8, true).setPotionEffect(Potion.moveSpeed.id, 8, 1, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("lambCookedK");
+		porkCookedK = new ItemFood2(5755, 9, true).setUnlocalizedName("porkCookedK");
+		fishCookedK = new ItemFood2(5756, 7, true).setUnlocalizedName("fishCookedK");
+		beefCookedK = new ItemFood2(5757, 9, true).setPotionEffect(Potion.resistance.id, 8, 1, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("beefCookedK");
+		chickenCookedK = new ItemFood2(5758, 7, true).setUnlocalizedName("chickenCookedK");
+
+		jelly = new ItemFoodItem(5629).setUnlocalizedName("jelly");		
+		jellyApple = new ItemFood2(5630, 3, true).setPotionEffect2(Potion.digSpeed.id, 12, 1, 1F).setPotionEffect(Potion.jump.id, 30, 3, 1F).setUnlocalizedName("jellyApple");
+		jellyStrawberry = new ItemFood2(5631, 3, true).setPotionEffect2(Potion.damageBoost.id, 12, 1, 1F).setPotionEffect(Potion.jump.id, 30, 3, 1F).setUnlocalizedName("jellyStrawberry");
+		jellyLemon = new ItemFood2(5632, 3, true).setPotionEffect2(Potion.moveSpeed.id, 12, 1, 1F).setPotionEffect(Potion.jump.id, 30, 3, 1F).setUnlocalizedName("jellyLemon");
+		jellyGrape = new ItemFood2(5633, 3, true).setPotionEffect2(Potion.nightVision.id, 12, 1, 1F).setPotionEffect(Potion.jump.id, 30, 3, 1F).setUnlocalizedName("jellyGrape");
+		jellyCherry = new ItemFood2(5634, 3, true).setPotionEffect2(Potion.digSpeed.id, 12, 1, 1F).setPotionEffect(Potion.jump.id, 30, 3, 1F).setUnlocalizedName("jellyCherry");
+		jellyOrange = new ItemFood2(5635, 3, true).setPotionEffect2(Potion.damageBoost.id, 12, 1, 1F).setPotionEffect(Potion.jump.id, 30, 3, 1F).setUnlocalizedName("jellyOrange");
+		jellyBlackcurrant = new ItemFood2(5800, 3, true).setPotionEffect2(Potion.moveSpeed.id, 12, 1, 1F).setPotionEffect(Potion.jump.id, 30, 3, 1F).setUnlocalizedName("jellyBlackcurrant");
+		jellyRaspberry = new ItemFood2(5801, 3, true).setPotionEffect2(Potion.digSpeed.id, 12, 1, 1F).setPotionEffect(Potion.jump.id, 30, 3, 1F).setUnlocalizedName("jellyRaspberry");
+		jellyBRaspberry = new ItemFood2(5802, 3, true).setPotionEffect2(Potion.digSpeed.id, 12, 1, 1F).setPotionEffect(Potion.jump.id, 30, 3, 1F).setUnlocalizedName("jellyBRaspberry");
+		icecream = new ItemFood2(5414, 5, true).setUnlocalizedName("icecream");
+		cicecream = new ItemFood2(5415, 6, false).setUnlocalizedName("cicecream");
+		micecream = new ItemFood2(5538, 5, true).setPotionEffect(Potion.regeneration.id, 4, 1, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("micecream");
+		licecream = new ItemFood2(5539, 5, true).setPotionEffect(Potion.moveSpeed.id, 35, 1, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("licecream");
+		sicecream = new ItemFood2(5540, 5, true).setPotionEffect(Potion.digSpeed.id, 35, 1, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("sicecream");
+		blueberryicecream = new ItemFood2(5788, 5, true).setPotionEffect(Potion.digSpeed.id, 35, 1, 1F).setPotionEffect2(Potion.regeneration.id, 3, 1, 0.6F).setUnlocalizedName("blueberryicecream");
+		blackcurranticecream = new ItemFood2(5789, 5, true).setPotionEffect(Potion.digSpeed.id, 35, 1, 1F).setPotionEffect2(Potion.regeneration.id, 3, 1, 0.6F).setUnlocalizedName("blackcurranticecream");
+		raspberryicecream = new ItemFood2(5790, 6, true).setPotionEffect(Potion.moveSpeed.id, 35, 1, 1F).setPotionEffect2(Potion.regeneration.id, 3, 1, 0.6F).setUnlocalizedName("raspberryicecream");
+		braspberryicecream = new ItemFood2(5791, 6, true).setPotionEffect(Potion.moveSpeed.id, 40, 1, 1F).setPotionEffect2(Potion.regeneration.id, 4, 1, 0.6F).setUnlocalizedName("braspberryicecream");
+		chicecream = new ItemFood2(5636, 4, true).setPotionEffect(Potion.digSpeed.id, 25, 2, 1F).setUnlocalizedName("chicecream");
+		caramelicecream = new ItemFood2(5699, 6, true).setPotionEffect(Potion.moveSpeed.id, 35, 1, 1F).setUnlocalizedName("caramelicecream");
+		bubblegumicecream = new ItemFood2(5700, 5, 2.5F, true).setPotionEffect(Potion.moveSpeed.id, 25, 1, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("bubblegumicecream");
+		nuticecream = new ItemFood2(5701, 5, 0.6F, true).setPotionEffect(Potion.resistance.id, 20, 0, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("nuticecream");
+		minticecream = new ItemFood2(5745, 5, false).setUnlocalizedName("minticecream");
+		cminticecream = new ItemFood2(5746, 7, false).setUnlocalizedName("cminticecream");
+		cookiedough = new ItemFoodItem(5416).setUnlocalizedName("cookiedough");
+		cdicecream = new ItemFood2(5417, 6, false).setPotionEffect(Potion.regeneration.id, 10, 10, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("cdicecream");
+		chocolate = new ItemFood2(5418, 2, false).setPotionEffect(Potion.regeneration.id, 3, 6, 0.7F).setPotionEffect2(Potion.regeneration.id, 4, 1, 1.0F).setUnlocalizedName("chocolate");
+		wafer = new ItemFoodItem(5419).setUnlocalizedName("wafer");
+		gum = new ItemFoodItem(5639).setUnlocalizedName("gum");		
+		gumApple = new ItemFood2(5640, 1, 3.0F, true).setPotionEffect2(Potion.digSpeed.id, 12, 1, 1F).setPotionEffect(Potion.moveSpeed.id, 30, 0, 1F).setUnlocalizedName("gumApple");
+		gumStrawberry = new ItemFood2(5641, 1, 3.0F, true).setPotionEffect2(Potion.damageBoost.id, 12, 1, 1F).setPotionEffect(Potion.moveSpeed.id, 30, 0, 1F).setUnlocalizedName("gumStrawberry");
+		gumLemon = new ItemFood2(5642, 1, 3.0F, true).setPotionEffect2(Potion.moveSpeed.id, 12, 1, 1F).setPotionEffect(Potion.moveSpeed.id, 30, 0, 1F).setUnlocalizedName("gumLemon");
+		gumGrape = new ItemFood2(5643, 1, 3.0F, true).setPotionEffect2(Potion.nightVision.id, 12, 1, 1F).setPotionEffect(Potion.moveSpeed.id, 30, 0, 1F).setUnlocalizedName("gumGrape");
+		gumCherry = new ItemFood2(5644, 1, 3.0F, true).setPotionEffect2(Potion.digSpeed.id, 12, 1, 1F).setPotionEffect(Potion.moveSpeed.id, 30, 0, 1F).setUnlocalizedName("gumCherry");
+		gumOrange = new ItemFood2(5645, 1, 3.0F, true).setPotionEffect2(Potion.damageBoost.id, 12, 1, 1F).setPotionEffect(Potion.moveSpeed.id, 30, 0, 1F).setUnlocalizedName("gumOrange");
+		gumMelon = new ItemFood2(5646, 1, 3.0F, true).setPotionEffect2(Potion.damageBoost.id, 10, 3, 1F).setPotionEffect(Potion.moveSpeed.id, 20, 0, 1F).setUnlocalizedName("gumMelon");
+		gumSweet = new ItemFood2(5696, 1, 2.5F, true).setPotionEffect(Potion.moveSpeed.id, 40, 1, 1F).setUnlocalizedName("gumSweet");
+		gumMint = new ItemFood2(5738, 1, 2.7F, true).setPotionEffect(Potion.moveSpeed.id, 25, 1, 1F).setPotionEffect(Potion.regeneration.id, 3, 0, 1F).setUnlocalizedName("gumMint");
+		gumBlackcurrant = new ItemFood2(5792, 1, 3.0F, true).setPotionEffect(Potion.moveSpeed.id, 50, 0, 1F).setUnlocalizedName("gumBlackcurrant");
+		gumRaspberry = new ItemFood2(5793, 1, 3.0F, true).setPotionEffect2(Potion.regeneration.id, 3, 0, 1F).setPotionEffect(Potion.moveSpeed.id, 30, 0, 1F).setUnlocalizedName("gumRaspberry");
+		gumBRaspberry = new ItemFood2(5794, 1, 3.0F, true).setPotionEffect2(Potion.regeneration.id, 3, 1, 1F).setPotionEffect(Potion.moveSpeed.id, 30, 0, 1F).setUnlocalizedName("gumBRaspberry");
+		gumBlueberry = new ItemFood2(5795, 1, 3.0F, true).setPotionEffect2(Potion.digSpeed.id, 12, 1, 1F).setPotionEffect(Potion.moveSpeed.id, 30, 0, 1F).setUnlocalizedName("gumBlueberry");
+		
+		pack = new ItemFoodItem(5420).setUnlocalizedName("pack");
+		cornoncob = new ItemFood2(5421, 1, true).setUnlocalizedName("cornoncob");
+		popcorn = new ItemFood2(5422, 1, false).setPotionEffect(Potion.digSpeed.id, 16, 2, 1F).setPotionEffect2(Potion.moveSpeed.id, 16, 2, 1F).setUnlocalizedName("popcorn");
+		popcornpack = new ItemFood2(5423, 1, true).setPotionEffect(Potion.digSpeed.id, 16, 2, 1F).setPotionEffect2(Potion.moveSpeed.id, 16, 2, 1F).setUnlocalizedName("popcornpack");
+		toffeeapple = new ItemToffeeApple(5702, 4, false).setPotionEffect(Potion.digSpeed.id, 10, 4, 1F).setPotionEffect2(Potion.moveSpeed.id, 16, 1, 1F).setUnlocalizedName("toffeeapple");
+		
+		cup = new ItemDrinkItem(5424).setUnlocalizedName("cup");
+		jar = new ItemDrinkItem(5425).setUnlocalizedName("jar");
+		tankard = new ItemDrinkItem(5587).setUnlocalizedName("tankard");
+		winecup = new ItemDrinkItem(5588).setUnlocalizedName("winecup");
+		mug = new ItemDrinkItem(5742).setUnlocalizedName("mug");
+		vinegar = new ItemDrink2(5578, 1, false).setPotionEffect(Potion.digSlowdown.id, 16, 2, 1F).setPotionEffect2(Potion.hunger.id, 20, 1, 0.3F).setUnlocalizedName("vinegar").setContainerItem(jar);
+		jam = new ItemDrink2(5429, 2, false).setPotionEffect(Potion.regeneration.id, 3, 1, 1F).setPotionEffect2(Potion.hunger.id, 10, 1, 0.1F).setUnlocalizedName("jam").setContainerItem(jar);
+		jamOrange = new ItemDrink2(5717, 2, false).setPotionEffect(Potion.regeneration.id, 3, 1, 1F).setPotionEffect2(Potion.hunger.id, 10, 1, 0.1F).setUnlocalizedName("jamOrange").setContainerItem(jar);
+		peanutbutter = new ItemDrink2(5718, 4, false).setPotionEffect(Potion.regeneration.id, 4, 0, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("peanutbutter").setContainerItem(jar);
+		treacle = new ItemDrink2(5567, 1, true).setPotionEffect(Potion.regeneration.id, 1, 3, 1F).setPotionEffect2(Potion.hunger.id, 10, 1, 0.3F).setUnlocalizedName("treacle").setContainerItem(jar);
+		custard = new ItemDrink2(5695, 1, true).setPotionEffect(Potion.regeneration.id, 4, 1, 1F).setPotionEffect2(Potion.moveSpeed.id, 30, 1, 0.3F).setUnlocalizedName("custard").setContainerItem(jar);
+		ketchup = new ItemDrink2(5430, 1, false).setPotionEffect(Potion.fireResistance.id, 8, 1, 1F).setPotionEffect2(Potion.hunger.id, 8, 1, 0.3F).setUnlocalizedName("ketchup").setContainerItem(jar);
+		bbq = new ItemDrink2(5431, 1, false).setPotionEffect(Potion.resistance.id, 8, 1, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("bbq").setContainerItem(jar);
+		mayo = new ItemDrink2(5432, 1, false).setPotionEffect(Potion.damageBoost.id, 8, 1, 1F).setPotionEffect2(Potion.hunger.id, 8, 1, 0.3F).setUnlocalizedName("mayo").setContainerItem(jar);
+		garlicsauce = new ItemDrink2(5686, 2, false).setPotionEffect(Potion.damageBoost.id, 8, 0, 1F).setPotionEffect2(Potion.confusion.id, 12, 1, 0.3F).setUnlocalizedName("garlicsauce").setContainerItem(jar);
+		mintsauce = new ItemDrink2(5739, 2, false).setPotionEffect(Potion.moveSpeed.id, 8, 3, 1F).setPotionEffect2(Potion.confusion.id, 12, 0, 0.2F).setUnlocalizedName("mintsauce").setContainerItem(jar);
+		gravy = new ItemDrink2(5687, 3, false).setPotionEffect2(Potion.hunger.id, 8, 1, 0.3F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("gravy").setContainerItem(jar);
+		saladcream = new ItemDrink2(5715, 3, false).setPotionEffect(Potion.fireResistance.id, 8, 1, 1F).setPotionEffect2(Potion.fireResistance.id, 8, 1, 1F).setUnlocalizedName("saladcream").setContainerItem(jar);
+		orangejuice = new ItemDrink(5426, 1, false).setPotionEffect(Potion.damageBoost.id, 6, 1, 1F).setPotionEffect2(Potion.damageBoost.id, 6, 1, 1F).setUnlocalizedName("orangejuice").setContainerItem(cup);
+		applejuice = new ItemDrink(5427, 1, false).setPotionEffect(Potion.digSpeed.id, 6, 1, 1F).setPotionEffect2(Potion.digSpeed.id, 6, 1, 1F).setUnlocalizedName("applejuice").setContainerItem(cup);
+		lemonjuice = new ItemDrink(5559, 1, false).setPotionEffect(Potion.moveSpeed.id, 6, 1, 1F).setPotionEffect2(Potion.moveSpeed.id, 12, 1, 1F).setUnlocalizedName("lemonjuice").setContainerItem(cup);
+		grapejuice = new ItemDrink(5560, 1, false).setPotionEffect(Potion.nightVision.id, 8, 1, 1F).setPotionEffect2(Potion.nightVision.id, 8, 1, 1F).setUnlocalizedName("grapejuice").setContainerItem(cup);
+		melonjuice = new ItemDrink(5561, 1, false).setPotionEffect(Potion.damageBoost.id, 7, 2, 1F).setPotionEffect2(Potion.damageBoost.id, 7, 2, 1F).setUnlocalizedName("melonjuice").setContainerItem(cup);
+		cherryjuice = new ItemDrink(5562, 1, false).setPotionEffect(Potion.digSpeed.id, 6, 2, 1F).setPotionEffect(Potion.digSpeed.id, 6, 2, 1F).setUnlocalizedName("cherryjuice").setContainerItem(cup);
+		blackcurrantjuice = new ItemDrink(5796, 2, false).setPotionEffect(Potion.regeneration.id, 6, 0, 0.5F).setPotionEffect2(Potion.moveSpeed.id, 24, 1, 0.8F).setUnlocalizedName("blackcurrantjuice").setContainerItem(cup);
+		blueberryjuice = new ItemDrink(5797, 2, false).setPotionEffect(Potion.regeneration.id, 6, 0, 0.5F).setPotionEffect2(Potion.digSpeed.id, 24, 1, 0.8F).setUnlocalizedName("blueberryjuice").setContainerItem(cup);
+		raspberryjuice = new ItemDrink(5798, 1, false).setPotionEffect(Potion.regeneration.id, 4, 0, 0.5F).setUnlocalizedName("raspberryjuice").setContainerItem(cup);
+		braspberryjuice = new ItemDrink(5799, 1, false).setPotionEffect(Potion.regeneration.id, 4, 0, 0.5F).setUnlocalizedName("braspberryjuice").setContainerItem(cup);
+		strawberryjuice = new ItemDrink(5563, 1, false).setPotionEffect(Potion.damageBoost.id, 12, 2, 1F).setUnlocalizedName("strawberryjuice").setContainerItem(cup);
+		lemonade = new ItemDrink(5428, 1, false).setPotionEffect(Potion.moveSpeed.id, 30, 2, 1F).setPotionEffect2(Potion.digSpeed.id, 12, 2, 1F).setUnlocalizedName("lemonade").setContainerItem(cup);
+		cherryade = new ItemDrink(5564, 1, false).setPotionEffect(Potion.moveSpeed.id, 30, 2, 1F).setPotionEffect2(Potion.damageBoost.id, 12, 2, 1F).setUnlocalizedName("cherryade").setContainerItem(cup);
+		orangeade = new ItemDrink(5565, 1, false).setPotionEffect(Potion.moveSpeed.id, 30, 2, 1F).setPotionEffect2(Potion.fireResistance.id, 12, 2, 1F).setUnlocalizedName("orangeade").setContainerItem(cup);
+		appleade = new ItemDrink(5586, 1, false).setPotionEffect(Potion.moveSpeed.id, 30, 2, 1F).setPotionEffect2(Potion.jump.id, 12, 2, 1F).setUnlocalizedName("appleade").setContainerItem(cup);
+		blackcurrantade = new ItemDrink(5586, 1, false).setPotionEffect(Potion.moveSpeed.id, 40, 2, 1F).setPotionEffect2(Potion.regeneration.id, 6, 0, 0.5F).setUnlocalizedName("blackcurrantade").setContainerItem(cup);
+		chocolatemilk = new ItemHotDrink(5740, 2, false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("chocolatemilk").setContainerItem(mug);
+		hotchocolatemilk = new ItemHotDrink(5741, 3, false).setPotionEffect(Potion.moveSpeed.id, 25, 0, 1F).setPotionEffect2(Potion.fireResistance.id, 0, 0, 0F).setUnlocalizedName("hotchocolatemilk").setContainerItem(mug);
+
+		beerbasic = new ItemBeer(5863, 2, false).setPotionEffect(Potion.damageBoost.id, 30, 0, 1F).setPotionEffect2(Potion.confusion.id, 12, 0, 0.1F).setUnlocalizedName("beerbasic").setContainerItem(tankard);
+		beerbasicBucket = new ItemDrinkBucket(5864, 3, false).setPotionEffect(Potion.damageBoost.id, 240, 1, 1F).setPotionEffect2(Potion.confusion.id, 180, 1, 1F).setUnlocalizedName("beerbasicBucket").setContainerItem(Item.bucketEmpty);
+		winebasic = new ItemBeer(5865, 1, false).setPotionEffect(Potion.moveSpeed.id, 30, 0, 1F).setPotionEffect2(Potion.confusion.id, 8, 0, 0.1F).setUnlocalizedName("winebasic").setContainerItem(winecup);
+		winebasicBucket = new ItemDrinkBucket(5866, 2, false).setPotionEffect(Potion.damageBoost.id, 240, 1, 1F).setPotionEffect2(Potion.confusion.id, 180, 1, 1F).setUnlocalizedName("winebasicBucket").setContainerItem(Item.bucketEmpty);
+		
+		goldcookie = new ItemFood3(5433, 6, true).setPotionEffect(Potion.regeneration.id, 30, 2, 1F).setPotionEffect2(Potion.heal.id, 12, 1, 1F).setUnlocalizedName("goldcookie");
+		co2 = new ItemDrinkItem(5566).setUnlocalizedName("co2").setContainerItem(Item.glassBottle);
+
+		sackGrapes = new ItemMiscItem(5867).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("sackGrapes");
+		sackYeast = new ItemMiscItem(5868).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("sackYeast");
+		sackHops = new ItemMiscItem(5869).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("sackHops");
+		sackBarleyGrain = new ItemMiscItem(5870).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("sackBarleyGrain");
+		sackBarleyMalt = new ItemMiscItem(5871).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("sackBarleyMalt");
+		sackWeed = new ItemMiscItem(5872).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("sackWeed");
+		sackTobacco = new ItemMiscItem(5873).setCreativeTab(ModCreativeTabs.tabOther).setUnlocalizedName("sackTobacco");
+
+
+
+
+
+
+
+
+
+		LanguageRegistry.instance().addName(scorpiontail, "Scorpion Tail");
+		LanguageRegistry.instance().addName(poison, "Venom");
+		LanguageRegistry.instance().addName(wolffur, "Wolf Fur");
+		LanguageRegistry.instance().addName(mammothfur, "Thick Fur");
+		LanguageRegistry.instance().addName(stonecog, "Stone Cog");
+		LanguageRegistry.instance().addName(woodcog, "Wooden Cog");
+		LanguageRegistry.instance().addName(grindingmech, "Grinding Mechanism");
+		LanguageRegistry.instance().addName(core, "\247dOrganic Core");
+		LanguageRegistry.instance().addName(core2, "\247dOrganic Crystal");
+		LanguageRegistry.instance().addName(tusk, "Tusk");
+		LanguageRegistry.instance().addName(whalefat, "Whale Fat");
+		LanguageRegistry.instance().addName(oilseed, "Seed Oil");
+		LanguageRegistry.instance().addName(oilolive, "Olive Oil");
+		LanguageRegistry.instance().addName(oilwhale, "Whale Fat Oil");
+
+		LanguageRegistry.instance().addName(potionhunger, "Potion of Hunger");
+		LanguageRegistry.instance().addName(potionhungerLong, "Potion of Starvation");
+		LanguageRegistry.instance().addName(potionhungerStrong, "Potion of Hunger II");
+		LanguageRegistry.instance().addName(potionvenomLong, "Potion of Venom");
+		LanguageRegistry.instance().addName(potionvenomStrong, "Potion of Venom II");
+
+		
+		LanguageRegistry.addName(knife, "Chef's Knife");	
+		LanguageRegistry.addName(whisk, "Whisk");	
+		LanguageRegistry.addName(foodgrinder, "Food Grinder");	
+		LanguageRegistry.addName(destalker, "Stalk Remover");	
+		LanguageRegistry.addName(cheesemold, "Cheese Mould");	
+		LanguageRegistry.addName(cheesemoldFilled, "Cheese Mould (Filled)");	
+		LanguageRegistry.addName(cheesemoldSet, "Cheese Mould");	
+
+		LanguageRegistry.addName(straw, "Straw"); //Adds the sapphire gem name (metadata sensitive)
+		LanguageRegistry.addName(stalk, "Stalk"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(wheatgrain, "Wheat Grain"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(barleygrain, "Barley Grain"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(barleymalt, "Malt Barley"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(flour, "Flour"); //Adds the sapphire gem name (metadata sensitive)
+		LanguageRegistry.addName(pasta, "Pasta"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pastry, "Pastry"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(yeast, "Yeast"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(magicyeast, "Enhancing Bacteria");
+		LanguageRegistry.addName(dough, "Dough"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(doughbread, "Bread Dough"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(cheesecurd, "Cheese Curd"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(lard, "Lard"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(butter, "Butter"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(cream, "Cream"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(caramel, "Caramel"); //Adds the amethyst gem name (metadata sensitive)
+
+		LanguageRegistry.addName(doughbiscuit, "Biscuit Dough"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(doughbiscuitchocolate, "Chocolate Biscuit Dough"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(doughbiscuitfruit, "Fruity Biscuit Dough"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(doughbiscuitcaramel, "Caramel Biscuit Dough"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(doughbiscuitpeanutbutter, "Peanut Butter Biscuit Dough"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(biscuit, "Biscuit"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(biscuitchocolate, "Chocolate Biscuit"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(biscuitfruit, "Fruity Biscuit"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(biscuitcaramel, "Caramel Biscuit"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(biscuitcream, "Cream Biscuit"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(biscuitjaffa, "Jaffa Cake"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(biscuitpeanutbutter, "Peanut Butter Biscuit"); //Adds the amethyst gem name (metadata sensitive)
+		
+		LanguageRegistry.addName(salt, "Salt"); //Adds the sapphire gem name (metadata sensitive)
+		LanguageRegistry.addName(pepper, "Pepper"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(peppersalt, "Salt + Pepper Seasoning"); //Adds the amethyst gem name (metadata sensitive)
+
+		LanguageRegistry.addName(bakedbread, "Baked Bread");	
+		LanguageRegistry.addName(burntbread, "Burnt Bread");	
+		LanguageRegistry.addName(bun, "Bread Bun");	
+		LanguageRegistry.addName(toast, "Toast");	
+		LanguageRegistry.addName(buttiefish, "Fish Sandwich");	
+		LanguageRegistry.addName(buttiepork, "Pork Sandwich");	
+		LanguageRegistry.addName(buttiebacon, "Bacon Buttie");	
+		LanguageRegistry.addName(buttiebeef, "Beef Sandwich");	
+		LanguageRegistry.addName(buttiecheese, "Cheese Sandwich");	
+		LanguageRegistry.addName(buttiechicken, "Chicken Sandwich");	
+		LanguageRegistry.addName(buttiesalami, "Salami Sandwich");	
+		LanguageRegistry.addName(buttielamb, "Mutton Sandwich");	
+		LanguageRegistry.addName(buttiemammoth, "Mammoth Sandwich");	
+		LanguageRegistry.addName(buttieegg, "Egg Sandwich");	
+		LanguageRegistry.addName(buttiejam, "Jam Sandwich");	
+		LanguageRegistry.addName(buttiemarmalade, "Marmalade Sandwich");	
+		LanguageRegistry.addName(buttiepeanutbutter, "Peanut Butter Sandwich");	
+		LanguageRegistry.addName(buttiepbj, "Peanut Butter + Jelly Sandwich");	
+		LanguageRegistry.addName(jamtoast, "Jam On Toast");	
+
+		LanguageRegistry.addName(pizzacheese, "Margherita Pizza");
+		LanguageRegistry.addName(pizzacheesestuffed, "Margherita Pizza (Stuffed Crust)");
+		LanguageRegistry.addName(pepperonislice, "Pepperoni Slice"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(cheeseslice, "Cheese Slice"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(breadslice, "Bread Slice"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzadough, "Pizza Dough"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzabase, "Pizza Base"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzadoughstuffed, "Stuffed Pizza Dough"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzabasestuffed, "Stuffed Pizza Base"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzapepperonibase, "Pepperoni Pizza Base"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzapepperoni, "Pepperoni Pizza"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzapepperonistuffed, "Pepperoni Pizza (Stuffed Crust)"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzapepperonibasestuffed, "Stuffed Pepperoni Pizza Base"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzacheesybase, "Cheesy Pizza Base"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzacheesy, "Cheesy Pizza"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzacheesystuffed, "Cheesy Pizza (Stuffed Crust)"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzacheesybasestuffed, "Stuffed Cheesy Pizza Base"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzameatbase, "Meaty Pizza Base"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzameat, "Meaty Pizza"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzameatstuffed, "Meaty Pizza (Stuffed Crust)"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzameatbasestuffed, "Stuffed Meaty Pizza Base"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzaamericabase, "American-Style Pizza Base"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzaamerica, "American-Style Pizza"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzaamericastuffed, "American-Style Pizza (Stuffed Crust)"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzaamericabasestuffed, "Stuffed American-Style Pizza Base"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzamushroombase, "Mushroom Pizza Base"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzamushroom, "Mushroom Pizza"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzamushroomstuffed, "Mushroom Pizza (Stuffed Crust)"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzamushroombasestuffed, "Stuffed Mushroom Pizza Base"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzavegbase, "Vegetarian Pizza Base"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzaveg, "Vegetarian Pizza"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzavegstuffed, "Vegetarian Pizza (Stuffed Crust)"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(pizzavegbasestuffed, "Vegetarian Pizza Base"); //Adds the amethyst gem name (metadata sensitive)
+
+		LanguageRegistry.addName(gbreaddough, "Garlic Bread Dough"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(gbread, "Garlic Bread"); //Adds the amethyst gem name (metadata sensitive)
+
+		LanguageRegistry.addName(cheese, "Cheese");	
+		LanguageRegistry.addName(cheesewheel, "Cheese Wheel");
+		LanguageRegistry.addName(eggFried, "Fried Egg");	
+		LanguageRegistry.addName(eggScrambled, "Scrambled Egg");	
+		LanguageRegistry.addName(eggBoiled, "Boiled Egg");	
+		
+		LanguageRegistry.addName(salad, "Salad");
+		LanguageRegistry.addName(saladChicken, "Chicken Salad");
+		LanguageRegistry.addName(saladEgg, "Egg Salad");
+		LanguageRegistry.addName(saladFruit, "Fruit Salad");
+		LanguageRegistry.addName(seaweedDry, "Dried Sea Weed"); //Adds the sapphire gem name (metadata sensitive)
+		LanguageRegistry.addName(sushi, "Sushi");
+		
+		LanguageRegistry.addName(soupTomato, "Tomato Soup");	
+		LanguageRegistry.addName(soupPumpkin, "Pumpkin Soup");	
+		LanguageRegistry.addName(soupChicken, "Chicken Soup");	
+		LanguageRegistry.addName(soupBeef, "Beef Stew");	
+		LanguageRegistry.addName(soupVegetable, "Vegetable Stew");	
+		LanguageRegistry.addName(soupCarrot, "Carrot Soup");	
+		
+		LanguageRegistry.addName(pieApple, "Apple Pie"); 
+		LanguageRegistry.addName(pieCherry, "Cherry Pie"); 
+		LanguageRegistry.addName(pieCream, "Cream Pie"); 
+		LanguageRegistry.addName(pieChicken, "Chicken Pie"); 
+		LanguageRegistry.addName(pieMeat, "Meat Pie"); 
+		LanguageRegistry.addName(piePork, "Pork Pie"); 
+		LanguageRegistry.addName(pieShepherds, "Shepherds Pie"); 
+		LanguageRegistry.addName(pieAppleCooked, "Cooked Apple Pie"); 
+		LanguageRegistry.addName(pieCherryCooked, "Cooked Cherry Pie"); 
+		LanguageRegistry.addName(pieCreamCooked, "Cooked Cream Pie"); 
+		LanguageRegistry.addName(pieChickenCooked, "Cooked Chicken Pie"); 
+		LanguageRegistry.addName(pieMeatCooked, "Cooked Meat Pie"); 
+		LanguageRegistry.addName(piePorkCooked, "Cooked Pork Pie"); 
+		LanguageRegistry.addName(pieShepherdsCooked, "Cooked Shepherds Pie"); 
+		
+		LanguageRegistry.addName(potatoSlice, "Potato Slices");	
+		LanguageRegistry.addName(potatoWedge, "Raw Fries");	
+		LanguageRegistry.addName(crisps, "Crisps");	
+		LanguageRegistry.addName(chips, "Fries");	
+		LanguageRegistry.addName(svchips, "Fries (Salt and Vinegar)");	
+		LanguageRegistry.addName(chippack, "Fries (Packaged)");	
+		LanguageRegistry.addName(friedfish, "Battered Fish");	
+		LanguageRegistry.addName(friedspam, "Spam Fritter");	
+		LanguageRegistry.addName(friedsausage, "Battered Sausage");	
+		LanguageRegistry.addName(fishcake, "Fish Cake");	
+		LanguageRegistry.addName(friedfishcake, "Battered Fish Cake");	
+		LanguageRegistry.addName(friedchicken, "Fried Chicken");	
+		LanguageRegistry.addName(friedchickenpack, "Fried Chicken (Packaged)");	
+		LanguageRegistry.addName(burgerRaw, "Raw Burger");	
+		LanguageRegistry.addName(burgerCooked, "Cooked Burger");	
+		LanguageRegistry.addName(burgerRegular, "Regular Burger");	
+		LanguageRegistry.addName(burgerCheese, "Cheeseburger");
+		LanguageRegistry.addName(burgerChicken, "Chicken Burger");	
+		LanguageRegistry.addName(burgerBacon, "Bacon Burger");	
+		LanguageRegistry.addName(burgerBaconCheese, "Cheeseburger with Bacon");	
+		LanguageRegistry.addName(burgerRegularK, "Regular Burger (Ketchup)");	
+		LanguageRegistry.addName(burgerCheeseK, "Cheeseburger (Ketchup)");
+		LanguageRegistry.addName(burgerChickenK, "Chicken Burger (Ketchup)");	
+		LanguageRegistry.addName(burgerBaconK, "Bacon Burger (Ketchup)");	
+		LanguageRegistry.addName(burgerBaconCheeseK, "Cheeseburger with Bacon (Ketchup)");	
+		LanguageRegistry.addName(hotdog, "Hotdog");	
+		LanguageRegistry.addName(hotdogketchup, "Hotdog (Ketchup)");	
+
+		LanguageRegistry.addName(ribsCooked, "Smoked Ribs");	
+		LanguageRegistry.addName(ribsCookedK, "Smoked Ribs (BBQ Sauce)");	
+		LanguageRegistry.addName(ribs, "Spare Ribs");	
+		LanguageRegistry.addName(baconRaw, "Raw Bacon");	
+		LanguageRegistry.addName(baconCooked, "Fried Bacon");	
+		LanguageRegistry.addName(mammothmeatRaw, "Raw Mammoth Meat");	
+		LanguageRegistry.addName(mammothmeatCooked, "Mammoth Steak");	
+		LanguageRegistry.addName(lambRaw, "Raw Lamb Chop");	
+		LanguageRegistry.addName(lambCooked, "Cooked Lambchop");	
+		LanguageRegistry.addName(lambCookedK, "Cooked Lambchop (Mint Sauce)");	
+		LanguageRegistry.addName(sausage, "Raw Sausage");	
+		LanguageRegistry.addName(sausageCooked, "Cooked Sausage");	
+		LanguageRegistry.addName(pepperoni, "Pepperoni");
+		LanguageRegistry.addName(pigskin, "Pig Skin"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(porkscratching, "Pork Crackling"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(porkCookedK, "Cooked Porkchop (Seasoned)");
+		LanguageRegistry.addName(beefCookedK, "Steak (BBQ Sauce)");
+		LanguageRegistry.addName(fishCookedK, "Cooked Fish (Seasoned)");
+		LanguageRegistry.addName(chickenCookedK, "Cooked Chicken (Seasoned)");
+		
+		LanguageRegistry.addName(jelly, "Jelly");	
+		LanguageRegistry.addName(jellyApple, "Apple Jelly");	
+		LanguageRegistry.addName(jellyStrawberry, "Strawberry Jelly");	
+		LanguageRegistry.addName(jellyLemon, "Lemon Jelly");	
+		LanguageRegistry.addName(jellyGrape, "Grape Jelly");	
+		LanguageRegistry.addName(jellyCherry, "Cherry Jelly");	
+		LanguageRegistry.addName(jellyOrange, "Orange Jelly");	
+		LanguageRegistry.addName(jellyBlackcurrant, "Blackcurrant Jelly");	
+		LanguageRegistry.addName(jellyRaspberry, "Raspberry Jelly");
+		LanguageRegistry.addName(jellyBRaspberry, "Blue Raspberry Jelly");
+		LanguageRegistry.addName(icecream, "Vanilla Ice Cream");	
+		LanguageRegistry.addName(cicecream, "Chocolate Ice Cream");	
+		LanguageRegistry.addName(micecream, "Melon Ice Cream");	
+		LanguageRegistry.addName(licecream, "Lemon Ice Cream");	
+		LanguageRegistry.addName(sicecream, "Strawberry Ice Cream");	
+		LanguageRegistry.addName(blueberryicecream, "Blueberry Ice Cream");
+		LanguageRegistry.addName(blackcurranticecream, "Blackcurrant Ice Cream");
+		LanguageRegistry.addName(raspberryicecream, "Raspberry Ice Cream");
+		LanguageRegistry.addName(braspberryicecream, "Blue Raspberry Ice Cream");
+		LanguageRegistry.addName(cdicecream, "Cookie Dough Ice Cream");	
+		LanguageRegistry.addName(chicecream, "Cherry Ice Cream");	
+		LanguageRegistry.addName(caramelicecream, "Caramel Ice Cream");	
+		LanguageRegistry.addName(bubblegumicecream, "Bubblegum Ice Cream");	
+		LanguageRegistry.addName(nuticecream, "Nutty Ice Cream");
+		LanguageRegistry.addName(minticecream, "Minty Ice Cream");
+		LanguageRegistry.addName(cminticecream, "Mint-Choc-Chip Ice Cream");
+		LanguageRegistry.addName(cookiedough, "Cookie Dough");	
+		LanguageRegistry.addName(chocolate, "Chocolate");
+		LanguageRegistry.addName(wafer, "Candy Wafer"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(gum, "Bubblegum"); 
+		LanguageRegistry.addName(gumApple, "Awesome Apple Bubblegum"); 
+		LanguageRegistry.addName(gumStrawberry, "Sweet Strawberry Bubblegum"); 
+		LanguageRegistry.addName(gumLemon, "Super-Sour Lemon Bubblegum"); 
+		LanguageRegistry.addName(gumGrape, "Gorgeous Grape Bubblegum"); 
+		LanguageRegistry.addName(gumCherry, "Cherry-Tastic Bubblegum"); 
+		LanguageRegistry.addName(gumOrange, "Tangy Orange Bubblegum"); 
+		LanguageRegistry.addName(gumMelon, "Wicked Watermelon Bubblegum"); 
+		LanguageRegistry.addName(gumSweet, "Sweet Bubblegum"); 
+		LanguageRegistry.addName(gumMint, "Minty Bubblegum"); 
+		LanguageRegistry.addName(gumBlackcurrant, "Brilliant Blackcurrant Bubblegum"); 
+		LanguageRegistry.addName(gumRaspberry, "Radical Raspberry Bubblegum"); 
+		LanguageRegistry.addName(gumBRaspberry, "Radical Blue Raspberry Bubblegum"); 
+		LanguageRegistry.addName(gumBlueberry, "Bright Blueberry Bubblegum"); 
+		
+		LanguageRegistry.addName(pack, "Fast Food Packaging");
+		LanguageRegistry.addName(cornoncob, "Corn On The Cob");
+		LanguageRegistry.addName(popcorn, "Popcorn");
+		LanguageRegistry.addName(popcornpack, "Popcorn (Packaged)");
+		LanguageRegistry.addName(toffeeapple, "Caramel Apple");
+
+		LanguageRegistry.addName(cup, "Drinking Glass"); //Adds the sapphire gem name (metadata sensitive)
+		LanguageRegistry.addName(jar, "Glass Jar"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(tankard, "Beer Glass"); //Adds the sapphire gem name (metadata sensitive)
+		LanguageRegistry.addName(winecup, "Wine Glass"); //Adds the sapphire gem name (metadata sensitive)
+		LanguageRegistry.addName(mug, "Stone Mug"); //Adds the sapphire gem name (metadata sensitive)
+		LanguageRegistry.addName(vinegar, "Vinegar");	
+		LanguageRegistry.addName(jam, "Strawberry Jam");	
+		LanguageRegistry.addName(jamOrange, "Orange Jam");
+		LanguageRegistry.addName(peanutbutter, "Peanut Butter");
+		LanguageRegistry.addName(treacle, "Treacle");
+		LanguageRegistry.addName(custard, "Custard");
+		LanguageRegistry.addName(ketchup, "Tomato Sauce");	
+		LanguageRegistry.addName(bbq, "BBQ Sauce");	
+		LanguageRegistry.addName(mayo, "Mayonaise");	
+		LanguageRegistry.addName(garlicsauce, "Garlic Sauce");	
+		LanguageRegistry.addName(gravy, "Gravy");	
+		LanguageRegistry.addName(saladcream, "Salad Cream");	
+		LanguageRegistry.addName(mintsauce, "Mint Sauce");	
+		LanguageRegistry.addName(applejuice, "Apple Juice");	
+		LanguageRegistry.addName(orangejuice, "Orange Juice");	
+		LanguageRegistry.addName(lemonjuice, "Lemon Juice");	
+		LanguageRegistry.addName(grapejuice, "Grape Juice");	
+		LanguageRegistry.addName(orangejuice, "Orange Juice");	
+		LanguageRegistry.addName(cherryjuice, "Cherry Juice");	
+		LanguageRegistry.addName(melonjuice, "Melon Juice");	
+		LanguageRegistry.addName(strawberryjuice, "Strawberry Juice");	
+		LanguageRegistry.addName(blueberryjuice, "Blueberry Juice");	
+		LanguageRegistry.addName(blackcurrantjuice, "Blackcurrant Juice");	
+		LanguageRegistry.addName(raspberryjuice, "Raspberry Juice");	
+		LanguageRegistry.addName(braspberryjuice, "Blue Raspberry Juice");	
+		LanguageRegistry.addName(lemonade, "Lemonade");	
+		LanguageRegistry.addName(cherryade, "Cherryade");	
+		LanguageRegistry.addName(orangeade, "Orangeade");	
+		LanguageRegistry.addName(appleade, "Appleade");	
+		LanguageRegistry.addName(blackcurrantade, "Blackcurrantade");	
+		LanguageRegistry.addName(chocolatemilk, "Chocolate Milk");	
+		LanguageRegistry.addName(hotchocolatemilk, "Hot Chocolate");
+		
+		LanguageRegistry.addName(beerbasic, "Beer (Basic)");
+		LanguageRegistry.addName(beerbasicBucket, "Bucket of Beer (Basic)");
+		LanguageRegistry.addName(winebasic, "Wine (Basic)");
+		LanguageRegistry.addName(winebasicBucket, "Bucket of Wine (Basic)");
+		
+		LanguageRegistry.addName(goldcookie, "Golden Cookie");
+		LanguageRegistry.addName(co2, "Carbonated Water");
+		
+		LanguageRegistry.addName(sackYeast, "Sack of Yeast");
+		LanguageRegistry.addName(sackHops, "Sack of Hops");
+		LanguageRegistry.addName(sackBarleyGrain, "Sack of Barley Grain");
+		LanguageRegistry.addName(sackBarleyMalt, "Sack of Malt Barley");
+		LanguageRegistry.addName(sackWeed, "Sack of Cannabis");
+		LanguageRegistry.addName(sackTobacco, "Sack of Weed");
+
+
+	}
+	@Init
+	public void load (FMLInitializationEvent event) {
+
+		GameRegistry.registerCraftingHandler(new CraftingHandler());
+		GameRegistry.registerCraftingHandler(new CraftingHandler2());
+		GameRegistry.registerCraftingHandler(new CraftingHandler3());
+		GameRegistry.registerCraftingHandler(new CraftingHandler4());
+		//MinecraftForge.EVENT_BUS.register(new SoundHandler());
+
+
+
+		GameRegistry.addRecipe(new ItemStack(knife), new Object[] {"X", "Z", 'X', Item.ingotIron, 'Z', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(whisk), new Object[] {"XX ", "XZ ", "  Z", 'X', Item.ingotIron, 'Z', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(whisk), new Object[] {" XX", " ZX", "Z  ", 'X', Item.ingotIron, 'Z', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(foodgrinder), new Object[] {"  Z", " X ", "Y  ", 'X', Item.ingotIron, 'Z', Item.stick, 'Y', new ItemStack(ModFood.grindingmech,1)});
+		GameRegistry.addRecipe(new ItemStack(destalker), new Object[] {"Z  ", " X ", "  X", 'X', Item.ingotIron, 'Z', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(cheesemold), new Object[] {"X X", "XXX", 'X', Block.stone});
+		GameRegistry.addShapelessRecipe(new ItemStack(cheesemoldFilled, 1), new Object[]{new ItemStack(cheesemold), new ItemStack(ModFood.cheesecurd), new ItemStack(ModFood.cheesecurd), new ItemStack(ModFood.cheesecurd), new ItemStack(ModFood.cheesecurd)});
+
+		GameRegistry.addRecipe(new ItemStack(ModFood.stonecog,1), new Object[] {" Z ", "Z Z", " Z ", 'Z', Block.stone});
+		GameRegistry.addRecipe(new ItemStack(ModFood.woodcog,1), new Object[] {" Z ", "Z Z", " Z ", 'Z', Block.planks});
+
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.peppersalt,2), new Object[]{new ItemStack(ModFood.pepper), new ItemStack(ModFood.salt)});    
+
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.stalk,1), new Object[]{new ItemStack(Item.wheat)}); 
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.wheatgrain,2), new Object[]{new ItemStack(Item.wheat), new ItemStack(ModFood.destalker, 1, WILDCARD_VALUE)}); 
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.barleygrain,2), new Object[]{new ItemStack(ModFruits.barley), new ItemStack(ModFood.destalker, 1, WILDCARD_VALUE)}); 
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.flour), new Object[]{new ItemStack(ModFood.wheatgrain), new ItemStack(ModFood.foodgrinder, 1, WILDCARD_VALUE)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.flour), new Object[]{new ItemStack(ModFood.barleygrain), new ItemStack(ModFood.foodgrinder, 1, WILDCARD_VALUE)});
+		GameRegistry.addRecipe(new ItemStack(ModFood.straw,1), new Object[] {"ZZZ", "ZZZ", "ZZZ", 'Z', new ItemStack(ModFood.stalk,1)});
+
+
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.dough,1), new Object[]{new ItemStack(ModFood.flour), new ItemStack(ModFood.flour), new ItemStack(ModFood.flour), new ItemStack(ModFood.butter,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.yeast,1), new Object[]{new ItemStack(Item.porkRaw)}); 
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.yeast,1), new Object[]{new ItemStack(Item.chickenRaw)}); 
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.yeast,1), new Object[]{new ItemStack(Item.beefRaw)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.yeast,1), new Object[]{new ItemStack(Item.fishRaw)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.pasta,4), new Object[]{new ItemStack(Item.egg), new ItemStack(ModFood.flour,1), new ItemStack(Item.bucketWater)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.pastry,4), new Object[]{new ItemStack(Item.bucketMilk), new ItemStack(ModFood.flour,1), new ItemStack(ModFood.butter,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(magicyeast, 6), new Object[]{new ItemStack(Item.ingotGold), new ItemStack(ModFood.yeast,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(magicyeast, 16), new Object[]{new ItemStack(Item.diamond), new ItemStack(ModFood.yeast,1)});
+
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.doughbread,1), new Object[]{new ItemStack(ModFood.flour,1), new ItemStack(ModFood.flour,1), new ItemStack(ModFood.flour,1), new ItemStack(ModFood.butter,1), new ItemStack(Item.bucketWater), new ItemStack(ModFood.yeast,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.doughbread,1), new Object[]{new ItemStack(ModFood.dough,1), new ItemStack(ModFood.yeast,1), new ItemStack(Item.bucketWater)});
+		GameRegistry.addSmelting(ModFood.doughbread.itemID, new ItemStack(ModFood.bakedbread), 2.0f);
+		GameRegistry.addSmelting(ModFood.bakedbread.itemID, new ItemStack(ModFood.burntbread), 0.0f);
+		GameRegistry.addSmelting(Item.bread.itemID, new ItemStack(ModFood.burntbread), 0.0f);
+		GameRegistry.addSmelting(ModFood.breadslice.itemID, new ItemStack(ModFood.toast), 0.8f);
+		GameRegistry.addRecipe(new ItemStack(buttiefish, 1), new Object[] { "X", "Z", "X", 'Z', Item.fishCooked, 'X', new ItemStack(ModFood.breadslice,1)});
+		GameRegistry.addRecipe(new ItemStack(buttiepork, 1), new Object[] { "X", "Z", "X", 'Z', Item.porkCooked, 'X', new ItemStack(ModFood.breadslice,1)});
+		GameRegistry.addRecipe(new ItemStack(buttiebacon, 1), new Object[] { "X", "Z", "X", 'Z', ModFood.baconCooked, 'X', ModFood.toast});
+		GameRegistry.addRecipe(new ItemStack(buttiebeef, 1), new Object[] { "X", "Z", "X", 'Z', Item.beefCooked, 'X', new ItemStack(ModFood.breadslice,1)});
+		GameRegistry.addRecipe(new ItemStack(buttiecheese, 1), new Object[] { "X", "Z", "X", 'Z', new ItemStack(ModFood.cheeseslice,1), 'X', new ItemStack(ModFood.breadslice,1)});
+		GameRegistry.addRecipe(new ItemStack(buttiechicken, 1), new Object[] { "X", "Z", "X", 'Z', Item.chickenCooked, 'X', new ItemStack(ModFood.breadslice,1)});
+		GameRegistry.addRecipe(new ItemStack(buttiesalami, 1), new Object[] { "X", "Z", "X", 'Z', new ItemStack(ModFood.pepperonislice,1), 'X', new ItemStack(ModFood.breadslice,1)});
+		GameRegistry.addRecipe(new ItemStack(buttielamb, 1), new Object[] { "X", "Z", "X", 'Z', new ItemStack(ModFood.lambCooked,1), 'X', new ItemStack(ModFood.breadslice,1)});
+		GameRegistry.addRecipe(new ItemStack(buttiemammoth, 1), new Object[] { "X", "Z", "X", 'Z', new ItemStack(ModFood.mammothmeatCooked,1), 'X', new ItemStack(ModFood.breadslice,1)});
+		GameRegistry.addRecipe(new ItemStack(buttieegg, 1), new Object[] { "X", "Z", "X", 'Z', new ItemStack(ModFood.eggFried,1), 'X', new ItemStack(ModFood.breadslice,1)});
+		GameRegistry.addRecipe(new ItemStack(buttiejam, 1), new Object[] { "X", "Z", "X", 'Z', new ItemStack(ModFood.jam,1), 'X', new ItemStack(ModFood.breadslice,1)});
+		GameRegistry.addRecipe(new ItemStack(buttiemarmalade, 1), new Object[] { "X", "Z", "X", 'Z', new ItemStack(ModFood.jamOrange,1), 'X', new ItemStack(ModFood.breadslice,1)});
+		GameRegistry.addRecipe(new ItemStack(buttiepeanutbutter, 1), new Object[] { "X", "Z", "X", 'Z', new ItemStack(ModFood.peanutbutter,1), 'X', new ItemStack(ModFood.breadslice,1)});
+		GameRegistry.addRecipe(new ItemStack(buttiepbj, 1), new Object[] { " X ", " ZY", " X ", 'Z', new ItemStack(ModFood.jam,1), 'Y', new ItemStack(ModFood.peanutbutter,1), 'X', new ItemStack(ModFood.breadslice,1)});
+		GameRegistry.addRecipe(new ItemStack(buttiepbj, 1), new Object[] { " X ", " YZ", " X ", 'Z', new ItemStack(ModFood.jam,1), 'Y', new ItemStack(ModFood.peanutbutter,1), 'X', new ItemStack(ModFood.breadslice,1)});
+		GameRegistry.addRecipe(new ItemStack(buttiepbj, 1), new Object[] { " X ", "Z Y", " X ", 'Z', new ItemStack(ModFood.jam,1), 'Y', new ItemStack(ModFood.peanutbutter,1), 'X', new ItemStack(ModFood.breadslice,1)});
+		GameRegistry.addRecipe(new ItemStack(buttiepbj, 1), new Object[] { " X ", "Y Z", " X ", 'Z', new ItemStack(ModFood.jam,1), 'Y', new ItemStack(ModFood.peanutbutter,1), 'X', new ItemStack(ModFood.breadslice,1)});
+		GameRegistry.addRecipe(new ItemStack(buttiepbj, 1), new Object[] { " X ", "ZY ", " X ", 'Z', new ItemStack(ModFood.jam,1), 'Y', new ItemStack(ModFood.peanutbutter,1), 'X', new ItemStack(ModFood.breadslice,1)});
+		GameRegistry.addRecipe(new ItemStack(buttiepbj, 1), new Object[] { " X ", "YZ ", " X ", 'Z', new ItemStack(ModFood.jam,1), 'Y', new ItemStack(ModFood.peanutbutter,1), 'X', new ItemStack(ModFood.breadslice,1)});
+		GameRegistry.addRecipe(new ItemStack(jamtoast, 1), new Object[] { "X", "Y", "Z", 'X', ModFood.jam, 'Y', new ItemStack(ModFood.butter,1), 'Z', ModFood.toast});
+
+		GameRegistry.addRecipe(new ItemStack(ModFood.pizzabase,1), new Object[] { "X", "Z", "Y", 'Z', ModFood.ketchup, 'X', new ItemStack(ModFood.cheeseslice,1), 'Y', new ItemStack(ModFood.pizzadough,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.pizzadough,2), new Object[]{new ItemStack(ModFood.doughbread,1)});
+		GameRegistry.addRecipe(new ItemStack(ModFood.pizzadoughstuffed,2), new Object[] { "Y", "Z", "Y", 'Z', ModFood.cheese, 'Y', new ItemStack(ModFood.pizzadough,1)});
+		GameRegistry.addRecipe(new ItemStack(ModFood.pizzabasestuffed,1), new Object[] { "X", "Z", "Y", 'Z', ModFood.ketchup, 'X', new ItemStack(ModFood.cheeseslice,1), 'Y', new ItemStack(ModFood.pizzadoughstuffed,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.gbreaddough,1), new Object[]{new ItemStack(ModFood.flour,1), new ItemStack(ModFood.flour,1), new ItemStack(ModFood.flour,1), new ItemStack(ModFood.butter,1), new ItemStack(ModFood.butter,1), new ItemStack(Item.bucketWater), new ItemStack(ModFood.yeast,1), new ItemStack(ModFruits.garlic,1), new ItemStack(ModCrops.parsleyPlant,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.gbreaddough,1), new Object[]{new ItemStack(ModFood.dough,1), new ItemStack(ModFood.butter,1), new ItemStack(Item.bucketWater), new ItemStack(ModFood.yeast,1), new ItemStack(ModFruits.garlic,1), new ItemStack(ModCrops.parsleyPlant,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.gbreaddough,1), new Object[]{new ItemStack(ModFood.doughbread,1), new ItemStack(ModFood.butter,1), new ItemStack(ModFruits.garlic,1), new ItemStack(ModCrops.parsleyPlant,1)});
+		GameRegistry.addSmelting(ModFood.pizzabase.itemID, new ItemStack(ModFood.pizzacheese), 4.0f);
+		GameRegistry.addSmelting(ModFood.pizzabasestuffed.itemID, new ItemStack(ModFood.pizzacheesestuffed), 6.0f);
+		GameRegistry.addSmelting(ModFood.pizzapepperonibase.itemID, new ItemStack(ModFood.pizzapepperoni), 5.0f);
+		GameRegistry.addSmelting(ModFood.pizzapepperonibasestuffed.itemID, new ItemStack(ModFood.pizzapepperonistuffed), 7.0f);
+		GameRegistry.addRecipe(new ItemStack(ModFood.pizzapepperonibase,1), new Object[] { "ZZZ", " X ", 'X', ModFood.pizzabase, 'Z', ModFood.pepperonislice});
+		GameRegistry.addRecipe(new ItemStack(ModFood.pizzapepperonibasestuffed,1), new Object[] { "ZZZ", " X ", 'X', ModFood.pizzabasestuffed, 'Z', ModFood.pepperonislice});
+		GameRegistry.addSmelting(ModFood.pizzacheesybase.itemID, new ItemStack(ModFood.pizzacheesy), 6.0f);
+		GameRegistry.addSmelting(ModFood.pizzacheesybasestuffed.itemID, new ItemStack(ModFood.pizzacheesystuffed), 7.50f);
+		GameRegistry.addRecipe(new ItemStack(ModFood.pizzacheesybase,1), new Object[] { "ZYZ", " X ", 'X', ModFood.pizzabase, 'Z', ModFood.cheeseslice, 'Y', ModFood.cheese});
+		GameRegistry.addRecipe(new ItemStack(ModFood.pizzacheesybasestuffed,1), new Object[] { "ZYZ", " X ", 'X', ModFood.pizzabasestuffed, 'Z', ModFood.cheeseslice, 'Y', ModFood.cheese});
+		GameRegistry.addSmelting(ModFood.pizzameatbase.itemID, new ItemStack(ModFood.pizzameat), 10.0f);
+		GameRegistry.addSmelting(ModFood.pizzameatbasestuffed.itemID, new ItemStack(ModFood.pizzameatstuffed), 12.0f);
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.pizzameatbase,1), new Object[]{new ItemStack(ModFood.pizzabase,1), new ItemStack(Item.porkRaw,1), new ItemStack(ModFood.pepperonislice,1), new ItemStack(Item.beefRaw), new ItemStack(Item.chickenRaw,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.pizzameatbasestuffed,1), new Object[]{new ItemStack(ModFood.pizzabasestuffed,1), new ItemStack(Item.porkRaw,1), new ItemStack(ModFood.pepperonislice,1), new ItemStack(Item.beefRaw), new ItemStack(Item.chickenRaw,1)});
+		GameRegistry.addSmelting(ModFood.pizzaamericabase.itemID, new ItemStack(ModFood.pizzaamerica), 10.0f);
+		GameRegistry.addSmelting(ModFood.pizzaamericabasestuffed.itemID, new ItemStack(ModFood.pizzaamericastuffed), 12.0f);
+		GameRegistry.addRecipe(new ItemStack(ModFood.pizzaamericabase,1), new Object[] { "ZYG", " X ", 'X', ModFood.pizzabasestuffed, 'Z', Item.chickenRaw, 'Y', ModFruits.corn, 'G', ModFood.baconRaw});
+		GameRegistry.addRecipe(new ItemStack(ModFood.pizzaamericabasestuffed,1), new Object[] { "ZYG", " X ", 'X', ModFood.pizzabasestuffed, 'Z', Item.chickenRaw, 'Y', ModFruits.corn, 'G', ModFood.baconRaw});
+		GameRegistry.addSmelting(ModFood.pizzamushroombase.itemID, new ItemStack(ModFood.pizzamushroom), 10.0f);
+		GameRegistry.addSmelting(ModFood.pizzamushroombasestuffed.itemID, new ItemStack(ModFood.pizzamushroomstuffed), 12.0f);
+		GameRegistry.addRecipe(new ItemStack(ModFood.pizzamushroombase,1), new Object[] { "ZZZ", " X ", 'X', ModFood.pizzabasestuffed, 'Z', Block.mushroomBrown});
+		GameRegistry.addRecipe(new ItemStack(ModFood.pizzamushroombasestuffed,1), new Object[] { "ZZZ", " X ", 'X', ModFood.pizzabasestuffed, 'Z', Block.mushroomBrown});
+		GameRegistry.addSmelting(ModFood.pizzavegbase.itemID, new ItemStack(ModFood.pizzaveg), 10.0f);
+		GameRegistry.addSmelting(ModFood.pizzavegbasestuffed.itemID, new ItemStack(ModFood.pizzavegstuffed), 12.0f);
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.pizzavegbase,1), new Object[]{new ItemStack(ModFood.pizzabase,1), new ItemStack(ModFruits.onion,1), new ItemStack(ModFruits.pepperRed,1), new ItemStack(ModFruits.pepperYellow), new ItemStack(ModFruits.pepperGreen)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.pizzavegbasestuffed,1), new Object[]{new ItemStack(ModFood.pizzabasestuffed,1), new ItemStack(ModFruits.onion,1), new ItemStack(ModFruits.pepperRed,1), new ItemStack(ModFruits.pepperYellow), new ItemStack(ModFruits.pepperGreen)});
+		GameRegistry.addSmelting(ModFood.gbreaddough.itemID, new ItemStack(ModFood.gbread), 4.0f);
+
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.cheeseslice,2), new Object[]{new ItemStack(cheese), new ItemStack(knife, 1, WILDCARD_VALUE)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.pepperonislice,3), new Object[]{new ItemStack(pepperoni), new ItemStack(knife, 1, WILDCARD_VALUE)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.breadslice,4), new Object[]{new ItemStack(Item.bread), new ItemStack(knife, 1, WILDCARD_VALUE)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.breadslice,6), new Object[]{new ItemStack(bakedbread), new ItemStack(knife, 1, WILDCARD_VALUE)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.bun,4), new Object[]{new ItemStack(Item.bread), new ItemStack(Item.seeds), new ItemStack(knife, 1, WILDCARD_VALUE)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.bun,8), new Object[]{new ItemStack(bakedbread), new ItemStack(Item.seeds),new ItemStack(knife, 1, WILDCARD_VALUE)});
+
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.cream,1), new Object[]{new ItemStack(Item.bucketMilk), new ItemStack(Item.sugar), new ItemStack(Item.bowlEmpty)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.butter,1), new Object[]{new ItemStack(Item.bucketMilk), new ItemStack(ModFood.salt,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.cheesecurd,1), new Object[]{new ItemStack(Item.bucketMilk)});
+		GameRegistry.addRecipe(new ItemStack(cheesewheel, 1), new Object[] { "XX", "XX", 'X', ModFood.cheese});
+		GameRegistry.addShapelessRecipe(new ItemStack(cheese, 4), new Object[]{new ItemStack(cheesewheel)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.lard,1), new Object[]{new ItemStack(ModFood.pigskin,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(eggScrambled, 1), new Object[]{new ItemStack(Item.egg), new ItemStack(whisk, 1, WILDCARD_VALUE), new ItemStack(Item.bowlEmpty)});
+		GameRegistry.addSmelting(Item.egg.itemID, new ItemStack(ModFood.eggBoiled), 0.7f);
+		GameRegistry.addSmelting(Item.sugar.itemID, new ItemStack(ModFood.caramel), 0.7f);
+
+		GameRegistry.addShapelessRecipe(new ItemStack(doughbiscuit, 1), new Object[]{new ItemStack(ModFood.dough,1), new ItemStack(butter), new ItemStack(Item.sugar), new ItemStack(Item.sugar)});
+		GameRegistry.addShapelessRecipe(new ItemStack(doughbiscuit, 1), new Object[]{new ItemStack(ModFood.flour), new ItemStack(ModFood.flour), new ItemStack(ModFood.flour), new ItemStack(butter), new ItemStack(butter), new ItemStack(Item.sugar), new ItemStack(Item.sugar)});
+		GameRegistry.addShapelessRecipe(new ItemStack(doughbiscuitchocolate, 1), new Object[]{new ItemStack(ModFood.doughbiscuit,1), new ItemStack(chocolate), new ItemStack(chocolate)});
+		GameRegistry.addShapelessRecipe(new ItemStack(doughbiscuitcaramel, 1), new Object[]{new ItemStack(ModFood.doughbiscuit,1), new ItemStack(caramel), new ItemStack(caramel)});
+		GameRegistry.addShapelessRecipe(new ItemStack(doughbiscuitfruit, 1), new Object[]{new ItemStack(ModFood.doughbiscuit,1), new ItemStack(ModFruits.strawberry), new ItemStack(ModFruits.cherry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(doughbiscuitpeanutbutter, 1), new Object[]{new ItemStack(ModFood.doughbiscuit,1), new ItemStack(peanutbutter)});
+		GameRegistry.addSmelting(ModFood.doughbiscuit.itemID, new ItemStack(ModFood.biscuit,4), 4.0f);
+		GameRegistry.addSmelting(ModFood.doughbiscuitchocolate.itemID, new ItemStack(ModFood.biscuitchocolate,4), 6.0f);
+		GameRegistry.addSmelting(ModFood.doughbiscuitcaramel.itemID, new ItemStack(ModFood.biscuitcaramel,4), 6.0f);
+		GameRegistry.addSmelting(ModFood.doughbiscuitfruit.itemID, new ItemStack(ModFood.biscuitfruit,4), 6.0f);
+		GameRegistry.addSmelting(ModFood.doughbiscuitpeanutbutter.itemID, new ItemStack(ModFood.biscuitpeanutbutter,4), 4.0f);
+		GameRegistry.addRecipe(new ItemStack(biscuitcream, 1), new Object[] { "X", "Z", "X", 'Z', new ItemStack(ModFood.cream,1), 'X', new ItemStack(ModFood.biscuit,1)});
+		GameRegistry.addRecipe(new ItemStack(biscuitjaffa, 1), new Object[] { "X", "Z", "Y", 'Y', new ItemStack(ModFood.biscuit,1), 'X', new ItemStack(ModFood.chocolate,1), 'Z', new ItemStack(ModFood.jamOrange,1)});
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(potatoSlice, 2), new Object[]{new ItemStack(potatoWedge), new ItemStack(knife, 1, WILDCARD_VALUE)});
+		GameRegistry.addShapelessRecipe(new ItemStack(potatoWedge, 2), new Object[]{new ItemStack(Item.potato), new ItemStack(knife, 1, WILDCARD_VALUE)});
+		GameRegistry.addShapelessRecipe(new ItemStack(chippack, 1), new Object[]{new ItemStack(ModFood.pack,1), new ItemStack(chips,1), new ItemStack(chips)});
+		GameRegistry.addShapelessRecipe(new ItemStack(svchips, 1), new Object[]{new ItemStack(ModFood.pack,1), new ItemStack(chips,1), new ItemStack(chips), new ItemStack(salt), new ItemStack(vinegar)});
+		GameRegistry.addShapelessRecipe(new ItemStack(svchips, 1), new Object[]{new ItemStack(chippack), new ItemStack(salt), new ItemStack(vinegar)});
+		GameRegistry.addShapelessRecipe(new ItemStack(fishcake, 2), new Object[]{new ItemStack(Item.fishRaw), new ItemStack(Item.fishRaw), new ItemStack(Item.fishRaw), new ItemStack(ModFood.salt,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(friedchickenpack, 1), new Object[]{new ItemStack(pack), new ItemStack(friedchicken), new ItemStack(friedchicken), new ItemStack(friedchicken)});
+		GameRegistry.addShapelessRecipe(new ItemStack(burgerRaw, 2), new Object[]{new ItemStack(Item.beefRaw), new ItemStack(salt), new ItemStack(Item.egg), new ItemStack(foodgrinder, 1, WILDCARD_VALUE)});
+		GameRegistry.addSmelting(ModFood.burgerRaw.itemID, new ItemStack(ModFood.burgerCooked), 2.0f);
+		GameRegistry.addRecipe(new ItemStack(burgerRegular, 1), new Object[] { " X ", " Z ", " X ", 'Z', ModFood.burgerCooked, 'X', ModFood.bun});
+		GameRegistry.addRecipe(new ItemStack(burgerChicken, 1), new Object[] { " X ", " Z ", " X ", 'Z', Item.chickenCooked, 'X', ModFood.bun});
+		GameRegistry.addRecipe(new ItemStack(burgerCheese, 1), new Object[] { " X ", "ZC ", " X ", 'Z', ModFood.burgerCooked, 'X', ModFood.bun, 'C', ModFood.cheeseslice});
+		GameRegistry.addRecipe(new ItemStack(burgerCheese, 1), new Object[] { " X ", "CZ ", " X ", 'Z', ModFood.burgerCooked, 'X', ModFood.bun, 'C', ModFood.cheeseslice});
+		GameRegistry.addRecipe(new ItemStack(burgerCheese, 1), new Object[] { " X ", "Z C", " X ", 'Z', ModFood.burgerCooked, 'X', ModFood.bun, 'C', ModFood.cheeseslice});
+		GameRegistry.addRecipe(new ItemStack(burgerCheese, 1), new Object[] { " X ", "C Z", " X ", 'Z', ModFood.burgerCooked, 'X', ModFood.bun, 'C', ModFood.cheeseslice});
+		GameRegistry.addRecipe(new ItemStack(burgerCheese, 1), new Object[] { " X ", " ZC", " X ", 'Z', ModFood.burgerCooked, 'X', ModFood.bun, 'C', ModFood.cheeseslice});
+		GameRegistry.addRecipe(new ItemStack(burgerCheese, 1), new Object[] { " X ", " CZ", " X ", 'Z', ModFood.burgerCooked, 'X', ModFood.bun, 'C', ModFood.cheeseslice});
+		GameRegistry.addRecipe(new ItemStack(burgerBacon, 1), new Object[] { " X ", "ZC ", " X ", 'Z', ModFood.burgerCooked, 'X', ModFood.bun, 'C', ModFood.baconCooked});
+		GameRegistry.addRecipe(new ItemStack(burgerBacon, 1), new Object[] { " X ", "CZ ", " X ", 'Z', ModFood.burgerCooked, 'X', ModFood.bun, 'C', ModFood.baconCooked});
+		GameRegistry.addRecipe(new ItemStack(burgerBacon, 1), new Object[] { " X ", "Z C", " X ", 'Z', ModFood.burgerCooked, 'X', ModFood.bun, 'C', ModFood.baconCooked});
+		GameRegistry.addRecipe(new ItemStack(burgerBacon, 1), new Object[] { " X ", "C Z", " X ", 'Z', ModFood.burgerCooked, 'X', ModFood.bun, 'C', ModFood.baconCooked});
+		GameRegistry.addRecipe(new ItemStack(burgerBacon, 1), new Object[] { " X ", " ZC", " X ", 'Z', ModFood.burgerCooked, 'X', ModFood.bun, 'C', ModFood.baconCooked});
+		GameRegistry.addRecipe(new ItemStack(burgerBacon, 1), new Object[] { " X ", " CZ", " X ", 'Z', ModFood.burgerCooked, 'X', ModFood.bun, 'C', ModFood.baconCooked});
+		GameRegistry.addRecipe(new ItemStack(burgerBaconCheese, 1), new Object[] { " X ", "CSZ", " X ", 'Z', ModFood.burgerCooked, 'X', ModFood.bun, 'C', ModFood.baconCooked, 'S', ModFood.cheeseslice});
+		GameRegistry.addRecipe(new ItemStack(burgerBaconCheese, 1), new Object[] { " X ", "CZS", " X ", 'Z', ModFood.burgerCooked, 'X', ModFood.bun, 'C', ModFood.baconCooked, 'S', ModFood.cheeseslice});
+		GameRegistry.addRecipe(new ItemStack(burgerBaconCheese, 1), new Object[] { " X ", "ZSC", " X ", 'Z', ModFood.burgerCooked, 'X', ModFood.bun, 'C', ModFood.baconCooked, 'S', ModFood.cheeseslice});
+		GameRegistry.addRecipe(new ItemStack(burgerBaconCheese, 1), new Object[] { " X ", "ZCS", " X ", 'Z', ModFood.burgerCooked, 'X', ModFood.bun, 'C', ModFood.baconCooked, 'S', ModFood.cheeseslice});
+		GameRegistry.addRecipe(new ItemStack(burgerBaconCheese, 1), new Object[] { " X ", "SCZ", " X ", 'Z', ModFood.burgerCooked, 'X', ModFood.bun, 'C', ModFood.baconCooked, 'S', ModFood.cheeseslice});
+		GameRegistry.addRecipe(new ItemStack(burgerBaconCheese, 1), new Object[] { " X ", "SZC", " X ", 'Z', ModFood.burgerCooked, 'X', ModFood.bun, 'C', ModFood.baconCooked, 'S', ModFood.cheeseslice});
+		GameRegistry.addShapelessRecipe(new ItemStack(burgerRegularK, 1), new Object[]{new ItemStack(ModFood.burgerRegular), new ItemStack(ketchup)});
+		GameRegistry.addShapelessRecipe(new ItemStack(burgerChickenK, 1), new Object[]{new ItemStack(ModFood.burgerChicken), new ItemStack(ketchup)});
+		GameRegistry.addShapelessRecipe(new ItemStack(burgerCheeseK, 1), new Object[]{new ItemStack(ModFood.burgerCheese), new ItemStack(ketchup)});
+		GameRegistry.addShapelessRecipe(new ItemStack(burgerBaconK, 1), new Object[]{new ItemStack(ModFood.burgerBacon), new ItemStack(ketchup)});
+		GameRegistry.addShapelessRecipe(new ItemStack(burgerBaconCheeseK, 1), new Object[]{new ItemStack(ModFood.burgerBaconCheese), new ItemStack(ketchup)});
+		GameRegistry.addRecipe(new ItemStack(hotdog, 1), new Object[] { "X", "Z", 'Z', Item.bread, 'X', ModFood.sausageCooked});
+		GameRegistry.addRecipe(new ItemStack(hotdogketchup, 1), new Object[] { "Y", "X", "Z", 'Z', Item.bread, 'X', ModFood.sausageCooked, 'Y', ModFood.ketchup});
+		GameRegistry.addShapelessRecipe(new ItemStack(hotdogketchup, 1), new Object[]{new ItemStack(ModFood.hotdog), new ItemStack(ketchup)});
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(salad, 1), new Object[]{new ItemStack(Item.bowlEmpty), new ItemStack(ModFruits.lettuce), new ItemStack(ModFruits.tomato), new ItemStack(ModFood.saladcream)});
+		GameRegistry.addShapelessRecipe(new ItemStack(saladChicken, 1), new Object[]{new ItemStack(Item.bowlEmpty), new ItemStack(ModFruits.lettuce), new ItemStack(ModFruits.tomato), new ItemStack(ModFood.saladcream), new ItemStack(Item.chickenCooked)});
+		GameRegistry.addShapelessRecipe(new ItemStack(saladEgg, 1), new Object[]{new ItemStack(Item.bowlEmpty), new ItemStack(ModFruits.lettuce), new ItemStack(ModFruits.tomato), new ItemStack(ModFood.saladcream), new ItemStack(ModFood.eggBoiled)});
+		GameRegistry.addShapelessRecipe(new ItemStack(saladChicken, 1), new Object[]{new ItemStack(ModFood.salad), new ItemStack(Item.chickenCooked)});
+		GameRegistry.addShapelessRecipe(new ItemStack(saladEgg, 1), new Object[]{new ItemStack(ModFood.salad), new ItemStack(ModFood.eggBoiled)});
+		GameRegistry.addShapelessRecipe(new ItemStack(saladFruit, 1), new Object[]{new ItemStack(Item.bowlEmpty), new ItemStack(ModFruits.strawberry), new ItemStack(ModFruits.cherry), new ItemStack(ModFruits.cherry), new ItemStack(ModFruits.grape), new ItemStack(ModFruits.orange), new ItemStack(Item.appleRed)});
+		GameRegistry.addSmelting(ModCrops.seaweed.blockID, new ItemStack(ModFood.seaweedDry), 1.0f);
+		GameRegistry.addRecipe(new ItemStack(sushi, 1), new Object[] { " X ", " Z ", " Y ", 'Z', ModFruits.rice, 'X', Item.fishRaw, 'Y', ModFood.seaweedDry});
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.soupTomato,1), new Object[]{new ItemStack(Item.bowlEmpty), new ItemStack(ModFruits.tomato), new ItemStack(ModFruits.tomato), new ItemStack(cream)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.soupCarrot,1), new Object[]{new ItemStack(Item.bowlEmpty), new ItemStack(Item.carrot), new ItemStack(Item.carrot), new ItemStack(cream)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.soupPumpkin,1), new Object[]{new ItemStack(Item.bowlEmpty), new ItemStack(Block.pumpkin), new ItemStack(cream)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.soupChicken,1), new Object[]{new ItemStack(Item.bowlEmpty), new ItemStack(Item.chickenCooked), new ItemStack(cream)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.soupBeef,1), new Object[]{new ItemStack(Item.bowlEmpty), new ItemStack(Item.beefCooked), new ItemStack(Item.bucketWater)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.soupVegetable,1), new Object[]{new ItemStack(Item.bowlEmpty), new ItemStack(Item.carrot), new ItemStack(Item.potato), new ItemStack(Item.bucketWater)});
+		
+		GameRegistry.addRecipe(new ItemStack(ModFood.pieApple,1), new Object[] {"ZXZ", " Z ", 'Z', pastry, 'X', Item.appleRed});
+		GameRegistry.addRecipe(new ItemStack(ModFood.pieCherry,1), new Object[] {"ZXZ", " Z ", 'Z', pastry, 'X', ModFruits.cherry});
+		GameRegistry.addRecipe(new ItemStack(ModFood.pieCream,1), new Object[] {"ZXZ", " Z ", 'Z', pastry, 'X', cream});
+		GameRegistry.addRecipe(new ItemStack(ModFood.pieChicken,1), new Object[] {" X ", "ZYZ", " Z ", 'Z', pastry, 'X', Item.chickenRaw, 'Y', gravy});
+		GameRegistry.addRecipe(new ItemStack(ModFood.pieMeat,1), new Object[] {" X ", "ZYZ", " Z ", 'Z', pastry, 'X', Item.beefRaw, 'Y', gravy});
+		GameRegistry.addRecipe(new ItemStack(ModFood.piePork,1), new Object[] {" X ", "ZYZ", " Z ", 'Z', pastry, 'X', Item.porkRaw, 'Y', jelly});
+		GameRegistry.addRecipe(new ItemStack(ModFood.pieShepherds,1), new Object[] {" GS", "ZXZ", " Z ", 'Z', pastry, 'G', Item.beefRaw, 'S', Item.potato, 'X', gravy});
+		GameRegistry.addRecipe(new ItemStack(ModFood.pieShepherds,1), new Object[] {" SG", "ZXZ", " Z ", 'Z', pastry, 'G', Item.beefRaw, 'S', Item.potato, 'X', gravy});
+		GameRegistry.addRecipe(new ItemStack(ModFood.pieShepherds,1), new Object[] {"GS ", "ZXZ", " Z ", 'Z', pastry, 'G', Item.beefRaw, 'S', Item.potato, 'X', gravy});
+		GameRegistry.addRecipe(new ItemStack(ModFood.pieShepherds,1), new Object[] {"SG ", "ZXZ", " Z ", 'Z', pastry, 'G', Item.beefRaw, 'S', Item.potato, 'X', gravy});
+		GameRegistry.addRecipe(new ItemStack(ModFood.pieShepherds,1), new Object[] {"G S", "ZXZ", " Z ", 'Z', pastry, 'G', Item.beefRaw, 'S', Item.potato, 'X', gravy});
+		GameRegistry.addRecipe(new ItemStack(ModFood.pieShepherds,1), new Object[] {"S G", "ZXZ", " Z ", 'Z', pastry, 'G', Item.beefRaw, 'S', Item.potato, 'X', gravy});
+		GameRegistry.addSmelting(pieApple.itemID, new ItemStack(ModFood.pieAppleCooked), 6.0f);
+		GameRegistry.addSmelting(pieCherry.itemID, new ItemStack(ModFood.pieCherryCooked), 6.0f);
+		GameRegistry.addSmelting(pieCream.itemID, new ItemStack(ModFood.pieCreamCooked), 6.0f);
+		GameRegistry.addSmelting(pieChicken.itemID, new ItemStack(ModFood.pieChickenCooked), 6.0f);
+		GameRegistry.addSmelting(pieMeat.itemID, new ItemStack(ModFood.pieMeatCooked), 6.0f);
+		GameRegistry.addSmelting(piePork.itemID, new ItemStack(ModFood.piePorkCooked), 6.0f);
+		GameRegistry.addSmelting(pieShepherds.itemID, new ItemStack(ModFood.pieShepherdsCooked), 8.0f);
+		
+		GameRegistry.addSmelting(ribs.itemID, new ItemStack(ModFood.ribsCooked), 0.1f);
+		GameRegistry.addShapelessRecipe(new ItemStack(baconRaw, 2), new Object[]{new ItemStack(Item.porkRaw), new ItemStack(knife, 1, WILDCARD_VALUE)});
+		GameRegistry.addSmelting(mammothmeatRaw.itemID, new ItemStack(ModFood.mammothmeatCooked), 4.0f);
+		GameRegistry.addSmelting(lambRaw.itemID, new ItemStack(ModFood.lambCooked), 2.2f);
+		GameRegistry.addSmelting(sausage.itemID, new ItemStack(ModFood.sausageCooked), 1.2f);
+		GameRegistry.addSmelting(pigskin.itemID, new ItemStack(ModFood.porkscratching), 0.8f);
+		GameRegistry.addSmelting(baconRaw.itemID, new ItemStack(ModFood.baconCooked), 1.2f);
+		GameRegistry.addShapelessRecipe(new ItemStack(lambCookedK, 1), new Object[]{new ItemStack(ModFood.lambCooked,1), new ItemStack(mintsauce)});
+		GameRegistry.addShapelessRecipe(new ItemStack(porkCookedK, 1), new Object[]{new ItemStack(Item.porkCooked,1), new ItemStack(peppersalt)});
+		GameRegistry.addShapelessRecipe(new ItemStack(beefCookedK, 1), new Object[]{new ItemStack(Item.beefCooked,1), new ItemStack(bbq)});
+		GameRegistry.addShapelessRecipe(new ItemStack(fishCookedK, 1), new Object[]{new ItemStack(Item.fishCooked,1), new ItemStack(vinegar), new ItemStack(salt), new ItemStack(ModFruits.lemon)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ribsCookedK, 1), new Object[]{new ItemStack(ribsCooked,1), new ItemStack(bbq)});
+		GameRegistry.addShapelessRecipe(new ItemStack(chickenCookedK, 1), new Object[]{new ItemStack(Item.chickenCooked,1), new ItemStack(peppersalt)});
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(pepperoni, 1), new Object[]{new ItemStack(Item.porkRaw), new ItemStack(Item.beefRaw), new ItemStack(pepper), new ItemStack(ModFood.pigskin,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(sausage, 2), new Object[]{new ItemStack(Item.porkRaw), new ItemStack(ModFood.pigskin,1)});
+
+		GameRegistry.addShapelessRecipe(new ItemStack(cookiedough, 1), new Object[]{new ItemStack(ModFood.dough,1), new ItemStack(chocolate)});
+		GameRegistry.addShapelessRecipe(new ItemStack(cookiedough, 1), new Object[]{new ItemStack(ModFood.dough,1), new ItemStack(chocolate, 1), new ItemStack(Item.sugar)});
+		GameRegistry.addSmelting(cookiedough.itemID, new ItemStack(Item.cookie, 16), 0.3f);
+		GameRegistry.addShapelessRecipe(new ItemStack(jelly, 1), new Object[]{new ItemStack(Item.slimeBall), new ItemStack(Item.sugar,1), new ItemStack(Item.bucketWater,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(jellyApple, 1), new Object[]{new ItemStack(Item.slimeBall), new ItemStack(Item.sugar,1), new ItemStack(Item.bucketWater,1), new ItemStack(Item.appleRed,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(jellyStrawberry, 1), new Object[]{new ItemStack(Item.slimeBall), new ItemStack(Item.sugar,1), new ItemStack(Item.bucketWater,1), new ItemStack(ModFruits.strawberry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(jellyLemon, 1), new Object[]{new ItemStack(Item.slimeBall), new ItemStack(Item.sugar,1), new ItemStack(Item.bucketWater,1), new ItemStack(ModFruits.lemon)});
+		GameRegistry.addShapelessRecipe(new ItemStack(jellyGrape, 1), new Object[]{new ItemStack(Item.slimeBall), new ItemStack(Item.sugar,1), new ItemStack(Item.bucketWater,1), new ItemStack(ModFruits.grape)});
+		GameRegistry.addShapelessRecipe(new ItemStack(jellyCherry, 1), new Object[]{new ItemStack(Item.slimeBall), new ItemStack(Item.sugar,1), new ItemStack(Item.bucketWater,1), new ItemStack(ModFruits.cherry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(jellyOrange, 1), new Object[]{new ItemStack(Item.slimeBall), new ItemStack(Item.sugar,1), new ItemStack(Item.bucketWater,1), new ItemStack(ModFruits.orange)});
+		GameRegistry.addShapelessRecipe(new ItemStack(jellyBlackcurrant, 1), new Object[]{new ItemStack(Item.slimeBall), new ItemStack(Item.sugar,1), new ItemStack(Item.bucketWater,1), new ItemStack(ModFruits.blackcurrant)});
+		GameRegistry.addShapelessRecipe(new ItemStack(jellyRaspberry, 1), new Object[]{new ItemStack(Item.slimeBall), new ItemStack(Item.sugar,1), new ItemStack(Item.bucketWater,1), new ItemStack(ModFruits.raspberry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(jellyBRaspberry, 1), new Object[]{new ItemStack(Item.slimeBall), new ItemStack(Item.sugar,1), new ItemStack(Item.bucketWater,1), new ItemStack(ModFruits.braspberry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(jellyApple, 1), new Object[]{new ItemStack(jelly,1), new ItemStack(Item.appleRed,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(jellyStrawberry, 1), new Object[]{new ItemStack(jelly,1), new ItemStack(ModFruits.strawberry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(jellyLemon, 1), new Object[]{new ItemStack(jelly,1), new ItemStack(ModFruits.lemon)});
+		GameRegistry.addShapelessRecipe(new ItemStack(jellyGrape, 1), new Object[]{new ItemStack(jelly,1), new ItemStack(ModFruits.grape)});
+		GameRegistry.addShapelessRecipe(new ItemStack(jellyCherry, 1), new Object[]{new ItemStack(jelly,1), new ItemStack(ModFruits.cherry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(jellyOrange, 1), new Object[]{new ItemStack(jelly,1), new ItemStack(ModFruits.orange)});
+		GameRegistry.addShapelessRecipe(new ItemStack(jellyBlackcurrant, 1), new Object[]{new ItemStack(jelly,1), new ItemStack(ModFruits.blackcurrant)});
+		GameRegistry.addShapelessRecipe(new ItemStack(jellyRaspberry, 1), new Object[]{new ItemStack(jelly,1), new ItemStack(ModFruits.raspberry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(jellyBRaspberry, 1), new Object[]{new ItemStack(jelly,1), new ItemStack(ModFruits.braspberry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gum, 1), new Object[]{new ItemStack(Item.sugar,1), new ItemStack(Item.sugar,1), new ItemStack(ModFruits.chicle,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gumApple, 1), new Object[]{new ItemStack(Item.sugar,1), new ItemStack(Item.sugar,1), new ItemStack(ModFruits.chicle,1), new ItemStack(Item.appleRed,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gumStrawberry, 1), new Object[]{new ItemStack(Item.sugar,1), new ItemStack(Item.sugar,1), new ItemStack(ModFruits.chicle,1), new ItemStack(ModFruits.strawberry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gumLemon, 1), new Object[]{new ItemStack(Item.sugar,1), new ItemStack(Item.sugar,1), new ItemStack(ModFruits.chicle,1), new ItemStack(ModFruits.lemon)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gumGrape, 1), new Object[]{new ItemStack(Item.sugar,1), new ItemStack(Item.sugar,1), new ItemStack(ModFruits.chicle,1), new ItemStack(ModFruits.grape)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gumCherry, 1), new Object[]{new ItemStack(Item.sugar,1), new ItemStack(Item.sugar,1), new ItemStack(ModFruits.chicle,1), new ItemStack(ModFruits.cherry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gumOrange, 1), new Object[]{new ItemStack(Item.sugar,1), new ItemStack(Item.sugar,1), new ItemStack(ModFruits.chicle,1), new ItemStack(ModFruits.orange)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gumMelon, 1), new Object[]{new ItemStack(Item.sugar,1), new ItemStack(Item.sugar,1), new ItemStack(ModFruits.chicle,1), new ItemStack(Item.melon)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gumMint, 1), new Object[]{new ItemStack(Item.sugar,1), new ItemStack(Item.sugar,1), new ItemStack(ModFruits.chicle,1), new ItemStack(ModFruits.mint)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gumApple, 1), new Object[]{new ItemStack(gum,1), new ItemStack(Item.appleRed,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gumStrawberry, 1), new Object[]{new ItemStack(gum,1), new ItemStack(ModFruits.strawberry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gumLemon, 1), new Object[]{new ItemStack(gum,1), new ItemStack(ModFruits.lemon)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gumGrape, 1), new Object[]{new ItemStack(gum,1), new ItemStack(ModFruits.grape)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gumCherry, 1), new Object[]{new ItemStack(gum,1), new ItemStack(ModFruits.cherry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gumOrange, 1), new Object[]{new ItemStack(gum,1), new ItemStack(ModFruits.orange)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gumMelon, 1), new Object[]{new ItemStack(gum,1), new ItemStack(Item.melon)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gumSweet, 1), new Object[]{new ItemStack(gum,1), new ItemStack(Item.sugar), new ItemStack(Item.sugar)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gumMint, 1), new Object[]{new ItemStack(gum,1), new ItemStack(ModFruits.mint)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gumBlackcurrant, 1), new Object[]{new ItemStack(gum,1), new ItemStack(ModFruits.blackcurrant)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gumRaspberry, 1), new Object[]{new ItemStack(gum,1), new ItemStack(ModFruits.raspberry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gumBRaspberry, 1), new Object[]{new ItemStack(gum,1), new ItemStack(ModFruits.braspberry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gumBlueberry, 1), new Object[]{new ItemStack(gum,1), new ItemStack(ModFruits.blueberry)});
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(icecream, 1), new Object[]{new ItemStack(Item.snowball), new ItemStack(ModFood.wafer,1), new ItemStack(ModFood.cream,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(cicecream, 1), new Object[]{new ItemStack(icecream), new ItemStack(chocolate)});
+		GameRegistry.addShapelessRecipe(new ItemStack(cicecream, 1), new Object[]{new ItemStack(Item.snowball), new ItemStack(ModFood.cream,1), new ItemStack(chocolate), new ItemStack(ModFood.wafer,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(micecream, 1), new Object[]{new ItemStack(icecream), new ItemStack(Item.melon)});
+		GameRegistry.addShapelessRecipe(new ItemStack(micecream, 1), new Object[]{new ItemStack(Item.snowball), new ItemStack(ModFood.cream,1), new ItemStack(Item.melon), new ItemStack(ModFood.wafer,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(licecream, 1), new Object[]{new ItemStack(icecream), new ItemStack(ModFruits.lemon)});
+		GameRegistry.addShapelessRecipe(new ItemStack(licecream, 1), new Object[]{new ItemStack(Item.snowball), new ItemStack(ModFood.cream,1), new ItemStack(ModFruits.lemon), new ItemStack(ModFood.wafer,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(sicecream, 1), new Object[]{new ItemStack(icecream), new ItemStack(ModFruits.strawberry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(sicecream, 1), new Object[]{new ItemStack(Item.snowball), new ItemStack(ModFood.cream,1), new ItemStack(ModFruits.strawberry), new ItemStack(ModFood.wafer,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(blueberryicecream, 1), new Object[]{new ItemStack(icecream), new ItemStack(ModFruits.blueberry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(blueberryicecream, 1), new Object[]{new ItemStack(Item.snowball), new ItemStack(ModFood.cream,1), new ItemStack(ModFruits.blueberry), new ItemStack(ModFood.wafer,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(raspberryicecream, 1), new Object[]{new ItemStack(icecream), new ItemStack(ModFruits.raspberry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(raspberryicecream, 1), new Object[]{new ItemStack(Item.snowball), new ItemStack(ModFood.cream,1), new ItemStack(ModFruits.raspberry), new ItemStack(ModFood.wafer,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(braspberryicecream, 1), new Object[]{new ItemStack(icecream), new ItemStack(ModFruits.braspberry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(braspberryicecream, 1), new Object[]{new ItemStack(Item.snowball), new ItemStack(ModFood.cream,1), new ItemStack(ModFruits.braspberry), new ItemStack(ModFood.wafer,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(blackcurranticecream, 1), new Object[]{new ItemStack(icecream), new ItemStack(ModFruits.blackcurrant)});
+		GameRegistry.addShapelessRecipe(new ItemStack(blackcurranticecream, 1), new Object[]{new ItemStack(Item.snowball), new ItemStack(ModFood.cream,1), new ItemStack(ModFruits.blackcurrant), new ItemStack(ModFood.wafer,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(chicecream, 1), new Object[]{new ItemStack(icecream), new ItemStack(ModFruits.cherry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(chicecream, 1), new Object[]{new ItemStack(Item.snowball), new ItemStack(ModFood.cream,1), new ItemStack(ModFruits.cherry), new ItemStack(ModFood.wafer,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(cdicecream, 1), new Object[]{new ItemStack(Item.snowball), new ItemStack(ModFood.cream,1), new ItemStack(cookiedough), new ItemStack(ModFood.wafer,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(cdicecream, 1), new Object[]{new ItemStack(cookiedough), new ItemStack(icecream)});
+		GameRegistry.addShapelessRecipe(new ItemStack(caramelicecream, 1), new Object[]{new ItemStack(icecream), new ItemStack(caramel)});
+		GameRegistry.addShapelessRecipe(new ItemStack(caramelicecream, 1), new Object[]{new ItemStack(Item.snowball), new ItemStack(ModFood.cream,1), new ItemStack(caramel), new ItemStack(ModFood.wafer,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(bubblegumicecream, 1), new Object[]{new ItemStack(icecream), new ItemStack(gumSweet)});
+		GameRegistry.addShapelessRecipe(new ItemStack(bubblegumicecream, 1), new Object[]{new ItemStack(Item.snowball), new ItemStack(ModFood.cream,1), new ItemStack(gumSweet), new ItemStack(ModFood.wafer,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(nuticecream, 1), new Object[]{new ItemStack(icecream), new ItemStack(ModFruits.peanut)});
+		GameRegistry.addShapelessRecipe(new ItemStack(nuticecream, 1), new Object[]{new ItemStack(Item.snowball), new ItemStack(ModFood.cream,1), new ItemStack(ModFruits.peanut), new ItemStack(ModFood.wafer,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(minticecream, 1), new Object[]{new ItemStack(icecream), new ItemStack(ModFruits.mint)});
+		GameRegistry.addShapelessRecipe(new ItemStack(minticecream, 1), new Object[]{new ItemStack(Item.snowball), new ItemStack(ModFood.cream,1), new ItemStack(ModFruits.mint), new ItemStack(ModFood.wafer,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(cminticecream, 1), new Object[]{new ItemStack(icecream), new ItemStack(chocolate), new ItemStack(ModFruits.mint)});
+		GameRegistry.addShapelessRecipe(new ItemStack(cminticecream, 1), new Object[]{new ItemStack(Item.snowball), new ItemStack(ModFood.cream,1), new ItemStack(chocolate), new ItemStack(ModFood.wafer,1), new ItemStack(ModFruits.mint)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFood.wafer,1), new Object[]{new ItemStack(ModFood.breadslice,1), new ItemStack(Item.sugar)});
+		GameRegistry.addShapelessRecipe(new ItemStack(chocolate, 2), new Object[]{new ItemStack(Item.sugar), new ItemStack(Item.bucketMilk), new ItemStack(Item.dyePowder, 1, 3), new ItemStack(ModFood.butter,1)});
+
+		GameRegistry.addSmelting(ModFruits.corn.itemID, new ItemStack(ModFood.cornoncob), 0.7f);
+		GameRegistry.addSmelting(ModFruits.cornSeed.itemID, new ItemStack(ModFood.popcorn), 0.4f);
+		GameRegistry.addRecipe(new ItemStack(ModFood.pack,4), new Object[] { "XYX", " X ", 'X', Item.paper, 'Y', new ItemStack(Item.dyePowder, 1, 1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(popcornpack, 1), new Object[]{new ItemStack(ModFood.pack,1), new ItemStack(ModFood.butter,1), new ItemStack(popcorn), new ItemStack(popcorn), new ItemStack(popcorn)});
+		GameRegistry.addRecipe(new ItemStack(ModFood.toffeeapple,1), new Object[] {"C", "A", "S", 'C', caramel, 'A', Item.appleRed, 'S', Item.stick});
+		
+		GameRegistry.addRecipe(new ItemStack(ModFood.cup,3), new Object[] {"Z Z", "Z Z", "ZZZ", 'Z', Block.glass});
+		GameRegistry.addRecipe(new ItemStack(ModFood.mug,2), new Object[] {"Z Z", "Z Z", "ZZZ", 'Z', Block.stone});
+		GameRegistry.addRecipe(new ItemStack(ModFood.tankard,1), new Object[] {"XZ", 'Z', Block.glass, 'X', cup});
+		GameRegistry.addRecipe(new ItemStack(ModFood.winecup,2), new Object[] {"Z Z", " Z ", " Z ", 'Z', Block.glass});
+		GameRegistry.addRecipe(new ItemStack(ModFood.jar,3), new Object[] {"ZXZ", "Z Z", "ZZZ", 'Z', Block.glass, 'X', Item.ingotIron});
+
+		GameRegistry.addShapelessRecipe(new ItemStack(vinegar, 1), new Object[]{new ItemStack(ModFood.salt), new ItemStack(ModFood.salt), new ItemStack(ModFood.jar,1), new ItemStack(ModFood.orangejuice)});
+		GameRegistry.addShapelessRecipe(new ItemStack(vinegar, 1), new Object[]{new ItemStack(ModFood.salt), new ItemStack(ModFood.salt), new ItemStack(ModFood.jar,1), new ItemStack(ModFood.applejuice)});
+		GameRegistry.addShapelessRecipe(new ItemStack(vinegar, 1), new Object[]{new ItemStack(ModFood.salt), new ItemStack(ModFood.salt), new ItemStack(ModFood.jar,1), new ItemStack(ModFood.lemonjuice)});
+		GameRegistry.addShapelessRecipe(new ItemStack(vinegar, 1), new Object[]{new ItemStack(ModFood.salt), new ItemStack(ModFood.salt), new ItemStack(ModFood.jar,1), new ItemStack(ModFood.melonjuice)});
+		GameRegistry.addShapelessRecipe(new ItemStack(vinegar, 1), new Object[]{new ItemStack(ModFood.salt), new ItemStack(ModFood.salt), new ItemStack(ModFood.jar,1), new ItemStack(ModFood.cherryjuice)});
+		GameRegistry.addShapelessRecipe(new ItemStack(vinegar, 1), new Object[]{new ItemStack(ModFood.salt), new ItemStack(ModFood.salt), new ItemStack(ModFood.jar,1), new ItemStack(ModFood.strawberryjuice)});
+		GameRegistry.addShapelessRecipe(new ItemStack(vinegar, 1), new Object[]{new ItemStack(ModFood.salt), new ItemStack(ModFood.salt), new ItemStack(ModFood.jar,1), new ItemStack(ModFood.grapejuice)});
+
+		GameRegistry.addShapelessRecipe(new ItemStack(jam, 1), new Object[]{new ItemStack(Item.sugar), new ItemStack(ModFood.jar,1), new ItemStack(ModFruits.strawberry)});
+		GameRegistry.addShapelessRecipe(new ItemStack(jamOrange, 1), new Object[]{new ItemStack(Item.sugar), new ItemStack(ModFood.jar,1), new ItemStack(ModFruits.orange)});
+		GameRegistry.addShapelessRecipe(new ItemStack(peanutbutter, 1), new Object[]{new ItemStack(Item.sugar), new ItemStack(ModFood.jar,1), new ItemStack(ModFruits.peanut), new ItemStack(ModFruits.peanut), new ItemStack(ModFruits.peanut), new ItemStack(ModFood.butter,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(treacle, 1), new Object[]{new ItemStack(Item.sugar), new ItemStack(ModFood.jar,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(custard, 1), new Object[]{new ItemStack(Item.bucketMilk,1), new ItemStack(ModFood.jar,1), new ItemStack(Item.egg), new ItemStack(Item.sugar), new ItemStack(cream)});
+		GameRegistry.addShapelessRecipe(new ItemStack(ketchup, 1), new Object[]{new ItemStack(ModFood.salt,1), new ItemStack(ModFood.jar,1), new ItemStack(ModFruits.tomato)});
+		GameRegistry.addShapelessRecipe(new ItemStack(bbq, 1), new Object[]{new ItemStack(ModFood.salt,1), new ItemStack(ModFood.jar,1), new ItemStack(ribsCooked)});
+		GameRegistry.addShapelessRecipe(new ItemStack(mayo, 1), new Object[]{new ItemStack(ModFood.cream,1), new ItemStack(ModFood.jar,1), new ItemStack(Item.egg)});
+		GameRegistry.addShapelessRecipe(new ItemStack(garlicsauce, 1), new Object[]{new ItemStack(ModFruits.garlic,1), new ItemStack(ModFood.jar,1), new ItemStack(Item.egg)});
+		GameRegistry.addShapelessRecipe(new ItemStack(mintsauce, 1), new Object[]{new ItemStack(ModFruits.mint,1), new ItemStack(ModFood.jar,1), new ItemStack(cream)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gravy, 1), new Object[]{new ItemStack(Item.bucketWater,1), new ItemStack(ModFood.jar,1), new ItemStack(Item.porkCooked)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gravy, 1), new Object[]{new ItemStack(Item.bucketWater,1), new ItemStack(ModFood.jar,1), new ItemStack(Item.chickenCooked)});
+		GameRegistry.addShapelessRecipe(new ItemStack(gravy, 1), new Object[]{new ItemStack(Item.bucketWater,1), new ItemStack(ModFood.jar,1), new ItemStack(Item.beefCooked)});
+		GameRegistry.addShapelessRecipe(new ItemStack(saladcream, 1), new Object[]{new ItemStack(Item.egg), new ItemStack(ModFood.jar,1), new ItemStack(oilolive), new ItemStack(cream)});
+		GameRegistry.addShapelessRecipe(new ItemStack(orangejuice, 1), new Object[]{new ItemStack(ModFruits.orange), new ItemStack(ModFood.cup,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(applejuice, 1), new Object[]{new ItemStack(Item.appleRed), new ItemStack(ModFood.cup,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(lemonjuice, 1), new Object[]{new ItemStack(ModFruits.lemon), new ItemStack(ModFood.cup,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(melonjuice, 1), new Object[]{new ItemStack(Item.melon), new ItemStack(ModFood.cup,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(cherryjuice, 1), new Object[]{new ItemStack(ModFruits.cherry), new ItemStack(ModFood.cup,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(strawberryjuice, 1), new Object[]{new ItemStack(ModFruits.strawberry), new ItemStack(ModFood.cup,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(grapejuice, 1), new Object[]{new ItemStack(ModFruits.grape),new ItemStack(ModFruits.grape),new ItemStack(ModFruits.grape),new ItemStack(ModFruits.grape),new ItemStack(ModFruits.grape),new ItemStack(ModFruits.grape),new ItemStack(ModFruits.grape),new ItemStack(ModFruits.grape), new ItemStack(ModFood.cup,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(blackcurrantjuice, 1), new Object[]{new ItemStack(ModFruits.blackcurrant),new ItemStack(ModFruits.blackcurrant),new ItemStack(ModFruits.blackcurrant),new ItemStack(ModFruits.blackcurrant), new ItemStack(ModFood.cup,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(blueberryjuice, 1), new Object[]{new ItemStack(ModFruits.blueberry),new ItemStack(ModFruits.blueberry),new ItemStack(ModFruits.blueberry),new ItemStack(ModFruits.blueberry), new ItemStack(ModFood.cup,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(raspberryjuice, 1), new Object[]{new ItemStack(ModFruits.raspberry), new ItemStack(ModFood.cup,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(braspberryjuice, 1), new Object[]{new ItemStack(ModFruits.braspberry), new ItemStack(ModFood.cup,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(lemonade, 1), new Object[]{new ItemStack(Item.sugar), new ItemStack(ModFruits.lemon), new ItemStack(ModFood.co2), new ItemStack(ModFood.cup,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(orangeade, 1), new Object[]{new ItemStack(Item.sugar), new ItemStack(ModFruits.orange), new ItemStack(ModFood.co2), new ItemStack(ModFood.cup,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(cherryade, 1), new Object[]{new ItemStack(Item.sugar), new ItemStack(ModFruits.cherry), new ItemStack(ModFood.co2), new ItemStack(ModFood.cup,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(appleade, 1), new Object[]{new ItemStack(Item.sugar), new ItemStack(Item.appleRed), new ItemStack(ModFood.co2), new ItemStack(ModFood.cup,1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(lemonade, 1), new Object[]{new ItemStack(Item.sugar), new ItemStack(ModFood.lemonjuice), new ItemStack(ModFood.co2)});
+		GameRegistry.addShapelessRecipe(new ItemStack(orangeade, 1), new Object[]{new ItemStack(Item.sugar), new ItemStack(ModFood.orangejuice), new ItemStack(ModFood.co2)});
+		GameRegistry.addShapelessRecipe(new ItemStack(cherryade, 1), new Object[]{new ItemStack(Item.sugar), new ItemStack(ModFood.cherryjuice), new ItemStack(ModFood.co2)});
+		GameRegistry.addShapelessRecipe(new ItemStack(blackcurrantade, 1), new Object[]{new ItemStack(Item.sugar), new ItemStack(ModFood.blackcurrantjuice), new ItemStack(ModFood.co2)});
+		GameRegistry.addShapelessRecipe(new ItemStack(appleade, 1), new Object[]{new ItemStack(Item.sugar), new ItemStack(ModFood.applejuice), new ItemStack(ModFood.co2)});
+		GameRegistry.addShapelessRecipe(new ItemStack(chocolatemilk), new Object[]{new ItemStack(Item.sugar), new ItemStack(Item.bucketMilk), new ItemStack(ModFood.chocolate), new ItemStack(ModFood.mug)});
+		GameRegistry.addSmelting(ModFood.chocolatemilk.itemID, new ItemStack(ModFood.hotchocolatemilk), 3.0f);
+		
+		GameRegistry.addRecipe(new ItemStack(beerbasic, 8), new Object[] { "XXX", "XZX", "XXX", 'Z', beerbasicBucket, 'X', tankard});
+		GameRegistry.addRecipe(new ItemStack(winebasic, 8), new Object[] { "XXX", "XZX", "XXX", 'Z', winebasicBucket, 'X', winecup});
+		
+		GameRegistry.addRecipe(new ItemStack(goldcookie, 1), new Object[] { "XXX", "XZX", "XXX", 'Z', Item.cookie, 'X', Item.ingotGold});
+		GameRegistry.addShapelessRecipe(new ItemStack(co2, 1), new Object[]{new ItemStack(Item.glassBottle), new ItemStack(ModDNA.DNA52), new ItemStack(ModDNA.DNA53), new ItemStack(ModDNA.DNA53), new ItemStack(Item.bucketWater)});
+
+		GameRegistry.addRecipe(new ItemStack(ModFood.grindingmech,1), new Object[] {"XZX", "XYX", 'X', Item.ingotIron, 'Y', new ItemStack(ModFood.stonecog,1), 'Z', new ItemStack(ModFood.woodcog,1)});
+		GameRegistry.addRecipe(new ItemStack(ModFood.mammothfur,1), new Object[] {"XX", "XX", 'X', new ItemStack(ModFood.wolffur,1)});
+
+		GameRegistry.addRecipe(new ItemStack(ModFood.core,1), new Object[] {"XXX", "XVX", "XXX", 'X', Item.seeds, 'V', Item.diamond});
+		GameRegistry.addRecipe(new ItemStack(ModFood.core2,1), new Object[] {"XXX", "XVX", "XXX", 'X', Item.seeds, 'V', Item.emerald});
+
+
+
+
+
+		/*/
+		GameRegistry.addSmelting(baconRaw.itemID, new ItemStack(baconCooked), 0.1f);
+				GameRegistry.addSmelting(Item.egg.itemID, new ItemStack(ModFood.eggFried), 0.5f);
+
+				pork scratching
+				bacon
+				fried egg
+				chips
+ /*/
+	}
+	@PostInit
+	public void postInit(FMLPostInitializationEvent event) {
+
+
+		// this is the post initialization.
+	}
+
+
+
+}
+
+
+
+
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;Minecraft/src/agentsmod&apos;&#x0D;&#x0A;- Original project: &apos;Minecraft&apos;&#x0D;&#x0A;- Destination element: &apos;Minecraft/src/agentsmod&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     agentsmod.BlockPicklerOnionDone.java&#x0D;&#x0A;     agentsmod.BlockPicklerOnion.java" description="Copy compilation units" destination="/src&lt;agentsmod" element1="/src&lt;agentsmod{BlockPicklerOnionDone.java" element2="/src&lt;agentsmod{BlockPicklerOnion.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1394472886439" units="2" version="1.0"/>
+</session>

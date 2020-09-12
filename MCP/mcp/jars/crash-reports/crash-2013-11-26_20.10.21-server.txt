@@ -1,0 +1,127 @@
+---- Minecraft Crash Report ----
+// Don't be sad, have a hug! <3
+
+Time: 26/11/13 20:10
+Description: Exception generating new chunk
+
+java.lang.OutOfMemoryError: Java heap space
+	at net.minecraft.world.chunk.storage.ExtendedBlockStorage.<init>(ExtendedBlockStorage.java:50)
+	at net.minecraft.world.gen.ChunkProviderFlat.provideChunk(ChunkProviderFlat.java:126)
+	at net.minecraft.world.gen.ChunkProviderServer.loadChunk(ChunkProviderServer.java:131)
+	at net.minecraft.world.gen.ChunkProviderServer.provideChunk(ChunkProviderServer.java:166)
+	at net.minecraft.world.World.getChunkFromChunkCoords(World.java:529)
+	at net.minecraft.world.World.getBlockId(World.java:414)
+	at net.minecraft.world.Explosion.doExplosionA(Explosion.java:90)
+	at net.minecraft.world.WorldServer.newExplosion(WorldServer.java:997)
+	at agentsmod.EntityWalnutShellWB3.onImpact(EntityWalnutShellWB3.java:43)
+	at net.minecraft.entity.projectile.EntityThrowable.onUpdate(EntityThrowable.java:235)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2350)
+	at net.minecraft.world.WorldServer.updateEntityWithOptionalForce(WorldServer.java:719)
+	at net.minecraft.world.World.updateEntity(World.java:2311)
+	at net.minecraft.world.World.updateEntities(World.java:2157)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:550)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:668)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.world.chunk.storage.ExtendedBlockStorage.<init>(ExtendedBlockStorage.java:50)
+	at net.minecraft.world.gen.ChunkProviderFlat.provideChunk(ChunkProviderFlat.java:126)
+
+-- Chunk to be generated --
+Details:
+	Location: -16,77
+	Position hash: 335007449072
+	Generator: FlatLevelSource
+Stacktrace:
+	at net.minecraft.world.gen.ChunkProviderServer.loadChunk(ChunkProviderServer.java:131)
+	at net.minecraft.world.gen.ChunkProviderServer.provideChunk(ChunkProviderServer.java:166)
+	at net.minecraft.world.World.getChunkFromChunkCoords(World.java:529)
+
+-- Requested block coordinates --
+Details:
+	Found chunk: true
+	Location: World: (-256,33,1237), Chunk: (at 0,2,5 in -16,77; contains blocks -256,0,1232 to -241,255,1247), Region: (-1,2; contains chunks -32,64 to -1,95, blocks -512,0,1024 to -1,255,1535)
+Stacktrace:
+	at net.minecraft.world.World.getBlockId(World.java:414)
+	at net.minecraft.world.Explosion.doExplosionA(Explosion.java:90)
+	at net.minecraft.world.WorldServer.newExplosion(WorldServer.java:997)
+	at agentsmod.EntityWalnutShellWB3.onImpact(EntityWalnutShellWB3.java:43)
+	at net.minecraft.entity.projectile.EntityThrowable.onUpdate(EntityThrowable.java:235)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2350)
+	at net.minecraft.world.WorldServer.updateEntityWithOptionalForce(WorldServer.java:719)
+	at net.minecraft.world.World.updateEntity(World.java:2311)
+
+-- Entity being ticked --
+Details:
+	Entity Type: ModRendering.Cataclysm Walnut Shell (agentsmod.EntityWalnutShellWB3)
+	Entity ID: 128455
+	Entity Name: entity.ModRendering.Cataclysm Walnut Shell.name
+	Entity's Exact location: -613.61, 9.79, 1118.53
+	Entity's Block location: World: (-614,9,1118), Chunk: (at 10,0,14 in -39,69; contains blocks -624,0,1104 to -609,255,1119), Region: (-2,2; contains chunks -64,64 to -33,95, blocks -1024,0,1024 to -513,255,1535)
+	Entity's Momentum: 0.00, -1.40, 0.00
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:2157)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:550)
+
+-- Affected level --
+Details:
+	Level name: New World
+	All players: 1 total; [EntityPlayerMP['Player933'/123409, l='New World', x=-613.33, y=7.00, z=1118.30]]
+	Chunk stats: ServerChunkCache: 5431 Drop: 0
+	Level seed: -6854949011933537149
+	Level generator: ID 01 - flat, ver 0. Features enabled: true
+	Level generator options: 
+	Level spawn location: World: (-613,4,1123), Chunk: (at 11,0,3 in -39,70; contains blocks -624,0,1120 to -609,255,1135), Region: (-2,2; contains chunks -64,64 to -33,95, blocks -1024,0,1024 to -513,255,1535)
+	Level time: 282 game time, 282 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 159482 (now: false), thunder time: 42070 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:668)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.6.4
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.7.0_40, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 760 bytes (0 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 1335 (74760 bytes; 0 MB) allocated, 1065 (59640 bytes; 0 MB) used
+	Suspicious classes: FML and Forge are installed
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v8.11 FML v6.4.20.916 Minecraft Forge 9.11.1.916 16 mods loaded, 16 mods active
+	mcp{8.09} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available->Available->Available->Available->Available->Available
+	FML{6.4.20.916} [Forge Mod Loader] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available->Available->Available->Available->Available->Available
+	Forge{9.11.1.916} [Minecraft Forge] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available->Available->Available->Available->Available->Available
+	mod_*{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available->Available->Available->Available->Available->Available
+	ModBlocks{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available->Available->Available->Available->Available->Available
+	CreativeTabs.modid{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available->Available->Available->Available->Available->Available
+	ModCrops{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available->Available->Available->Available->Available->Available
+	ModDNA{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available->Available->Available->Available->Available->Available
+	ModFood{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available->Available->Available->Available->Available->Available
+	ModFruits{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available->Available->Available->Available->Available->Available
+	MobMammoth.modid{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available->Available->Available->Available->Available->Available
+	MobMammothZombie.modid{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available->Available->Available->Available->Available->Available
+	MobScorpion.modid{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available->Available->Available->Available->Available->Available
+	MobWhale.modid{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available->Available->Available->Available->Available->Available
+	ModRendering{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available->Available->Available->Available->Available->Available
+	ModTools{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available->Available->Available->Available->Available->Available
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 446 (24976 bytes; 0 MB) allocated, 216 (12096 bytes; 0 MB) used
+	Player Count: 1 / 8; [EntityPlayerMP['Player933'/123409, l='New World', x=-613.33, y=7.00, z=1118.30]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

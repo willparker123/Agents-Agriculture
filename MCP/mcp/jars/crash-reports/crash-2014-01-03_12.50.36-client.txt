@@ -1,0 +1,122 @@
+---- Minecraft Crash Report ----
+// Shall we play a game?
+
+Time: 03/01/14 12:50
+Description: Exception in world tick
+
+java.lang.NullPointerException
+	at net.minecraft.client.multiplayer.NetClientHandler.handleMobSpawn(NetClientHandler.java:952)
+	at net.minecraft.network.packet.Packet24MobSpawn.processPacket(Packet24MobSpawn.java:143)
+	at net.minecraft.network.MemoryConnection.processReadPackets(MemoryConnection.java:89)
+	at net.minecraft.client.multiplayer.NetClientHandler.processReadPackets(NetClientHandler.java:281)
+	at net.minecraft.client.multiplayer.WorldClient.tick(WorldClient.java:99)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1929)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:909)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:837)
+	at net.minecraft.client.main.Main.main(Main.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:131)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:27)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.client.multiplayer.NetClientHandler.handleMobSpawn(NetClientHandler.java:952)
+	at net.minecraft.network.packet.Packet24MobSpawn.processPacket(Packet24MobSpawn.java:143)
+	at net.minecraft.network.MemoryConnection.processReadPackets(MemoryConnection.java:89)
+	at net.minecraft.client.multiplayer.NetClientHandler.processReadPackets(NetClientHandler.java:281)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player290'/29, l='MpServer', x=-1369.77, y=18.63, z=-157.73]]
+	Chunk stats: MultiplayerChunkCache: 441
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-1381,4,-212), Chunk: (at 11,0,12 in -87,-14; contains blocks -1392,0,-224 to -1377,255,-209), Region: (-3,-1; contains chunks -96,-32 to -65,-1, blocks -1536,0,-512 to -1025,255,-1)
+	Level time: 707669 game time, 130782 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 16 total; [EntitySheep['Sheep'/1, l='MpServer', x=-1444.25, y=4.00, z=-183.63], EntitySheep['Sheep'/3, l='MpServer', x=-1430.94, y=4.00, z=-180.91], EntitySlime['Slime'/8, l='MpServer', x=-1419.78, y=4.00, z=-133.78], EntityMammoth['Mammoth'/1225, l='MpServer', x=-1377.78, y=4.00, z=-162.68], EntitySlime['Slime'/13, l='MpServer', x=-1370.78, y=4.00, z=-230.22], EntityPigZombie['Zombie Pigman'/14, l='MpServer', x=-1366.85, y=4.00, z=-191.03], EntitySlime['Slime'/17, l='MpServer', x=-1365.19, y=4.18, z=-222.94], EntitySheep['Sheep'/16, l='MpServer', x=-1359.16, y=4.00, z=-231.19], EntitySheep['Sheep'/19, l='MpServer', x=-1331.66, y=4.00, z=-138.29], EntitySlime['Slime'/18, l='MpServer', x=-1359.22, y=4.00, z=-173.78], EntitySlime['Slime'/20, l='MpServer', x=-1345.28, y=4.00, z=-130.56], EntitySheep['Sheep'/22, l='MpServer', x=-1318.06, y=4.00, z=-173.84], EntityWalnutShellElectric['entity.ModRendering.Electric Shell.name'/2279, l='MpServer', x=-1373.11, y=5.11, z=-163.26], EntitySheep['Sheep'/25, l='MpServer', x=-1309.19, y=4.00, z=-159.22], EntitySheep['Sheep'/24, l='MpServer', x=-1307.75, y=4.00, z=-223.44], EntityClientPlayerMP['Player290'/29, l='MpServer', x=-1369.77, y=18.63, z=-157.73]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:440)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1942)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:909)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:837)
+	at net.minecraft.client.main.Main.main(Main.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:131)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:27)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player290'/29, l='MpServer', x=-1369.77, y=18.63, z=-157.73]]
+	Chunk stats: MultiplayerChunkCache: 441
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-1381,4,-212), Chunk: (at 11,0,12 in -87,-14; contains blocks -1392,0,-224 to -1377,255,-209), Region: (-3,-1; contains chunks -96,-32 to -65,-1, blocks -1536,0,-512 to -1025,255,-1)
+	Level time: 707669 game time, 130782 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 16 total; [EntitySheep['Sheep'/1, l='MpServer', x=-1444.25, y=4.00, z=-183.63], EntitySheep['Sheep'/3, l='MpServer', x=-1430.94, y=4.00, z=-180.91], EntitySlime['Slime'/8, l='MpServer', x=-1419.78, y=4.00, z=-133.78], EntityMammoth['Mammoth'/1225, l='MpServer', x=-1377.78, y=4.00, z=-162.68], EntitySlime['Slime'/13, l='MpServer', x=-1370.78, y=4.00, z=-230.22], EntityPigZombie['Zombie Pigman'/14, l='MpServer', x=-1366.85, y=4.00, z=-191.03], EntitySlime['Slime'/17, l='MpServer', x=-1365.19, y=4.18, z=-222.94], EntitySheep['Sheep'/16, l='MpServer', x=-1359.16, y=4.00, z=-231.19], EntitySheep['Sheep'/19, l='MpServer', x=-1331.66, y=4.00, z=-138.29], EntitySlime['Slime'/18, l='MpServer', x=-1359.22, y=4.00, z=-173.78], EntitySlime['Slime'/20, l='MpServer', x=-1345.28, y=4.00, z=-130.56], EntitySheep['Sheep'/22, l='MpServer', x=-1318.06, y=4.00, z=-173.84], EntityWalnutShellElectric['entity.ModRendering.Electric Shell.name'/2279, l='MpServer', x=-1373.11, y=5.11, z=-163.26], EntitySheep['Sheep'/25, l='MpServer', x=-1309.19, y=4.00, z=-159.22], EntitySheep['Sheep'/24, l='MpServer', x=-1307.75, y=4.00, z=-223.44], EntityClientPlayerMP['Player290'/29, l='MpServer', x=-1369.77, y=18.63, z=-157.73]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+
+-- System Details --
+Details:
+	Minecraft Version: 1.6.4
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.7.0_45, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 766982872 bytes (731 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 19635 (1099560 bytes; 1 MB) allocated, 320 (17920 bytes; 0 MB) used
+	Suspicious classes: FML and Forge are installed
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v8.11 FML v6.4.20.916 Minecraft Forge 9.11.1.916 17 mods loaded, 17 mods active
+	mcp{8.09} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{6.4.20.916} [Forge Mod Loader] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{9.11.1.916} [Minecraft Forge] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	mod_*{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	ModAchievements{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	ModBlocks{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	CreativeTabs.modid{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	ModCrops{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	ModDNA{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	ModFood{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	ModFruits{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	MobMammoth.modid{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	MobMammothZombie.modid{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	MobScorpion.modid{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	MobWhale.modid{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	ModRendering{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	ModTools{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Launched Version: 1.6
+	LWJGL: 2.9.0
+	OpenGL: GeForce GTX 650/PCIe/SSE2 GL version 4.2.0, NVIDIA Corporation
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Pack: Default
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 562 (31472 bytes; 0 MB) allocated, 52 (2912 bytes; 0 MB) used

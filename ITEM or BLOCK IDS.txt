@@ -1,0 +1,7 @@
+
+LAST ID USED - 5765 (ITEMS)
+LAST ID USED - 2251 (BLOCKS)
+LAST ID USED - 4016 (MACHINES)
+LAST ID USED - 75 (ACHIEVEMENTS)
+
+http://www.minecraftforge.net/forum/index.php?topic=6086.0

@@ -1,0 +1,337 @@
+
+package agentsmod;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockVine;
+import net.minecraft.entity.passive.EntityPig;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemSeedFood;
+import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraftforge.common.MinecraftForge;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.Init;
+import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.Mod.PostInit;
+import cpw.mods.fml.common.Mod.PreInit;
+import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
+
+@Mod(modid="ModDNA", name="Agent's Mod", version="Alpha")
+@NetworkMod(clientSideRequired=true, serverSideRequired=false)
+public class ModDNA {
+	
+	public static final String modid = "ModDNA";
+
+	public static Item DNA;
+	public static Item DNA1;
+	public static Item DNA2;
+	public static Item DNA3;
+	public static Item DNA4;
+	public static Item DNA5;
+	public static Item DNA6;
+	public static Item DNA7;
+	public static Item DNA8;
+	public static Item DNA9;
+	public static Item DNA10;
+	public static Item DNA11;
+	public static Item DNA12;
+	public static Item DNA13;
+	public static Item DNA14;
+	public static Item DNA15;
+	public static Item DNA16;
+	public static Item DNA17;
+	public static Item DNA18;
+	public static Item DNA19;
+	public static Item DNA20;
+	public static Item DNA21;
+	public static Item DNA22;
+	public static Item DNA23;
+	public static Item DNA24;
+	public static Item DNA25;
+	public static Item DNA26;
+	public static Item DNA27;
+	public static Item DNA28;
+	public static Item DNA29;
+	public static Item DNA30;
+	public static Item DNA31;
+	public static Item DNA32;
+	public static Item DNA33;
+	public static Item DNA34;
+	public static Item DNA35;
+	public static Item DNA36;
+	public static Item DNA37;
+	public static Item DNA38;
+	public static Item DNA39;
+	public static Item DNA40;
+	public static Item DNA41;
+	public static Item DNA42;
+	public static Item DNA43;
+	public static Item DNA44;
+	public static Item DNA45;
+	public static Item DNA46;
+	public static Item DNA47;
+	public static Item DNA48;
+	public static Item DNA49;
+	public static Item DNA50;
+	public static Item DNA51;
+	public static Item DNA52;
+	public static Item DNA53;
+	public static Item DNA54;
+	public static Item DNA55;
+	public static Item DNA56;
+	public static Item DNA57;
+	public static Item DNA58;
+	public static Item DNA59;
+	public static Item DNA60;
+	public static Item DNA61;
+	public static Item DNA62;
+	public static Item DNA63;
+	public static Item DNA64;
+	public static Item DNA65;
+	public static Item DNA66;
+	public static Item DNA67;
+	public static Item DNA68;
+	public static Item DNA69;
+	public static Item DNA70;
+	public static Item DNA71;
+	public static Item DNA72;
+	public static Item DNA73;
+	public static Item DNA74;
+	
+	public static final int WILDCARD_VALUE = Short.MAX_VALUE;
+	
+
+	// The instance of your mod that Forge uses.
+	@Instance("ModDNA")
+	public static ModDNA instance;
+	// This loads up your common and client proxies. change the location of the proxies and the public static to fit your setup
+	@SidedProxy(clientSide="agentsmod.ClientProxy", serverSide="agentsmod.CommonProxy")
+	public static CommonProxy proxy;
+	@PreInit
+	public void preInit(FMLPreInitializationEvent event)
+	{
+		
+	    DNA = new ItemDNA(5350).setUnlocalizedName("dna");
+	    DNA1 = new ItemDNA(5470).setUnlocalizedName("dna1");
+	    DNA2 = new ItemDNA(5471).setUnlocalizedName("dna2");
+	    DNA3 = new ItemDNA(5472).setUnlocalizedName("dna3");
+	    DNA4 = new ItemDNA(5473).setUnlocalizedName("dna4");
+	    DNA5 = new ItemDNA(5474).setUnlocalizedName("dna5");
+	    DNA6 = new ItemDNA(5475).setUnlocalizedName("dna6");
+	    DNA7 = new ItemDNA(5476).setUnlocalizedName("dna7");
+	    DNA8 = new ItemDNA(5477).setUnlocalizedName("dna8");
+	    DNA9 = new ItemDNA(5478).setUnlocalizedName("dna9");
+	    DNA10 = new ItemDNA(5479).setUnlocalizedName("dna10");
+	    DNA11 = new ItemDNA(5480).setUnlocalizedName("dna11");
+	    DNA12 = new ItemDNA(5481).setUnlocalizedName("dna12");
+	    DNA13 = new ItemDNA(5482).setUnlocalizedName("dna13");
+	    DNA14 = new ItemDNA(5483).setUnlocalizedName("dna14");
+	    DNA15 = new ItemDNA(5484).setUnlocalizedName("dna15");
+	    DNA16 = new ItemDNA(5485).setUnlocalizedName("dna16");
+	    DNA17 = new ItemDNA(5486).setUnlocalizedName("dna17");
+	    DNA18 = new ItemDNA(5487).setUnlocalizedName("dna18");
+	    DNA19 = new ItemDNA(5488).setUnlocalizedName("dna19");
+	    DNA20 = new ItemDNA(5489).setUnlocalizedName("dna20");
+	    DNA21 = new ItemDNA(5490).setUnlocalizedName("dna21");
+	    DNA22 = new ItemDNA(5491).setUnlocalizedName("dna22");
+	    DNA23 = new ItemDNA(5492).setUnlocalizedName("dna23");
+	    DNA24 = new ItemDNA(5493).setUnlocalizedName("dna24");
+	    DNA25 = new ItemDNA(5494).setUnlocalizedName("dna25");
+	    DNA26 = new ItemDNA(5495).setUnlocalizedName("dna26");
+	    DNA27 = new ItemDNA(5496).setUnlocalizedName("dna27");
+	    DNA28 = new ItemDNA(5497).setUnlocalizedName("dna28");
+	    DNA29 = new ItemDNA(5498).setUnlocalizedName("dna29");
+	    DNA30 = new ItemDNA(5499).setUnlocalizedName("dna30");
+	    DNA31 = new ItemDNA(5500).setUnlocalizedName("dna31");
+	    DNA32 = new ItemDNA(5501).setUnlocalizedName("dna32");
+	    DNA33 = new ItemDNA(5502).setUnlocalizedName("dna33");
+	    DNA34 = new ItemDNA(5503).setUnlocalizedName("dna34");
+	    DNA35 = new ItemDNA(5504).setUnlocalizedName("dna35");
+	    DNA36 = new ItemDNA(5505).setUnlocalizedName("dna36");
+	    DNA37 = new ItemDNA(5506).setUnlocalizedName("dna37");
+	    DNA38 = new ItemDNA(5507).setUnlocalizedName("dna38");
+	    DNA39 = new ItemDNA(5508).setUnlocalizedName("dna39");
+	    DNA40 = new ItemDNA(5529).setUnlocalizedName("dna40");
+	    DNA41 = new ItemDNA(5530).setUnlocalizedName("dna41");
+	    DNA42 = new ItemDNA(5531).setUnlocalizedName("dna42");
+	    DNA43 = new ItemDNA(5532).setUnlocalizedName("dna43");
+	    DNA44 = new ItemDNA(5533).setUnlocalizedName("dna44");
+	    DNA45 = new ItemDNA(5534).setUnlocalizedName("dna45");
+	    DNA46 = new ItemDNA(5535).setUnlocalizedName("dna46");
+	    DNA47 = new ItemDNA(5547).setUnlocalizedName("dna47");
+	    DNA48 = new ItemDNA(5548).setUnlocalizedName("dna48");
+	    DNA49 = new ItemDNA(5549).setUnlocalizedName("dna49");
+	    DNA50 = new ItemDNA(5550).setUnlocalizedName("dna50");
+	    DNA51 = new ItemDNA(5551).setUnlocalizedName("dna51");
+	    DNA52 = new ItemDNA(5552).setUnlocalizedName("dna52");
+	    DNA53 = new ItemDNA(5553).setUnlocalizedName("dna53");
+	    DNA54 = new ItemDNA(5554).setUnlocalizedName("dna54");
+	    DNA55 = new ItemDNA(5589).setUnlocalizedName("dna55");
+	    DNA56 = new ItemDNA(5590).setUnlocalizedName("dna56");
+	    DNA57 = new ItemDNA(5591).setUnlocalizedName("dna57");
+	    DNA58 = new ItemDNA(5620).setUnlocalizedName("dna58");
+	    DNA59 = new ItemDNA(5647).setUnlocalizedName("dna59");
+	    DNA60 = new ItemDNA(5648).setUnlocalizedName("dna60");
+	    DNA61 = new ItemDNA(5662).setUnlocalizedName("dna61");
+	    DNA62 = new ItemDNA(5663).setUnlocalizedName("dna62");
+	    DNA63 = new ItemDNA(5666).setUnlocalizedName("dna63");
+	    DNA64 = new ItemDNA(5698).setUnlocalizedName("dna64");
+	    DNA65 = new ItemDNA(5759).setUnlocalizedName("dna65");
+	    DNA66 = new ItemDNA(5734).setUnlocalizedName("dna66");
+	    DNA67 = new ItemDNA(5735).setUnlocalizedName("dna67");
+	    DNA68 = new ItemDNA(5779).setUnlocalizedName("dna68");
+	    DNA69 = new ItemDNA(5780).setUnlocalizedName("dna69");
+	    DNA70 = new ItemDNA(5781).setUnlocalizedName("dna70");
+	    DNA71 = new ItemDNA(5782).setUnlocalizedName("dna71");
+	    DNA72 = new ItemDNA(5787).setUnlocalizedName("dna72");
+	    DNA73 = new ItemDNA(5806).setUnlocalizedName("dna73");
+	    DNA74 = new ItemDNA(5847).setUnlocalizedName("dna74");
+	    
+	    LanguageRegistry.addName(new ItemStack(ModDNA.DNA), "Blank \2475DNA"); //Adds the sapphire gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA1), "Rose \2475DNA"); //Adds the sapphire gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA2), "Dandelion \2475DNA"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA3), "Strawberry \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA4), "Tomato \2475DNA"); //Adds the amethyst gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA5), "Lemon \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA6), "Orange \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA7), "Cherry \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA8), "Lettuce \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA9), "Corn \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA10), "Pepper \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA11), "Rice \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA12), "Barley \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA13), "Cotton \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA14), "Onion \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA15), "Olive \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA16), "Cannabis \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA17), "Salty \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA18), "Sweet \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA19), "Bitter \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA20), "Sour \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA21), "Cocoa \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA22), "Apple \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA23), "Pumpkin \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA24), "Melon \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA25), "Wheat \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA26), "Sugar Cane \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA27), "Brown Mushroom \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA28), "Red Mushroom \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA29), "Carrot \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA30), "Potato \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA31), "Oak \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA32), "Spruce \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA33), "Birch \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA34), "Jungle \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA35), "Spiny \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA36), "Cactus \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA37), "Bean \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA38), "Root \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA39), "Leaf \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA40), "Lavender \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA41), "Parsley \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA42), "Herb \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA43), "Walnut \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA44), "Nutty \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA45), "Tobacco \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA46), "Pepper \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA47), "Vine \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA48), "Golden \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA49), "Iron \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA50), "Lapis Lazuli \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA51), "Hardening \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA52), "Carbon"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA53), "Oxygen"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA54), "Enlarging \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA55), "Spicy \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA56), "Garlicy \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA57), "Garlic \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA58), "Grape \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA59), "Sticky \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA60), "Chicle \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA61), "Hard Nut \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA62), "Hardened Walnut \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA63), "Iron Walnut \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA64), "Peanut \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA65), "Caffeine"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA66), "Minty \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA67), "Mint \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA68), "Berry \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA69), "Raspberry \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA70), "Blue Raspberry \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA71), "Blackcurrant \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA72), "Blueberry \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA73), "Golden Walnut \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		LanguageRegistry.addName(new ItemStack(ModDNA.DNA74), "Diamond Walnut \2475DNA"); //Adds the topaz gem name (metadata sensitive)
+		
+	}
+
+	@Init
+	public void load (FMLInitializationEvent event)
+	{
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA21,4), new Object[] {"XX", "XX", 'X', new ItemStack(Item.dyePowder,1,3)});
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA50,4), new Object[] {"XX", "XX", 'X', new ItemStack(Item.dyePowder,1,4)});
+		GameRegistry.addShapelessRecipe(new ItemStack(DNA53, 1), new Object[]{new ItemStack(DNA31)}); 
+		GameRegistry.addShapelessRecipe(new ItemStack(DNA53, 1), new Object[]{new ItemStack(DNA32)}); 
+		GameRegistry.addShapelessRecipe(new ItemStack(DNA53, 1), new Object[]{new ItemStack(DNA33)}); 
+		
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA31,1), new Object[] {"XX", "XX", 'X', new ItemStack(Block.leaves,1,0)});
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA32,1), new Object[] {"XX", "XX", 'X', new ItemStack(Block.leaves,1,1)});
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA33,1), new Object[] {"XX", "XX", 'X', new ItemStack(Block.leaves,1,2)});
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA34,1), new Object[] {"XX", "XX", 'X', new ItemStack(Block.leaves,1,3)});
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA65,1), new Object[] {"XXX", "XXX", "XXX", 'X', new ItemStack(Item.dyePowder,1,3)});
+		
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA55,3), new Object[] {"XYX", "ZXZ", "XYX", 'X', ModDNA.DNA46, 'Y', ModDNA.DNA17, 'Z', ModDNA.DNA19});
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA55,3), new Object[] {"XYX", "ZXZ", "XYX", 'X', ModDNA.DNA46, 'Z', ModDNA.DNA17, 'Y', ModDNA.DNA19});
+		GameRegistry.addShapelessRecipe(new ItemStack(DNA56, 1), new Object[]{new ItemStack(DNA55), new ItemStack(DNA17), new ItemStack(DNA19), new ItemStack(DNA20)}); 
+		GameRegistry.addShapelessRecipe(new ItemStack(DNA57, 1), new Object[]{new ItemStack(DNA56), new ItemStack(DNA38), new ItemStack(DNA14)}); 
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA60,1), new Object[] {"XYX", "YZY", "XYX", 'X', ModDNA.DNA34, 'Z', ModDNA.DNA6, 'Y', ModDNA.DNA59});
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA61,1), new Object[] {"XYX", "YZY", "XYX", 'X', ModDNA.DNA51, 'Z', ModDNA.DNA44, 'Y', ModDNA.DNA49});
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA61,1), new Object[] {"XYX", "YZY", "XYX", 'Y', ModDNA.DNA51, 'Z', ModDNA.DNA44, 'X', ModDNA.DNA49});
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA62,1), new Object[] {"XYX", "YZY", "XYX", 'Y', ModDNA.DNA61, 'Z', ModDNA.DNA43, 'X', ModDNA.DNA51});
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA62,1), new Object[] {"XYX", "YZY", "XYX", 'X', ModDNA.DNA61, 'Z', ModDNA.DNA43, 'Y', ModDNA.DNA51});
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA63,1), new Object[] {"XXX", "YZY", "XXX", 'X', ModDNA.DNA49, 'Z', ModDNA.DNA62, 'Y', ModDNA.DNA51});
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA63,1), new Object[] {"XYX", "XZX", "XYX", 'X', ModDNA.DNA49, 'Z', ModDNA.DNA62, 'Y', ModDNA.DNA51});
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA64,1), new Object[] {"XYX", "WZW", "XYX", 'X', ModDNA.DNA18, 'Z', ModDNA.DNA43, 'Y', ModDNA.DNA44, 'W', ModDNA.DNA37});
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA64,1), new Object[] {"XYX", "WZW", "XYX", 'X', ModDNA.DNA18, 'Z', ModDNA.DNA43, 'W', ModDNA.DNA44, 'Y', ModDNA.DNA37});
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA66,1), new Object[] {"XYX", "WZW", "XYX", 'X', ModDNA.DNA42, 'Z', ModDNA.DNA55, 'Y', ModDNA.DNA18, 'W', ModDNA.DNA20});
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA66,1), new Object[] {"XYX", "WZW", "XYX", 'X', ModDNA.DNA42, 'Z', ModDNA.DNA55, 'W', ModDNA.DNA18, 'Y', ModDNA.DNA20});
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA67,1), new Object[] {"XYX", "YZY", "XYX", 'X', ModDNA.DNA42, 'Z', ModDNA.DNA39, 'Y', ModDNA.DNA66});
+		
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA69,1), new Object[] {"XYX", "YZY", "XYX", 'X', ModDNA.DNA68, 'Z', ModDNA.DNA3, 'Y', ModDNA.DNA18});
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA69,1), new Object[] {"XYX", "YZY", "XYX", 'Y', ModDNA.DNA68, 'Z', ModDNA.DNA3, 'X', ModDNA.DNA18});
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA70,1), new Object[] {"ZXZ", "XYX", "ZXZ", 'Y', ModDNA.DNA69, 'Z', new ItemStack(Item.dyePowder,1,4), 'X', new ItemStack(Item.dyePowder,1,12)});
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA70,1), new Object[] {"ZXZ", "XYX", "ZXZ", 'X', ModDNA.DNA69, 'Z', new ItemStack(Item.dyePowder,1,4), 'Y', new ItemStack(Item.dyePowder,1,12)});	
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA71,1), new Object[] {"ZXZ", "XYX", "ZXZ", 'X', ModDNA.DNA18, 'Y', new ItemStack(Item.dyePowder,1,0), 'Z', new ItemStack(ModDNA.DNA68)});	
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA71,1), new Object[] {"ZXZ", "XYX", "ZXZ", 'Z', ModDNA.DNA18, 'Y', new ItemStack(Item.dyePowder,1,0), 'X', new ItemStack(ModDNA.DNA68)});	
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA72,1), new Object[] {"ZXZ", "XYX", "ZXZ", 'X', ModDNA.DNA18, 'Y', new ItemStack(Item.dyePowder,1,4), 'Z', new ItemStack(ModDNA.DNA68)});	
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA72,1), new Object[] {"ZXZ", "XYX", "ZXZ", 'Z', ModDNA.DNA18, 'Y', new ItemStack(Item.dyePowder,1,4), 'X', new ItemStack(ModDNA.DNA68)});	
+		GameRegistry.addRecipe(new ItemStack(ModDNA.DNA73,1), new Object[] {"ZZZ", "ZYZ", "ZZZ", 'Z', ModDNA.DNA48, 'Y', new ItemStack(ModDNA.DNA63)});	
+	
+		/*/
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.garlic, 1), new Object[]{new ItemStack(DNA57), new ItemStack(ModBlocks.DNAextractor2, 1, WILDCARD_VALUE)}); 
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.chicleSeed, 1), new Object[]{new ItemStack(DNA60), new ItemStack(ModBlocks.DNAextractor2, 1, WILDCARD_VALUE)}); 
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutHard, 1), new Object[]{new ItemStack(DNA62), new ItemStack(ModBlocks.DNAextractor2, 1, WILDCARD_VALUE)}); 
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutHarder, 1), new Object[]{new ItemStack(DNA63), new ItemStack(ModBlocks.DNAextractor2, 1, WILDCARD_VALUE)}); 
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.peanut, 1), new Object[]{new ItemStack(DNA64), new ItemStack(ModBlocks.DNAextractor2, 1, WILDCARD_VALUE)}); 
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.mintSeed, 1), new Object[]{new ItemStack(DNA67), new ItemStack(ModBlocks.DNAextractor2, 1, WILDCARD_VALUE)}); 
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.raspberrySeed, 1), new Object[]{new ItemStack(DNA69), new ItemStack(ModBlocks.DNAextractor2, 1, WILDCARD_VALUE)}); 
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.braspberrySeed, 1), new Object[]{new ItemStack(DNA70), new ItemStack(ModBlocks.DNAextractor2, 1, WILDCARD_VALUE)}); 
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.blackcurrantSeed, 1), new Object[]{new ItemStack(DNA71), new ItemStack(ModBlocks.DNAextractor2, 1, WILDCARD_VALUE)}); 
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.blueberrySeed, 1), new Object[]{new ItemStack(DNA72), new ItemStack(ModBlocks.DNAextractor2, 1, WILDCARD_VALUE)}); 
+		GameRegistry.addShapelessRecipe(new ItemStack(ModFruits.walnutGold, 1), new Object[]{new ItemStack(DNA73), new ItemStack(ModBlocks.DNAextractor2, 1, WILDCARD_VALUE)}); 
+		/*/
+	}
+
+	@PostInit
+	public void postInit(FMLPostInitializationEvent event)
+	{
+		// this is the post initialization.
+	}
+}

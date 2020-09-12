@@ -1,0 +1,178 @@
+2013-11-09 20:19:23 [INFO] Starting minecraft server version 1.6.4
+2013-11-09 20:19:34 [INFO] Loading properties
+2013-11-09 20:19:34 [INFO] Default game type: SURVIVAL
+2013-11-09 20:19:34 [INFO] Generating keypair
+2013-11-09 20:19:34 [INFO] Starting Minecraft server on *:25565
+2013-11-09 20:19:34 [WARNING] **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+2013-11-09 20:19:34 [WARNING] The server will make no attempt to authenticate usernames. Beware.
+2013-11-09 20:19:34 [WARNING] While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+2013-11-09 20:19:34 [WARNING] To change this, set "online-mode" to "true" in the server.properties file.
+2013-11-09 20:19:34 [WARNING] Failed to load operators list: java.io.FileNotFoundException: .\ops.txt (The system cannot find the file specified)
+2013-11-09 20:19:34 [WARNING] Failed to load white-list: java.io.FileNotFoundException: .\white-list.txt (The system cannot find the file specified)
+2013-11-09 20:19:35 [INFO] Preparing level "mcpworld"
+2013-11-09 20:19:35 [INFO] Preparing start region for level 0
+2013-11-09 20:19:36 [INFO] Preparing spawn area: 5%
+2013-11-09 20:19:37 [INFO] Preparing spawn area: 10%
+2013-11-09 20:19:38 [INFO] Preparing spawn area: 17%
+2013-11-09 20:19:39 [INFO] Preparing spawn area: 23%
+2013-11-09 20:19:40 [INFO] Preparing spawn area: 30%
+2013-11-09 20:19:41 [INFO] Preparing spawn area: 35%
+2013-11-09 20:19:42 [INFO] Preparing spawn area: 42%
+2013-11-09 20:19:43 [SEVERE] Reached end of stream for /127.0.0.1
+2013-11-09 20:19:43 [INFO] Preparing spawn area: 48%
+2013-11-09 20:19:44 [INFO] Preparing spawn area: 54%
+2013-11-09 20:19:45 [SEVERE] Reached end of stream for /127.0.0.1
+2013-11-09 20:19:45 [INFO] Preparing spawn area: 60%
+2013-11-09 20:19:46 [INFO] Preparing spawn area: 63%
+2013-11-09 20:19:47 [SEVERE] Reached end of stream for /127.0.0.1
+2013-11-09 20:19:47 [INFO] Preparing spawn area: 68%
+2013-11-09 20:19:48 [INFO] Preparing spawn area: 73%
+2013-11-09 20:19:49 [INFO] Preparing spawn area: 78%
+2013-11-09 20:19:50 [INFO] Preparing spawn area: 85%
+2013-11-09 20:19:51 [SEVERE] Reached end of stream for /127.0.0.1
+2013-11-09 20:19:51 [INFO] Preparing spawn area: 90%
+2013-11-09 20:19:53 [INFO] Preparing spawn area: 95%
+2013-11-09 20:19:54 [INFO] Done (19.006s)! For help, type "help" or "?"
+2013-11-09 20:19:54 [INFO] /127.0.0.1:50038 lost connection
+2013-11-09 20:19:54 [INFO] /127.0.0.1:50039 lost connection
+2013-11-09 20:19:54 [INFO] /127.0.0.1:50040 lost connection
+2013-11-09 20:19:54 [INFO] /127.0.0.1:50042 lost connection
+2013-11-09 20:19:54 [SEVERE] Reached end of stream for /127.0.0.1
+2013-11-09 20:19:56 [SEVERE] Reached end of stream for /127.0.0.1
+2013-11-09 20:19:58 [INFO] Player628[/127.0.0.1:50045] logged in with entity id 609 at (-180.5, 69.0, 246.5)
+2013-11-09 20:19:58 [INFO] Player628 joined the game
+2013-11-09 20:20:05 [WARNING] Can't keep up! Did the system time change, or is the server overloaded?
+2013-11-09 20:20:48 [INFO] Player628 lost connection: disconnect.quitting
+2013-11-09 20:20:48 [INFO] Player628 left the game
+2013-11-09 20:23:12 [INFO] Stopping server
+2013-11-09 20:23:12 [INFO] Saving players
+2013-11-09 20:23:12 [INFO] Saving worlds
+2013-11-09 20:23:12 [INFO] Saving chunks for level 'mcpworld'/Overworld
+2013-11-09 20:23:12 [INFO] Closing listening thread
+2013-11-09 20:23:12 [INFO] Saving chunks for level 'mcpworld'/Nether
+2013-11-09 20:23:12 [INFO] Saving chunks for level 'mcpworld'/The End
+2013-11-09 20:23:12 [INFO] Stopping server
+2013-11-26 20:05:42 [INFO] Starting minecraft server version 1.6.4
+2013-11-26 20:05:49 [INFO] Loading properties
+2013-11-26 20:05:49 [INFO] Default game type: SURVIVAL
+2013-11-26 20:05:49 [INFO] Generating keypair
+2013-11-26 20:05:50 [INFO] Starting Minecraft server on *:25565
+2013-11-26 20:05:50 [WARNING] **** FAILED TO BIND TO PORT!
+2013-11-26 20:05:50 [WARNING] The exception was: java.net.BindException: Address already in use: JVM_Bind
+2013-11-26 20:05:50 [WARNING] Perhaps a server is already running on that port?
+2013-11-26 20:10:47 [INFO] Stopping server
+2013-11-26 20:10:47 [INFO] Saving worlds
+2013-11-26 20:10:47 [INFO] Stopping server
+2013-11-26 22:30:58 [INFO] Starting minecraft server version 1.6.4
+2013-11-26 22:31:04 [SEVERE] Encountered an unexpected exception NullPointerException
+java.lang.NullPointerException
+	at net.minecraft.item.ItemStack.<init>(ItemStack.java:77)
+	at agentsmod.ModDNA.preInit(ModDNA.java:273)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at cpw.mods.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:545)
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventHandler.handleEvent(EventHandler.java:74)
+	at com.google.common.eventbus.SynchronizedEventHandler.handleEvent(SynchronizedEventHandler.java:45)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:313)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:296)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:267)
+	at cpw.mods.fml.common.LoadController.sendEventToModContainer(LoadController.java:194)
+	at cpw.mods.fml.common.LoadController.propogateStateMessage(LoadController.java:174)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventHandler.handleEvent(EventHandler.java:74)
+	at com.google.common.eventbus.SynchronizedEventHandler.handleEvent(SynchronizedEventHandler.java:45)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:313)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:296)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:267)
+	at cpw.mods.fml.common.LoadController.distributeStateMessage(LoadController.java:105)
+	at cpw.mods.fml.common.Loader.loadMods(Loader.java:520)
+	at cpw.mods.fml.server.FMLServerHandler.beginServerLoading(FMLServerHandler.java:99)
+	at cpw.mods.fml.common.FMLCommonHandler.onServerStart(FMLCommonHandler.java:350)
+	at net.minecraft.server.dedicated.DedicatedServer.startServer(DedicatedServer.java:69)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:445)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+2013-11-26 22:31:04 [SEVERE] This crash report has been saved to: C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\.\crash-reports\crash-2013-11-26_22.31.04-server.txt
+2013-11-26 22:31:28 [INFO] Stopping server
+2013-11-26 22:31:28 [INFO] Saving worlds
+2013-11-26 22:31:28 [INFO] Stopping server
+2013-11-26 22:32:43 [INFO] Starting minecraft server version 1.6.4
+2013-11-26 22:32:49 [INFO] Loading properties
+2013-11-26 22:32:49 [INFO] Default game type: SURVIVAL
+2013-11-26 22:32:49 [INFO] Generating keypair
+2013-11-26 22:32:49 [INFO] Starting Minecraft server on *:25565
+2013-11-26 22:32:49 [WARNING] **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+2013-11-26 22:32:49 [WARNING] The server will make no attempt to authenticate usernames. Beware.
+2013-11-26 22:32:49 [WARNING] While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+2013-11-26 22:32:49 [WARNING] To change this, set "online-mode" to "true" in the server.properties file.
+2013-11-26 22:32:49 [INFO] Preparing level "mcpworld"
+2013-11-26 22:32:50 [INFO] Preparing start region for level 0
+2013-11-26 22:32:51 [INFO] Preparing spawn area: 46%
+2013-11-26 22:32:52 [INFO] Preparing spawn area: 96%
+2013-11-26 22:32:52 [INFO] Done (2.348s)! For help, type "help" or "?"
+2013-11-26 22:34:08 [SEVERE] Reached end of stream for /127.0.0.1
+2013-11-26 22:35:45 [INFO] Stopping server
+2013-11-26 22:35:45 [INFO] Saving players
+2013-11-26 22:35:45 [INFO] Saving worlds
+2013-11-26 22:35:45 [INFO] Saving chunks for level 'mcpworld'/Overworld
+2013-11-26 22:35:45 [INFO] Closing listening thread
+2013-11-26 22:35:45 [INFO] Saving chunks for level 'mcpworld'/Nether
+2013-11-26 22:35:45 [INFO] Saving chunks for level 'mcpworld'/The End
+2013-11-26 22:35:45 [INFO] Stopping server
+2014-01-17 22:15:46 [INFO] Starting minecraft server version 1.6.4
+2014-01-17 22:15:55 [INFO] Loading properties
+2014-01-17 22:15:55 [INFO] Default game type: SURVIVAL
+2014-01-17 22:15:55 [INFO] Generating keypair
+2014-01-17 22:15:55 [INFO] Starting Minecraft server on *:25565
+2014-01-17 22:15:55 [WARNING] **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+2014-01-17 22:15:55 [WARNING] The server will make no attempt to authenticate usernames. Beware.
+2014-01-17 22:15:55 [WARNING] While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+2014-01-17 22:15:55 [WARNING] To change this, set "online-mode" to "true" in the server.properties file.
+2014-01-17 22:15:56 [INFO] Preparing level "mcpworld"
+2014-01-17 22:15:56 [INFO] Preparing start region for level 0
+2014-01-17 22:15:57 [INFO] Preparing spawn area: 55%
+2014-01-17 22:15:58 [INFO] Done (2.133s)! For help, type "help" or "?"
+2014-01-17 22:16:28 [SEVERE] Reached end of stream for /127.0.0.1
+2014-01-17 22:16:30 [INFO] Player280[/127.0.0.1:58720] logged in with entity id 526 at (-181.5, 70.0, 246.5)
+2014-01-17 22:16:30 [INFO] Player280 joined the game
+2014-01-17 22:16:41 [INFO] Opped player280
+2014-01-17 22:16:43 [INFO] [Player280: Set own game mode to Creative Mode]
+2014-01-17 22:16:53 [INFO] [Player280: Set own game mode to Survival Mode]
+2014-01-17 22:16:56 [INFO] Player280 was slain by entity.MobMammoth.modid.Mammoth.name
+2014-01-17 22:19:06 [INFO] Disconnecting /25.150.191.201:55308: Protocol error
+2014-01-17 22:19:06 [INFO] /25.150.191.201:55308 lost connection
+2014-01-17 22:19:06 [SEVERE] Reached end of stream for /25.150.191.201
+2014-01-17 22:21:52 [INFO] Player280 lost connection: disconnect.genericReason
+2014-01-17 22:21:52 [INFO] Player280 left the game
+2014-01-17 22:25:52 [SEVERE] Reached end of stream for /127.0.0.1
+2014-01-17 22:25:53 [INFO] Player506[/127.0.0.1:58972] logged in with entity id 3082 at (-178.5, 69.0, 243.5)
+2014-01-17 22:25:53 [INFO] Player506 joined the game
+2014-01-17 22:26:00 [INFO] Player506 was slain by entity.MobMammoth.modid.Mammoth.name
+2014-01-17 22:26:05 [INFO] Player506 lost connection: disconnect.genericReason
+2014-01-17 22:26:05 [INFO] Player506 left the game
+2014-01-17 22:30:28 [SEVERE] Reached end of stream for /127.0.0.1
+2014-01-17 22:30:31 [INFO] Player315[/127.0.0.1:59114] logged in with entity id 3241 at (-182.5, 70.0, 244.5)
+2014-01-17 22:30:31 [INFO] Player315 joined the game
+2014-01-17 22:30:39 [INFO] Player315 was slain by entity.MobMammoth.modid.Mammoth.name
+2014-01-17 22:31:53 [INFO] Player315 lost connection: disconnect.genericReason
+2014-01-17 22:31:53 [INFO] Player315 left the game
+2014-01-17 22:34:23 [SEVERE] Reached end of stream for /127.0.0.1
+2014-01-17 22:34:24 [INFO] Player975[/127.0.0.1:59190] logged in with entity id 3984 at (-194.5, 69.0, 249.5)
+2014-01-17 22:34:24 [INFO] Player975 joined the game
+2014-01-17 22:35:10 [INFO] Player975 lost connection: disconnect.genericReason
+2014-01-17 22:35:10 [INFO] Player975 left the game
+2014-01-17 22:35:25 [INFO] Stopping server
+2014-01-17 22:35:25 [INFO] Saving players
+2014-01-17 22:35:25 [INFO] Saving worlds
+2014-01-17 22:35:25 [INFO] Saving chunks for level 'mcpworld'/Overworld
+2014-01-17 22:35:25 [INFO] Closing listening thread
+2014-01-17 22:35:25 [INFO] Saving chunks for level 'mcpworld'/Nether
+2014-01-17 22:35:25 [INFO] Saving chunks for level 'mcpworld'/The End
+2014-01-17 22:35:26 [INFO] Stopping server

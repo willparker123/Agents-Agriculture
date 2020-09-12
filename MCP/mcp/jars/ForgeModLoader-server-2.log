@@ -1,0 +1,1340 @@
+2013-11-26 22:30:56 [INFO] [ForgeModLoader] Forge Mod Loader version 6.4.20.916 for Minecraft 1.6.4 loading
+2013-11-26 22:30:56 [INFO] [ForgeModLoader] Java is Java HotSpot(TM) 64-Bit Server VM, version 1.7.0_40, running on Windows 7:amd64:6.1, installed at C:\Program Files\Java\jre7
+2013-11-26 22:30:56 [FINE] [ForgeModLoader] Java classpath at launch is C:\Users\Will\Desktop\1.6.4\MCP\mcp\eclipse\Minecraft\bin;C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\org\ow2\asm\asm-debug-all\4.1\asm-debug-all-4.1.jar;C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\net\minecraft\launchwrapper\1.8\launchwrapper-1.8.jar;C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\versions\1.6.4\1.6.4.jar;C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\lzma\lzma\0.0.1\lzma-0.0.1.jar;C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar;C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar;C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\com\google\guava\guava\14.0\guava-14.0.jar;C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar;C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar;C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar
+2013-11-26 22:30:56 [FINE] [ForgeModLoader] Java library path at launch is C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\versions\1.6.4\1.6.4-natives
+2013-11-26 22:30:56 [INFO] [ForgeModLoader] Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+2013-11-26 22:30:56 [FINE] [ForgeModLoader] Instantiating coremod class FMLCorePlugin
+2013-11-26 22:30:56 [FINE] [ForgeModLoader] Loaded coremod FMLCorePlugin
+2013-11-26 22:30:56 [FINE] [ForgeModLoader] Instantiating coremod class FMLForgePlugin
+2013-11-26 22:30:56 [FINE] [ForgeModLoader] Loaded coremod FMLForgePlugin
+2013-11-26 22:30:56 [FINE] [ForgeModLoader] All fundamental core mods are successfully located
+2013-11-26 22:30:56 [FINE] [ForgeModLoader] Discovering coremods
+2013-11-26 22:30:56 [FINEST] [ForgeModLoader] Registering transformer cpw.mods.fml.common.asm.transformers.AccessTransformer
+2013-11-26 22:30:56 [INFO] [STDOUT] Loaded 40 rules from AccessTransformer config file fml_at.cfg
+2013-11-26 22:30:56 [FINEST] [ForgeModLoader] Registering transformer cpw.mods.fml.common.asm.transformers.MarkerTransformer
+2013-11-26 22:30:56 [FINEST] [ForgeModLoader] Registering transformer cpw.mods.fml.common.asm.transformers.SideTransformer
+2013-11-26 22:30:56 [FINEST] [ForgeModLoader] Registering transformer net.minecraftforge.transformers.ForgeAccessTransformer
+2013-11-26 22:30:56 [INFO] [STDOUT] Loaded 109 rules from AccessTransformer config file forge_at.cfg
+2013-11-26 22:30:56 [FINEST] [ForgeModLoader] Registering transformer net.minecraftforge.transformers.EventTransformer
+2013-11-26 22:30:56 [FINE] [ForgeModLoader] Running coremod plugins
+2013-11-26 22:30:56 [FINE] [ForgeModLoader] Running coremod plugin FMLCorePlugin
+2013-11-26 22:30:56 [SEVERE] [ForgeModLoader] The binary patch set is missing. Either you are in a development environment, or things are not going to work!
+2013-11-26 22:30:57 [FINE] [ForgeModLoader] Coremod plugin FMLCorePlugin run successfully
+2013-11-26 22:30:57 [FINE] [ForgeModLoader] Running coremod plugin FMLForgePlugin
+2013-11-26 22:30:57 [FINE] [ForgeModLoader] Coremod plugin FMLForgePlugin run successfully
+2013-11-26 22:30:57 [INFO] [ForgeModLoader] Loading tweak class name cpw.mods.fml.common.launcher.FMLDeobfTweaker
+2013-11-26 22:30:57 [INFO] [ForgeModLoader] Calling tweak class cpw.mods.fml.common.launcher.FMLDeobfTweaker
+2013-11-26 22:30:57 [FINE] [ForgeModLoader] Validating minecraft
+2013-11-26 22:30:57 [FINE] [ForgeModLoader] Minecraft validated, launching...
+2013-11-26 22:30:57 [INFO] [ForgeModLoader] Launching wrapped minecraft {net.minecraft.server.MinecraftServer}
+2013-11-26 22:30:58 [INFO] [Minecraft-Server] Starting minecraft server version 1.6.4
+2013-11-26 22:30:58 [INFO] [MinecraftForge] Attempting early MinecraftForge initialization
+2013-11-26 22:30:58 [INFO] [STDOUT] MinecraftForge v9.11.1.916 Initialized
+2013-11-26 22:30:58 [INFO] [ForgeModLoader] MinecraftForge v9.11.1.916 Initialized
+2013-11-26 22:30:58 [INFO] [STDOUT] Replaced 101 ore recipies
+2013-11-26 22:30:58 [INFO] [MinecraftForge] Completed early MinecraftForge initialization
+2013-11-26 22:30:58 [INFO] [ForgeModLoader] Reading custom logging properties from C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\config\logging.properties
+2013-11-26 22:30:58 [OFF] [ForgeModLoader] Logging level for ForgeModLoader logging is set to ALL
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Building injected Mod Containers [cpw.mods.fml.common.FMLDummyContainer, net.minecraftforge.common.ForgeDummyContainer]
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Attempting to load mods contained in the minecraft jar file and associated classes
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Found a minecraft related directory at C:\Users\Will\Desktop\1.6.4\MCP\mcp\eclipse\Minecraft\bin, examining for mod candidates
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\org\ow2\asm\asm-debug-all\4.1\asm-debug-all-4.1.jar, examining for mod candidates
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\net\minecraft\launchwrapper\1.8\launchwrapper-1.8.jar, examining for mod candidates
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\versions\1.6.4\1.6.4.jar, examining for mod candidates
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\lzma\lzma\0.0.1\lzma-0.0.1.jar, examining for mod candidates
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar, examining for mod candidates
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar, examining for mod candidates
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar, examining for mod candidates
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar, examining for mod candidates
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar, examining for mod candidates
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar, examining for mod candidates
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar, examining for mod candidates
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar, examining for mod candidates
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\com\google\guava\guava\14.0\guava-14.0.jar, examining for mod candidates
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar, examining for mod candidates
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\commons-io\commons-io\2.4\commons-io-2.4.jar, examining for mod candidates
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar, examining for mod candidates
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar, examining for mod candidates
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar, examining for mod candidates
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar, examining for mod candidates
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar, examining for mod candidates
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Minecraft jar mods loaded successfully
+2013-11-26 22:30:58 [INFO] [ForgeModLoader] Searching C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\mods for mods
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] Examining directory bin for potential mods
+2013-11-26 22:30:58 [FINE] [ForgeModLoader] No mcmod.info file found in directory bin
+2013-11-26 22:30:58 [FINEST] [ForgeModLoader] Recursing into package agentsmod
+2013-11-26 22:30:59 [FINE] [ForgeModLoader] Identified an FMLMod type mod agentsmod.CoreModFile
+2013-11-26 22:30:59 [FINEST] [mod_*] Parsed dependency info : [] [] []
+2013-11-26 22:30:59 [FINE] [ForgeModLoader] Identified an FMLMod type mod agentsmod.ModBlocks
+2013-11-26 22:30:59 [FINEST] [ModBlocks] Parsed dependency info : [] [] []
+2013-11-26 22:30:59 [FINE] [ForgeModLoader] Identified an FMLMod type mod agentsmod.ModCreativeTabs
+2013-11-26 22:30:59 [FINEST] [CreativeTabs.modid] Parsed dependency info : [] [] []
+2013-11-26 22:30:59 [FINE] [ForgeModLoader] Identified an FMLMod type mod agentsmod.ModCrops
+2013-11-26 22:30:59 [FINEST] [ModCrops] Parsed dependency info : [] [] []
+2013-11-26 22:30:59 [FINE] [ForgeModLoader] Identified an FMLMod type mod agentsmod.ModDNA
+2013-11-26 22:30:59 [FINEST] [ModDNA] Parsed dependency info : [] [] []
+2013-11-26 22:30:59 [FINE] [ForgeModLoader] Identified an FMLMod type mod agentsmod.ModFood
+2013-11-26 22:30:59 [FINEST] [ModFood] Parsed dependency info : [] [] []
+2013-11-26 22:30:59 [FINE] [ForgeModLoader] Identified an FMLMod type mod agentsmod.ModFruits
+2013-11-26 22:30:59 [FINEST] [ModFruits] Parsed dependency info : [] [] []
+2013-11-26 22:30:59 [FINE] [ForgeModLoader] Identified an FMLMod type mod agentsmod.ModMobMammoth
+2013-11-26 22:30:59 [FINEST] [MobMammoth.modid] Parsed dependency info : [] [] []
+2013-11-26 22:30:59 [FINE] [ForgeModLoader] Identified an FMLMod type mod agentsmod.ModMobMammothZombie
+2013-11-26 22:30:59 [FINEST] [MobMammothZombie.modid] Parsed dependency info : [] [] []
+2013-11-26 22:30:59 [FINE] [ForgeModLoader] Identified an FMLMod type mod agentsmod.ModMobScorpion
+2013-11-26 22:30:59 [FINEST] [MobScorpion.modid] Parsed dependency info : [] [] []
+2013-11-26 22:30:59 [FINE] [ForgeModLoader] Identified an FMLMod type mod agentsmod.ModMobWhale
+2013-11-26 22:30:59 [FINEST] [MobWhale.modid] Parsed dependency info : [] [] []
+2013-11-26 22:30:59 [FINE] [ForgeModLoader] Identified an FMLMod type mod agentsmod.ModRendering
+2013-11-26 22:30:59 [FINEST] [ModRendering] Parsed dependency info : [] [] []
+2013-11-26 22:30:59 [FINE] [ForgeModLoader] Identified an FMLMod type mod agentsmod.ModTools
+2013-11-26 22:30:59 [FINEST] [ModTools] Parsed dependency info : [] [] []
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.forge
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.forge.lang
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.modblocks
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.modblocks.textures
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.modblocks.textures.blocks
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.modblocks.textures.items
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.modcrops
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.modcrops.textures
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.modcrops.textures.blocks
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.moddna
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.moddna.textures
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.moddna.textures.items
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.modfood
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.modfood.textures
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.modfood.textures.items
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.modfruits
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.modfruits.textures
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.modfruits.textures.items
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.modmobs
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.modsounds
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.modsounds.sound
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.modtools
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.modtools.textures
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package assets.modtools.textures.items
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.client
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.client.modloader
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.client.registry
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.asm
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.asm.transformers
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.asm.transformers.deobf
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.discovery
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.discovery.asm
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.event
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.functions
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.launcher
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.modloader
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.network
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.patcher
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.registry
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.toposort
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.versioning
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.relauncher
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.repackage
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.repackage.com
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.repackage.com.nothome
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.repackage.com.nothome.delta
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.server
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package ibxm
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.block
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.block.material
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.audio
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.entity
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.gui
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.gui.achievement
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.gui.inventory
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.gui.mco
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.main
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.mco
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.model
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.multiplayer
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.particle
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.renderer
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.renderer.culling
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.renderer.entity
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.renderer.texture
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.renderer.tileentity
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.resources
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.resources.data
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.settings
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.stats
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.command
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.crash
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.creativetab
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.dispenser
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.enchantment
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.ai
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.ai.attributes
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.boss
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.effect
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.item
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.monster
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.passive
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.player
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.projectile
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.inventory
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.item
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.item.crafting
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.logging
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.nbt
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.network
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.network.packet
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.network.rcon
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.pathfinding
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.potion
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.profiler
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.scoreboard
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.server
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.server.dedicated
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.server.gui
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.server.integrated
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.server.management
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.src
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.stats
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.tileentity
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.util
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.village
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.biome
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.chunk
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.chunk.storage
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.demo
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.gen
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.gen.feature
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.gen.layer
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.gen.structure
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.storage
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.classloading
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.client
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.client.event
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.client.event.sound
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.client.model
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.client.model.obj
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.client.model.techne
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.common
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.common.network
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.common.network.packet
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.brewing
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.entity
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.entity.item
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.entity.living
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.entity.minecart
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.entity.player
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.terraingen
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.world
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.fluids
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.liquids
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.oredict
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.server
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.server.command
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.transformers
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package paulscode
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package paulscode.sound
+2013-11-26 22:30:59 [FINEST] [ForgeModLoader] Recursing into package paulscode.sound.codecs
+2013-11-26 22:30:59 [FINE] [ForgeModLoader] Examining file asm-debug-all-4.1.jar for potential mods
+2013-11-26 22:30:59 [FINE] [ForgeModLoader] The mod container asm-debug-all-4.1.jar appears to be missing an mcmod.info file
+2013-11-26 22:30:59 [FINE] [ForgeModLoader] Examining file launchwrapper-1.8.jar for potential mods
+2013-11-26 22:30:59 [FINE] [ForgeModLoader] The mod container launchwrapper-1.8.jar appears to be missing an mcmod.info file
+2013-11-26 22:30:59 [FINE] [ForgeModLoader] Examining file 1.6.4.jar for potential mods
+2013-11-26 22:30:59 [FINE] [ForgeModLoader] The mod container 1.6.4.jar appears to be missing an mcmod.info file
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] Examining file lzma-0.0.1.jar for potential mods
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] The mod container lzma-0.0.1.jar appears to be missing an mcmod.info file
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] Examining file jopt-simple-4.5.jar for potential mods
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] The mod container jopt-simple-4.5.jar appears to be missing an mcmod.info file
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] Examining file codecjorbis-20101023.jar for potential mods
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] The mod container codecjorbis-20101023.jar appears to be missing an mcmod.info file
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] Examining file codecwav-20101023.jar for potential mods
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] The mod container codecwav-20101023.jar appears to be missing an mcmod.info file
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] Examining file libraryjavasound-20101123.jar for potential mods
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] The mod container libraryjavasound-20101123.jar appears to be missing an mcmod.info file
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] Examining file librarylwjglopenal-20100824.jar for potential mods
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] The mod container librarylwjglopenal-20100824.jar appears to be missing an mcmod.info file
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] Examining file soundsystem-20120107.jar for potential mods
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] The mod container soundsystem-20120107.jar appears to be missing an mcmod.info file
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] Examining file argo-2.25_fixed.jar for potential mods
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] The mod container argo-2.25_fixed.jar appears to be missing an mcmod.info file
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] Examining file bcprov-jdk15on-1.47.jar for potential mods
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] The mod container bcprov-jdk15on-1.47.jar appears to be missing an mcmod.info file
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] Examining file guava-14.0.jar for potential mods
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] The mod container guava-14.0.jar appears to be missing an mcmod.info file
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] Examining file commons-lang3-3.1.jar for potential mods
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] The mod container commons-lang3-3.1.jar appears to be missing an mcmod.info file
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] Examining file commons-io-2.4.jar for potential mods
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] The mod container commons-io-2.4.jar appears to be missing an mcmod.info file
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] Examining file jutils-1.0.0.jar for potential mods
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] The mod container jutils-1.0.0.jar appears to be missing an mcmod.info file
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] Examining file gson-2.2.2.jar for potential mods
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] The mod container gson-2.2.2.jar appears to be missing an mcmod.info file
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] Examining file jinput-2.0.5.jar for potential mods
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] The mod container jinput-2.0.5.jar appears to be missing an mcmod.info file
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] Examining file lwjgl-2.9.0.jar for potential mods
+2013-11-26 22:31:00 [FINE] [ForgeModLoader] The mod container lwjgl-2.9.0.jar appears to be missing an mcmod.info file
+2013-11-26 22:31:01 [FINE] [ForgeModLoader] Examining file lwjgl_util-2.9.0.jar for potential mods
+2013-11-26 22:31:01 [FINE] [ForgeModLoader] The mod container lwjgl_util-2.9.0.jar appears to be missing an mcmod.info file
+2013-11-26 22:31:01 [INFO] [ForgeModLoader] Forge Mod Loader has identified 16 mods to load
+2013-11-26 22:31:01 [FINER] [ForgeModLoader] Received a system property request ''
+2013-11-26 22:31:01 [FINER] [ForgeModLoader] System property request managing the state of 0 mods
+2013-11-26 22:31:01 [FINE] [ForgeModLoader] After merging, found state information for 0 mods
+2013-11-26 22:31:01 [FINE] [ForgeModLoader] Reloading logging properties from C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\config\logging.properties
+2013-11-26 22:31:01 [FINE] [ForgeModLoader] Reloaded logging properties
+2013-11-26 22:31:01 [FINE] [mcp] Mod Logging channel mcp configured at default level.
+2013-11-26 22:31:01 [INFO] [mcp] Activating mod mcp
+2013-11-26 22:31:01 [FINE] [FML] Mod Logging channel FML configured at default level.
+2013-11-26 22:31:01 [INFO] [FML] Activating mod FML
+2013-11-26 22:31:01 [FINE] [ForgeModLoader] Injecting found translation data at assets/forge/lang/en_US.lang into language system
+2013-11-26 22:31:01 [FINE] [Forge] Mod Logging channel Forge configured at default level.
+2013-11-26 22:31:01 [INFO] [Forge] Activating mod Forge
+2013-11-26 22:31:01 [FINE] [ForgeModLoader] Injecting found translation data at assets/forge/lang/en_US.lang into language system
+2013-11-26 22:31:01 [FINE] [mod_*] Enabling mod mod_*
+2013-11-26 22:31:01 [FINE] [mod_*] Mod Logging channel mod_* configured at default level.
+2013-11-26 22:31:01 [INFO] [mod_*] Activating mod mod_*
+2013-11-26 22:31:01 [FINE] [ForgeModLoader] Injecting found translation data at assets/forge/lang/en_US.lang into language system
+2013-11-26 22:31:01 [FINE] [ModBlocks] Enabling mod ModBlocks
+2013-11-26 22:31:01 [FINE] [ModBlocks] Mod Logging channel ModBlocks configured at default level.
+2013-11-26 22:31:01 [INFO] [ModBlocks] Activating mod ModBlocks
+2013-11-26 22:31:01 [FINE] [ForgeModLoader] Injecting found translation data at assets/forge/lang/en_US.lang into language system
+2013-11-26 22:31:01 [FINE] [CreativeTabs.modid] Enabling mod CreativeTabs.modid
+2013-11-26 22:31:01 [FINE] [CreativeTabs.modid] Mod Logging channel CreativeTabs.modid configured at default level.
+2013-11-26 22:31:01 [INFO] [CreativeTabs.modid] Activating mod CreativeTabs.modid
+2013-11-26 22:31:01 [FINE] [ForgeModLoader] Injecting found translation data at assets/forge/lang/en_US.lang into language system
+2013-11-26 22:31:01 [FINE] [ModCrops] Enabling mod ModCrops
+2013-11-26 22:31:01 [FINE] [ModCrops] Mod Logging channel ModCrops configured at default level.
+2013-11-26 22:31:01 [INFO] [ModCrops] Activating mod ModCrops
+2013-11-26 22:31:01 [FINE] [ForgeModLoader] Injecting found translation data at assets/forge/lang/en_US.lang into language system
+2013-11-26 22:31:02 [FINE] [ModDNA] Enabling mod ModDNA
+2013-11-26 22:31:02 [FINE] [ModDNA] Mod Logging channel ModDNA configured at default level.
+2013-11-26 22:31:02 [INFO] [ModDNA] Activating mod ModDNA
+2013-11-26 22:31:02 [FINE] [ForgeModLoader] Injecting found translation data at assets/forge/lang/en_US.lang into language system
+2013-11-26 22:31:02 [FINE] [ModFood] Enabling mod ModFood
+2013-11-26 22:31:02 [FINE] [ModFood] Mod Logging channel ModFood configured at default level.
+2013-11-26 22:31:02 [INFO] [ModFood] Activating mod ModFood
+2013-11-26 22:31:02 [FINE] [ForgeModLoader] Injecting found translation data at assets/forge/lang/en_US.lang into language system
+2013-11-26 22:31:02 [FINE] [ModFruits] Enabling mod ModFruits
+2013-11-26 22:31:02 [FINE] [ModFruits] Mod Logging channel ModFruits configured at default level.
+2013-11-26 22:31:02 [INFO] [ModFruits] Activating mod ModFruits
+2013-11-26 22:31:02 [FINE] [ForgeModLoader] Injecting found translation data at assets/forge/lang/en_US.lang into language system
+2013-11-26 22:31:02 [FINE] [MobMammoth.modid] Enabling mod MobMammoth.modid
+2013-11-26 22:31:02 [FINE] [MobMammoth.modid] Mod Logging channel MobMammoth.modid configured at default level.
+2013-11-26 22:31:02 [INFO] [MobMammoth.modid] Activating mod MobMammoth.modid
+2013-11-26 22:31:02 [FINE] [ForgeModLoader] Injecting found translation data at assets/forge/lang/en_US.lang into language system
+2013-11-26 22:31:02 [FINE] [MobMammothZombie.modid] Enabling mod MobMammothZombie.modid
+2013-11-26 22:31:02 [FINE] [MobMammothZombie.modid] Mod Logging channel MobMammothZombie.modid configured at default level.
+2013-11-26 22:31:02 [INFO] [MobMammothZombie.modid] Activating mod MobMammothZombie.modid
+2013-11-26 22:31:02 [FINE] [ForgeModLoader] Injecting found translation data at assets/forge/lang/en_US.lang into language system
+2013-11-26 22:31:02 [FINE] [MobScorpion.modid] Enabling mod MobScorpion.modid
+2013-11-26 22:31:02 [FINE] [MobScorpion.modid] Mod Logging channel MobScorpion.modid configured at default level.
+2013-11-26 22:31:02 [INFO] [MobScorpion.modid] Activating mod MobScorpion.modid
+2013-11-26 22:31:02 [FINE] [ForgeModLoader] Injecting found translation data at assets/forge/lang/en_US.lang into language system
+2013-11-26 22:31:02 [FINE] [MobWhale.modid] Enabling mod MobWhale.modid
+2013-11-26 22:31:02 [FINE] [MobWhale.modid] Mod Logging channel MobWhale.modid configured at default level.
+2013-11-26 22:31:02 [INFO] [MobWhale.modid] Activating mod MobWhale.modid
+2013-11-26 22:31:02 [FINE] [ForgeModLoader] Injecting found translation data at assets/forge/lang/en_US.lang into language system
+2013-11-26 22:31:03 [FINE] [ModRendering] Enabling mod ModRendering
+2013-11-26 22:31:03 [FINE] [ModRendering] Mod Logging channel ModRendering configured at default level.
+2013-11-26 22:31:03 [INFO] [ModRendering] Activating mod ModRendering
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] Injecting found translation data at assets/forge/lang/en_US.lang into language system
+2013-11-26 22:31:03 [FINE] [ModTools] Enabling mod ModTools
+2013-11-26 22:31:03 [FINE] [ModTools] Mod Logging channel ModTools configured at default level.
+2013-11-26 22:31:03 [INFO] [ModTools] Activating mod ModTools
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] Injecting found translation data at assets/forge/lang/en_US.lang into language system
+2013-11-26 22:31:03 [FINER] [ForgeModLoader] Verifying mod requirements are satisfied
+2013-11-26 22:31:03 [FINER] [ForgeModLoader] All mod requirements are satisfied
+2013-11-26 22:31:03 [FINER] [ForgeModLoader] Sorting mods into an ordered list
+2013-11-26 22:31:03 [FINER] [ForgeModLoader] Mod sorting completed successfully
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] Mod sorting data
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	mod_*(Agent's Mod:Alpha): bin ()
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	ModBlocks(Agent's Mod:Alpha): bin ()
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	CreativeTabs.modid(Agent's Mod:Alpha): bin ()
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	ModCrops(Agent's Mod:Alpha): bin ()
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	ModDNA(Agent's Mod:Alpha): bin ()
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	ModFood(Agent's Mod:Alpha): bin ()
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	ModFruits(Agent's Mod:Alpha): bin ()
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	MobMammoth.modid(Agent's Mod:Alpha): bin ()
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	MobMammothZombie.modid(Agent's Mod:Alpha): bin ()
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	MobScorpion.modid(Agent's Mod:Alpha): bin ()
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	MobWhale.modid(Agent's Mod:Alpha): bin ()
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	ModRendering(Agent's Mod:Alpha): bin ()
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	ModTools(Agent's Mod:Alpha): bin ()
+2013-11-26 22:31:03 [FINEST] [mcp] Sending event FMLConstructionEvent to mod mcp
+2013-11-26 22:31:03 [FINEST] [mcp] Sent event FMLConstructionEvent to mod mcp
+2013-11-26 22:31:03 [FINEST] [FML] Sending event FMLConstructionEvent to mod FML
+2013-11-26 22:31:03 [FINEST] [FML] Sent event FMLConstructionEvent to mod FML
+2013-11-26 22:31:03 [FINEST] [Forge] Sending event FMLConstructionEvent to mod Forge
+2013-11-26 22:31:03 [INFO] [ForgeModLoader] Registering Forge Packet Handler
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] Testing mod Forge to verify it accepts its own version in a remote connection
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] The mod Forge accepts its own version (9.11.1.916)
+2013-11-26 22:31:03 [INFO] [ForgeModLoader] Succeeded registering Forge Packet Handler
+2013-11-26 22:31:03 [FINEST] [Forge] Sent event FMLConstructionEvent to mod Forge
+2013-11-26 22:31:03 [FINEST] [mod_*] Sending event FMLConstructionEvent to mod mod_*
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] Testing mod mod_* to verify it accepts its own version in a remote connection
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] The mod mod_* accepts its own version (Alpha)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] Attempting to inject @SidedProxy classes into mod_*
+2013-11-26 22:31:03 [FINEST] [mod_*] Sent event FMLConstructionEvent to mod mod_*
+2013-11-26 22:31:03 [FINEST] [ModBlocks] Sending event FMLConstructionEvent to mod ModBlocks
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] Testing mod ModBlocks to verify it accepts its own version in a remote connection
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] The mod ModBlocks accepts its own version (Alpha)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] Attempting to inject @SidedProxy classes into ModBlocks
+2013-11-26 22:31:03 [FINEST] [ModBlocks] Sent event FMLConstructionEvent to mod ModBlocks
+2013-11-26 22:31:03 [FINEST] [CreativeTabs.modid] Sending event FMLConstructionEvent to mod CreativeTabs.modid
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] Testing mod CreativeTabs.modid to verify it accepts its own version in a remote connection
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] The mod CreativeTabs.modid accepts its own version (Alpha)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] Attempting to inject @SidedProxy classes into CreativeTabs.modid
+2013-11-26 22:31:03 [FINEST] [CreativeTabs.modid] Sent event FMLConstructionEvent to mod CreativeTabs.modid
+2013-11-26 22:31:03 [FINEST] [ModCrops] Sending event FMLConstructionEvent to mod ModCrops
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] Testing mod ModCrops to verify it accepts its own version in a remote connection
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] The mod ModCrops accepts its own version (Alpha)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] Attempting to inject @SidedProxy classes into ModCrops
+2013-11-26 22:31:03 [FINEST] [ModCrops] Sent event FMLConstructionEvent to mod ModCrops
+2013-11-26 22:31:03 [FINEST] [ModDNA] Sending event FMLConstructionEvent to mod ModDNA
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] Testing mod ModDNA to verify it accepts its own version in a remote connection
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] The mod ModDNA accepts its own version (Alpha)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] Attempting to inject @SidedProxy classes into ModDNA
+2013-11-26 22:31:03 [FINEST] [ModDNA] Sent event FMLConstructionEvent to mod ModDNA
+2013-11-26 22:31:03 [FINEST] [ModFood] Sending event FMLConstructionEvent to mod ModFood
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] Testing mod ModFood to verify it accepts its own version in a remote connection
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] The mod ModFood accepts its own version (Alpha)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] Attempting to inject @SidedProxy classes into ModFood
+2013-11-26 22:31:03 [FINEST] [ModFood] Sent event FMLConstructionEvent to mod ModFood
+2013-11-26 22:31:03 [FINEST] [ModFruits] Sending event FMLConstructionEvent to mod ModFruits
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] Testing mod ModFruits to verify it accepts its own version in a remote connection
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] The mod ModFruits accepts its own version (Alpha)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] Attempting to inject @SidedProxy classes into ModFruits
+2013-11-26 22:31:03 [FINEST] [ModFruits] Sent event FMLConstructionEvent to mod ModFruits
+2013-11-26 22:31:03 [FINEST] [MobMammoth.modid] Sending event FMLConstructionEvent to mod MobMammoth.modid
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] Testing mod MobMammoth.modid to verify it accepts its own version in a remote connection
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] The mod MobMammoth.modid accepts its own version (Alpha)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] Attempting to inject @SidedProxy classes into MobMammoth.modid
+2013-11-26 22:31:03 [FINEST] [MobMammoth.modid] Sent event FMLConstructionEvent to mod MobMammoth.modid
+2013-11-26 22:31:03 [FINEST] [MobMammothZombie.modid] Sending event FMLConstructionEvent to mod MobMammothZombie.modid
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] Testing mod MobMammothZombie.modid to verify it accepts its own version in a remote connection
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] The mod MobMammothZombie.modid accepts its own version (Alpha)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] Attempting to inject @SidedProxy classes into MobMammothZombie.modid
+2013-11-26 22:31:03 [FINEST] [MobMammothZombie.modid] Sent event FMLConstructionEvent to mod MobMammothZombie.modid
+2013-11-26 22:31:03 [FINEST] [MobScorpion.modid] Sending event FMLConstructionEvent to mod MobScorpion.modid
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] Testing mod MobScorpion.modid to verify it accepts its own version in a remote connection
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] The mod MobScorpion.modid accepts its own version (Alpha)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] Attempting to inject @SidedProxy classes into MobScorpion.modid
+2013-11-26 22:31:03 [FINEST] [MobScorpion.modid] Sent event FMLConstructionEvent to mod MobScorpion.modid
+2013-11-26 22:31:03 [FINEST] [MobWhale.modid] Sending event FMLConstructionEvent to mod MobWhale.modid
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] Testing mod MobWhale.modid to verify it accepts its own version in a remote connection
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] The mod MobWhale.modid accepts its own version (Alpha)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] Attempting to inject @SidedProxy classes into MobWhale.modid
+2013-11-26 22:31:03 [FINEST] [MobWhale.modid] Sent event FMLConstructionEvent to mod MobWhale.modid
+2013-11-26 22:31:03 [FINEST] [ModRendering] Sending event FMLConstructionEvent to mod ModRendering
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] Testing mod ModRendering to verify it accepts its own version in a remote connection
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] The mod ModRendering accepts its own version (Alpha)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] Attempting to inject @SidedProxy classes into ModRendering
+2013-11-26 22:31:03 [FINEST] [ModRendering] Sent event FMLConstructionEvent to mod ModRendering
+2013-11-26 22:31:03 [FINEST] [ModTools] Sending event FMLConstructionEvent to mod ModTools
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] Testing mod ModTools to verify it accepts its own version in a remote connection
+2013-11-26 22:31:03 [FINEST] [ForgeModLoader] The mod ModTools accepts its own version (Alpha)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] Attempting to inject @SidedProxy classes into ModTools
+2013-11-26 22:31:03 [FINEST] [ModTools] Sent event FMLConstructionEvent to mod ModTools
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] Mod signature data
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	mcp(Minecraft Coder Pack:8.09): minecraft.jar (NO VALID CERTIFICATE FOUND)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	FML(Forge Mod Loader:6.4.20.916): bin (NO VALID CERTIFICATE FOUND)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	Forge(Minecraft Forge:9.11.1.916): bin (NO VALID CERTIFICATE FOUND)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	mod_*(Agent's Mod:Alpha): bin (NO VALID CERTIFICATE FOUND)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	ModBlocks(Agent's Mod:Alpha): bin (NO VALID CERTIFICATE FOUND)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	CreativeTabs.modid(Agent's Mod:Alpha): bin (NO VALID CERTIFICATE FOUND)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	ModCrops(Agent's Mod:Alpha): bin (NO VALID CERTIFICATE FOUND)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	ModDNA(Agent's Mod:Alpha): bin (NO VALID CERTIFICATE FOUND)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	ModFood(Agent's Mod:Alpha): bin (NO VALID CERTIFICATE FOUND)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	ModFruits(Agent's Mod:Alpha): bin (NO VALID CERTIFICATE FOUND)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	MobMammoth.modid(Agent's Mod:Alpha): bin (NO VALID CERTIFICATE FOUND)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	MobMammothZombie.modid(Agent's Mod:Alpha): bin (NO VALID CERTIFICATE FOUND)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	MobScorpion.modid(Agent's Mod:Alpha): bin (NO VALID CERTIFICATE FOUND)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	MobWhale.modid(Agent's Mod:Alpha): bin (NO VALID CERTIFICATE FOUND)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	ModRendering(Agent's Mod:Alpha): bin (NO VALID CERTIFICATE FOUND)
+2013-11-26 22:31:03 [FINE] [ForgeModLoader] 	ModTools(Agent's Mod:Alpha): bin (NO VALID CERTIFICATE FOUND)
+2013-11-26 22:31:03 [FINEST] [mcp] Sending event FMLPreInitializationEvent to mod mcp
+2013-11-26 22:31:03 [FINEST] [mcp] Sent event FMLPreInitializationEvent to mod mcp
+2013-11-26 22:31:03 [FINEST] [FML] Sending event FMLPreInitializationEvent to mod FML
+2013-11-26 22:31:03 [FINEST] [FML] Sent event FMLPreInitializationEvent to mod FML
+2013-11-26 22:31:03 [FINEST] [Forge] Sending event FMLPreInitializationEvent to mod Forge
+2013-11-26 22:31:03 [INFO] [ForgeModLoader] Configured a dormant chunk cache size of 0
+2013-11-26 22:31:03 [FINEST] [Forge] Sent event FMLPreInitializationEvent to mod Forge
+2013-11-26 22:31:03 [FINEST] [mod_*] Sending event FMLPreInitializationEvent to mod mod_*
+2013-11-26 22:31:03 [FINEST] [mod_*] Sent event FMLPreInitializationEvent to mod mod_*
+2013-11-26 22:31:03 [FINEST] [ModBlocks] Sending event FMLPreInitializationEvent to mod ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemBlockChanger(5798) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(853) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(854) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(855) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(856) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(857) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(858) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(895) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(896) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(1020) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(1021) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(1022) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(1023) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(908) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(909) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(910) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(911) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(912) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(913) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(914) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(915) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(916) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(917) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(918) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(919) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(920) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(921) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(922) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(923) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(924) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(925) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(958) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(926) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(927) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(928) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(929) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(934) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(935) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(936) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(937) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(938) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(939) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(940) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(941) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(942) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(943) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(944) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(990) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(991) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(992) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(993) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(994) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(995) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(996) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(997) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(998) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(999) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(1000) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(945) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(947) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(948) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(949) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(950) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(951) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(952) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(953) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(1010) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(1011) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(1012) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(960) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(961) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(962) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(963) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(964) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(965) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(966) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(967) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(968) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(969) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(970) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(971) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(972) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(973) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(974) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(975) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(976) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(977) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(978) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(979) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(980) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(981) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(982) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(983) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(984) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(985) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(986) owned by ModBlocks
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(987) owned by ModBlocks
+2013-11-26 22:31:03 [FINEST] [ModBlocks] Sent event FMLPreInitializationEvent to mod ModBlocks
+2013-11-26 22:31:03 [FINEST] [CreativeTabs.modid] Sending event FMLPreInitializationEvent to mod CreativeTabs.modid
+2013-11-26 22:31:03 [FINEST] [CreativeTabs.modid] Sent event FMLPreInitializationEvent to mod CreativeTabs.modid
+2013-11-26 22:31:03 [FINEST] [ModCrops] Sending event FMLPreInitializationEvent to mod ModCrops
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(859) owned by ModCrops
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(860) owned by ModCrops
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(861) owned by ModCrops
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(862) owned by ModCrops
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(863) owned by ModCrops
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(864) owned by ModCrops
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(865) owned by ModCrops
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(866) owned by ModCrops
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(867) owned by ModCrops
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(868) owned by ModCrops
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(869) owned by ModCrops
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(870) owned by ModCrops
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(871) owned by ModCrops
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(872) owned by ModCrops
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(873) owned by ModCrops
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(874) owned by ModCrops
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(898) owned by ModCrops
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(899) owned by ModCrops
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(902) owned by ModCrops
+2013-11-26 22:31:03 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(903) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(904) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(988) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(989) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(1013) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(1019) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(930) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(931) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(932) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(933) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(946) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(959) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(1001) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(1002) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(1003) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(1004) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(1005) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(1006) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(1007) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(1009) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(1024) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(875) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(876) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(877) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(878) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(879) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(880) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(881) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(882) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(883) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(884) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(885) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(886) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(955) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(956) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(957) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(887) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(888) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(889) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(890) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(891) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(892) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(893) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(894) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(1008) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(897) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(900) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(901) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(905) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(906) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(907) owned by ModCrops
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(1014) owned by ModCrops
+2013-11-26 22:31:04 [FINEST] [ModCrops] Sent event FMLPreInitializationEvent to mod ModCrops
+2013-11-26 22:31:04 [FINEST] [ModDNA] Sending event FMLPreInitializationEvent to mod ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5606) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5726) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5727) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5728) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5729) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5730) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5731) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5732) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5733) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5734) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5735) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5736) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5737) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5738) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5739) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5740) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5741) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5742) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5743) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5744) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5745) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5746) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5747) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5748) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5749) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5750) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5751) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5752) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5753) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5754) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5755) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5756) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5757) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5758) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5759) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5760) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5761) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5762) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5763) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5764) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5785) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5786) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5787) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5788) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5789) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5790) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5791) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5803) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5804) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5805) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5806) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5807) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5808) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5809) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5810) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5845) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5846) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5847) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5876) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5903) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5904) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5918) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5919) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5922) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5954) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(6015) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5990) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(5991) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(6035) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(6036) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(6037) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(6038) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(6043) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(6062) owned by ModDNA
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDNA(6103) owned by ModDNA
+2013-11-26 22:31:04 [FINEST] [ModDNA] Sent event FMLPreInitializationEvent to mod ModDNA
+2013-11-26 22:31:04 [FINEST] [ModFood] Sending event FMLPreInitializationEvent to mod ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScorpionTail(5607) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink(5608) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemMiscItem(5609) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemMiscItem(5610) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemMiscItem(5611) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemMiscItem(5612) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemMiscItem(5613) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemMiscItem(5614) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemMiscItem(5848) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemMiscItem(5769) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemMiscItem(5770) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemMiscItem(5825) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemMiscItem(5826) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemMiscItem(5827) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemPotionGlowing(6109) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemPotionGlowing(6110) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemPotionGlowing(6111) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemPotionGlowing(6112) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemPotionGlowing(6113) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemKnife(5615) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWhisk(5616) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodGrinder(5617) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDestalker(5618) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemCheeseMold(5619) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemCheeseMold(5620) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemCheeseMold(5621) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5622) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5623) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5624) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5812) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5625) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5626) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5627) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5628) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5629) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemMagicYeast(5630) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5631) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5632) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5633) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5634) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5635) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5824) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5980) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5981) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5982) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5983) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5999) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5984) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5985) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5986) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5987) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5988) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5989) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6000) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5636) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5637) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5638) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5639) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemEatable(5640) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5959) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5641) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5642) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5643) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5644) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5645) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5646) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5647) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5648) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5813) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5814) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5829) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5975) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5976) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5977) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5978) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5649) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5652) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5653) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5654) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5655) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5657) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5650) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5651) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5656) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5658) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5852) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5853) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5854) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5855) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5856) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5857) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5858) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5859) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5860) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5861) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5862) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5863) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5864) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5865) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5866) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5867) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5868) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5869) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5870) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5871) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5872) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5873) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5874) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5875) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5850) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5851) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrambledEgg(5968) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrambledEgg(5969) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrambledEgg(5970) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrambledEgg(5972) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(6097) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6098) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSoup2(5929) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSoup2(5930) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSoup2(5931) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSoup2(5932) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSoup2(5933) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSoup2(5934) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5935) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5936) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5937) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5938) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5939) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5940) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5941) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5944) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5945) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5946) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5947) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5948) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5949) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5950) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5659) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemCheeseMold(5660) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5661) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrambledEgg(5662) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5828) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5830) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5831) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5832) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5833) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5840) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5835) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5836) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5837) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5838) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5839) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5841) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5925) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5926) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5663) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5664) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5665) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5666) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5765) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5766) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5792) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5793) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5767) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5768) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5667) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5668) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5669) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5960) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6003) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5961) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5962) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5963) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6004) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6005) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6006) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6007) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6008) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5964) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5965) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5966) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5967) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6009) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6010) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6011) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6012) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6013) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6014) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5885) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5886) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5887) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5888) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5889) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5890) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5891) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6056) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6057) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6058) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5670) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5671) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5794) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5795) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5796) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6044) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6045) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6046) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6047) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5892) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5955) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5956) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5957) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6001) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6002) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5672) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5673) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5674) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5675) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5895) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5896) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5897) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5898) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5899) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5900) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5901) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5902) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5952) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5994) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6048) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6049) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6050) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(6051) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFoodItem(5676) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5677) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5678) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood2(5679) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemToffeeApple(5958) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrinkItem(5680) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrinkItem(5681) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrinkItem(5843) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrinkItem(5844) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrinkItem(5998) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink2(5834) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink2(5685) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink2(5973) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink2(5974) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink2(5823) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink2(5951) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink2(5686) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink2(5687) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink2(5688) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink2(5942) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink2(5995) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink2(5943) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink2(5971) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink(5682) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink(5683) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink(5815) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink(5816) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink(5817) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink(5818) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink(6052) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink(6053) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink(6054) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink(6055) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink(5819) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink(5684) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink(5820) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink(5821) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink(5842) owned by ModFood
+2013-11-26 22:31:04 [INFO] [STDOUT] CONFLICT @ 5586 item slot already occupied by agentsmod.ItemDrink@64339c1 while adding agentsmod.ItemDrink@2784b11d
+2013-11-26 22:31:04 [INFO] [fml.ItemTracker] The mod ModFood is overwriting existing item at 5842 (agentsmod.ItemDrink from ModFood) with agentsmod.ItemDrink
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrink(5842) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemHotDrink(5996) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemHotDrink(5997) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFood3(5689) owned by ModFood
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemDrinkItem(5822) owned by ModFood
+2013-11-26 22:31:04 [FINEST] [ModFood] Sent event FMLPreInitializationEvent to mod ModFood
+2013-11-26 22:31:04 [FINEST] [ModFruits] Sending event FMLPreInitializationEvent to mod ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFertiliser(5690) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemMiscItem2(5691) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit2(5692) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(5693) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit2(5694) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(5695) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit2(5696) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(5697) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit2(5698) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(5699) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit2(5700) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(5701) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit2(5702) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(5703) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit2(5704) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(5705) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(5706) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit(5707) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(5708) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit2(5709) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(5710) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(5711) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit(5712) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeedFood2(5713) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit2(5714) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(5715) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(5776) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(5777) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeedFood2(5778) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeedFood2(5920) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeedFood2(5921) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeedFood2(6061) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeedFood2(6099) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeedFood2(5953) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit2(5781) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit2(5782) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit2(5783) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(5784) owned by ModFruits
+2013-11-26 22:31:04 [INFO] [STDOUT] CONFLICT @ 5554 item slot already occupied by agentsmod.ItemDNA@14844bb8 while adding agentsmod.ItemFruit2@7987278d
+2013-11-26 22:31:04 [INFO] [fml.ItemTracker] The mod ModFruits is overwriting existing item at 5810 (agentsmod.ItemDNA from ModDNA) with agentsmod.ItemFruit2
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit2(5810) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit(5811) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeedFood2(5849) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit2(5893) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(5894) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit(5992) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(5993) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit2(6029) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit2(6030) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit2(6031) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(6032) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit2(6033) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(6034) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit2(6039) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(6040) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit2(6041) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(6042) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit(6115) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(6116) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(5716) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(5717) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit2(5718) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(5719) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit(5720) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit(5721) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit(5722) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit(5723) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit(5724) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemJoint(5725) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit2(5779) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemSeed(5780) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit(5799) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit(5800) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit(5877) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit(5878) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit(5880) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemJoint(5879) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemJoint(5881) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit(5883) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemJoint(5884) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemFruit(5882) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWalnutShell(5797) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWalnutShellCluster(5906) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWalnutShellHard(5905) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWalnutShellClusterHard(5907) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWalnutShellHarder(5923) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWalnutShellClusterHarder(5924) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWalnutShellGold(6059) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWalnutShellClusterGold(6060) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWalnutShellDiamond(6100) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWalnutShellClusterDiamond(6101) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWalnutShellFire(5908) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWalnutShellFireCluster(5909) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWalnutShellElectric(5910) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWalnutShellElectricCluster(5911) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWalnutShellBomb(5912) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWalnutShellBombCluster(5913) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWalnutShellBigBomb(5914) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWalnutShellBigBombCluster(5915) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWalnutShellNuke(5916) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWalnutShellNukeCluster(5917) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWalnutShellWB(5927) owned by ModFruits
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWalnutShellWBCluster(5928) owned by ModFruits
+2013-11-26 22:31:04 [FINEST] [ModFruits] Sent event FMLPreInitializationEvent to mod ModFruits
+2013-11-26 22:31:04 [FINEST] [MobMammoth.modid] Sending event FMLPreInitializationEvent to mod MobMammoth.modid
+2013-11-26 22:31:04 [FINEST] [MobMammoth.modid] Sent event FMLPreInitializationEvent to mod MobMammoth.modid
+2013-11-26 22:31:04 [FINEST] [MobMammothZombie.modid] Sending event FMLPreInitializationEvent to mod MobMammothZombie.modid
+2013-11-26 22:31:04 [FINEST] [MobMammothZombie.modid] Sent event FMLPreInitializationEvent to mod MobMammothZombie.modid
+2013-11-26 22:31:04 [FINEST] [MobScorpion.modid] Sending event FMLPreInitializationEvent to mod MobScorpion.modid
+2013-11-26 22:31:04 [FINEST] [MobScorpion.modid] Sent event FMLPreInitializationEvent to mod MobScorpion.modid
+2013-11-26 22:31:04 [FINEST] [MobWhale.modid] Sending event FMLPreInitializationEvent to mod MobWhale.modid
+2013-11-26 22:31:04 [FINEST] [MobWhale.modid] Sent event FMLPreInitializationEvent to mod MobWhale.modid
+2013-11-26 22:31:04 [FINEST] [ModRendering] Sending event FMLPreInitializationEvent to mod ModRendering
+2013-11-26 22:31:04 [FINEST] [ModRendering] Sent event FMLPreInitializationEvent to mod ModRendering
+2013-11-26 22:31:04 [FINEST] [ModTools] Sending event FMLPreInitializationEvent to mod ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemBaseballBat(5979) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemTool2(5801) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemWatch(5802) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemAnalyser(6063) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollBarley(6064) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollBlackcurrant(6065) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollBlueberry(6066) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollBRaspberry(6067) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollCherry(6068) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollChicle(6069) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollLemon(6070) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollOlive(6071) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollOrange(6072) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollCorn(6073) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollCotton(6074) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollDandelion(6075) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollGarlic(6076) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollGrape(6077) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollHops(6114) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollLavender(6078) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollLettuce(6079) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollMint(6080) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollOnion(6081) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollParsley(6082) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollPeanut(6083) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollPepper(6084) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollPeppers(6085) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollRaspberry(6086) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollRice(6087) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollRose(6088) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollStrawberry(6089) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollTobacco(6090) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollTomato(6091) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollWalnut(6092) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollWalnutHard(6093) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollWalnutHarder(6094) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollWalnutGold(6095) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollWalnutDiamond(6102) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollWeed(6096) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollWheat(6104) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollCarrot(6105) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollPotato(6106) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollMelon(6107) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemScrollPumpkin(6108) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemPoisonSword(5771) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemPoisonSword(5772) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemPoisonSword(5773) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemPoisonSword(5774) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemPoisonSword(5775) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemTool2(6016) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemTool2(6017) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemTool2(6018) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemTool2(6019) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemTool2(6020) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemTool2(6021) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemTool2(6022) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemTool2(6023) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemTool2(6024) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemTool2(6025) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemTool2(6026) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemTool2(6027) owned by ModTools
+2013-11-26 22:31:04 [FINE] [fml.ItemTracker] Adding item agentsmod.ItemTool2(6028) owned by ModTools
+2013-11-26 22:31:04 [FINEST] [ModTools] Sent event FMLPreInitializationEvent to mod ModTools
+2013-11-26 22:31:04 [SEVERE] [ForgeModLoader] Fatal errors were detected during the transition from PREINITIALIZATION to INITIALIZATION. Loading cannot continue
+2013-11-26 22:31:04 [SEVERE] [ForgeModLoader] 
+	mcp{8.09} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized
+	FML{6.4.20.916} [Forge Mod Loader] (bin) Unloaded->Constructed->Pre-initialized
+	Forge{9.11.1.916} [Minecraft Forge] (bin) Unloaded->Constructed->Pre-initialized
+	mod_*{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized
+	ModBlocks{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized
+	CreativeTabs.modid{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized
+	ModCrops{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized
+	ModDNA{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Errored
+	ModFood{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized
+	ModFruits{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized
+	MobMammoth.modid{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized
+	MobMammothZombie.modid{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized
+	MobScorpion.modid{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized
+	MobWhale.modid{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized
+	ModRendering{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized
+	ModTools{Alpha} [Agent's Mod] (bin) Unloaded->Constructed->Pre-initialized
+2013-11-26 22:31:04 [SEVERE] [ForgeModLoader] The following problems were captured during this phase
+2013-11-26 22:31:04 [SEVERE] [ForgeModLoader] Caught exception from ModDNA
+java.lang.NullPointerException
+	at net.minecraft.item.ItemStack.<init>(ItemStack.java:77)
+	at agentsmod.ModDNA.preInit(ModDNA.java:273)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at cpw.mods.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:545)
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventHandler.handleEvent(EventHandler.java:74)
+	at com.google.common.eventbus.SynchronizedEventHandler.handleEvent(SynchronizedEventHandler.java:45)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:313)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:296)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:267)
+	at cpw.mods.fml.common.LoadController.sendEventToModContainer(LoadController.java:194)
+	at cpw.mods.fml.common.LoadController.propogateStateMessage(LoadController.java:174)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventHandler.handleEvent(EventHandler.java:74)
+	at com.google.common.eventbus.SynchronizedEventHandler.handleEvent(SynchronizedEventHandler.java:45)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:313)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:296)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:267)
+	at cpw.mods.fml.common.LoadController.distributeStateMessage(LoadController.java:105)
+	at cpw.mods.fml.common.Loader.loadMods(Loader.java:520)
+	at cpw.mods.fml.server.FMLServerHandler.beginServerLoading(FMLServerHandler.java:99)
+	at cpw.mods.fml.common.FMLCommonHandler.onServerStart(FMLCommonHandler.java:350)
+	at net.minecraft.server.dedicated.DedicatedServer.startServer(DedicatedServer.java:69)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:445)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+2013-11-26 22:31:04 [INFO] [STDERR] java.lang.NullPointerException
+2013-11-26 22:31:04 [INFO] [STDERR] 	at net.minecraft.item.ItemStack.<init>(ItemStack.java:77)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at agentsmod.ModDNA.preInit(ModDNA.java:273)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at java.lang.reflect.Method.invoke(Unknown Source)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at cpw.mods.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:545)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at java.lang.reflect.Method.invoke(Unknown Source)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at com.google.common.eventbus.EventHandler.handleEvent(EventHandler.java:74)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at com.google.common.eventbus.SynchronizedEventHandler.handleEvent(SynchronizedEventHandler.java:45)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:313)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:296)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at com.google.common.eventbus.EventBus.post(EventBus.java:267)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at cpw.mods.fml.common.LoadController.sendEventToModContainer(LoadController.java:194)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at cpw.mods.fml.common.LoadController.propogateStateMessage(LoadController.java:174)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at java.lang.reflect.Method.invoke(Unknown Source)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at com.google.common.eventbus.EventHandler.handleEvent(EventHandler.java:74)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at com.google.common.eventbus.SynchronizedEventHandler.handleEvent(SynchronizedEventHandler.java:45)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:313)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:296)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at com.google.common.eventbus.EventBus.post(EventBus.java:267)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at cpw.mods.fml.common.LoadController.distributeStateMessage(LoadController.java:105)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at cpw.mods.fml.common.Loader.loadMods(Loader.java:520)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at cpw.mods.fml.server.FMLServerHandler.beginServerLoading(FMLServerHandler.java:99)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at cpw.mods.fml.common.FMLCommonHandler.onServerStart(FMLCommonHandler.java:350)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at net.minecraft.server.dedicated.DedicatedServer.startServer(DedicatedServer.java:69)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:445)
+2013-11-26 22:31:04 [INFO] [STDERR] 	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+2013-11-26 22:31:04 [SEVERE] [Minecraft-Server] Encountered an unexpected exception NullPointerException
+java.lang.NullPointerException
+	at net.minecraft.item.ItemStack.<init>(ItemStack.java:77)
+	at agentsmod.ModDNA.preInit(ModDNA.java:273)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at cpw.mods.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:545)
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventHandler.handleEvent(EventHandler.java:74)
+	at com.google.common.eventbus.SynchronizedEventHandler.handleEvent(SynchronizedEventHandler.java:45)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:313)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:296)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:267)
+	at cpw.mods.fml.common.LoadController.sendEventToModContainer(LoadController.java:194)
+	at cpw.mods.fml.common.LoadController.propogateStateMessage(LoadController.java:174)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventHandler.handleEvent(EventHandler.java:74)
+	at com.google.common.eventbus.SynchronizedEventHandler.handleEvent(SynchronizedEventHandler.java:45)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:313)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:296)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:267)
+	at cpw.mods.fml.common.LoadController.distributeStateMessage(LoadController.java:105)
+	at cpw.mods.fml.common.Loader.loadMods(Loader.java:520)
+	at cpw.mods.fml.server.FMLServerHandler.beginServerLoading(FMLServerHandler.java:99)
+	at cpw.mods.fml.common.FMLCommonHandler.onServerStart(FMLCommonHandler.java:350)
+	at net.minecraft.server.dedicated.DedicatedServer.startServer(DedicatedServer.java:69)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:445)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+2013-11-26 22:31:04 [SEVERE] [Minecraft-Server] This crash report has been saved to: C:\Users\Will\Desktop\1.6.4\MCP\mcp\jars\.\crash-reports\crash-2013-11-26_22.31.04-server.txt
+2013-11-26 22:31:28 [INFO] [Minecraft-Server] Stopping server
+2013-11-26 22:31:28 [INFO] [Minecraft-Server] Saving worlds
+2013-11-26 22:31:28 [FINEST] [mcp] Sending event FMLServerStoppedEvent to mod mcp
+2013-11-26 22:31:28 [FINEST] [mcp] Sent event FMLServerStoppedEvent to mod mcp
+2013-11-26 22:31:28 [FINEST] [FML] Sending event FMLServerStoppedEvent to mod FML
+2013-11-26 22:31:28 [FINEST] [FML] Sent event FMLServerStoppedEvent to mod FML
+2013-11-26 22:31:28 [FINEST] [Forge] Sending event FMLServerStoppedEvent to mod Forge
+2013-11-26 22:31:28 [FINEST] [Forge] Sent event FMLServerStoppedEvent to mod Forge
+2013-11-26 22:31:28 [FINEST] [mod_*] Sending event FMLServerStoppedEvent to mod mod_*
+2013-11-26 22:31:28 [FINEST] [mod_*] Sent event FMLServerStoppedEvent to mod mod_*
+2013-11-26 22:31:28 [FINEST] [ModBlocks] Sending event FMLServerStoppedEvent to mod ModBlocks
+2013-11-26 22:31:28 [FINEST] [ModBlocks] Sent event FMLServerStoppedEvent to mod ModBlocks
+2013-11-26 22:31:28 [FINEST] [CreativeTabs.modid] Sending event FMLServerStoppedEvent to mod CreativeTabs.modid
+2013-11-26 22:31:28 [FINEST] [CreativeTabs.modid] Sent event FMLServerStoppedEvent to mod CreativeTabs.modid
+2013-11-26 22:31:28 [FINEST] [ModCrops] Sending event FMLServerStoppedEvent to mod ModCrops
+2013-11-26 22:31:28 [FINEST] [ModCrops] Sent event FMLServerStoppedEvent to mod ModCrops
+2013-11-26 22:31:28 [FINEST] [ModDNA] Sending event FMLServerStoppedEvent to mod ModDNA
+2013-11-26 22:31:28 [FINEST] [ModDNA] Sent event FMLServerStoppedEvent to mod ModDNA
+2013-11-26 22:31:28 [FINEST] [ModFood] Sending event FMLServerStoppedEvent to mod ModFood
+2013-11-26 22:31:28 [FINEST] [ModFood] Sent event FMLServerStoppedEvent to mod ModFood
+2013-11-26 22:31:28 [FINEST] [ModFruits] Sending event FMLServerStoppedEvent to mod ModFruits
+2013-11-26 22:31:28 [FINEST] [ModFruits] Sent event FMLServerStoppedEvent to mod ModFruits
+2013-11-26 22:31:28 [FINEST] [MobMammoth.modid] Sending event FMLServerStoppedEvent to mod MobMammoth.modid
+2013-11-26 22:31:28 [FINEST] [MobMammoth.modid] Sent event FMLServerStoppedEvent to mod MobMammoth.modid
+2013-11-26 22:31:28 [FINEST] [MobMammothZombie.modid] Sending event FMLServerStoppedEvent to mod MobMammothZombie.modid
+2013-11-26 22:31:28 [FINEST] [MobMammothZombie.modid] Sent event FMLServerStoppedEvent to mod MobMammothZombie.modid
+2013-11-26 22:31:28 [FINEST] [MobScorpion.modid] Sending event FMLServerStoppedEvent to mod MobScorpion.modid
+2013-11-26 22:31:28 [FINEST] [MobScorpion.modid] Sent event FMLServerStoppedEvent to mod MobScorpion.modid
+2013-11-26 22:31:28 [FINEST] [MobWhale.modid] Sending event FMLServerStoppedEvent to mod MobWhale.modid
+2013-11-26 22:31:28 [FINEST] [MobWhale.modid] Sent event FMLServerStoppedEvent to mod MobWhale.modid
+2013-11-26 22:31:28 [FINEST] [ModRendering] Sending event FMLServerStoppedEvent to mod ModRendering
+2013-11-26 22:31:28 [FINEST] [ModRendering] Sent event FMLServerStoppedEvent to mod ModRendering
+2013-11-26 22:31:28 [FINEST] [ModTools] Sending event FMLServerStoppedEvent to mod ModTools
+2013-11-26 22:31:28 [FINEST] [ModTools] Sent event FMLServerStoppedEvent to mod ModTools
+2013-11-26 22:31:28 [INFO] [ForgeModLoader] The state engine was in incorrect state ERRORED and forced into state SERVER_STOPPED. Errors may have been discarded.
+2013-11-26 22:31:28 [INFO] [ForgeModLoader] The state engine was in incorrect state ERRORED and forced into state AVAILABLE. Errors may have been discarded.
+2013-11-26 22:31:28 [INFO] [Minecraft-Server] Stopping server
+2013-11-26 22:31:28 [INFO] [Minecraft-Server] Saving worlds

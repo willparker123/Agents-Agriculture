@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="257" key="DIALOG_WIDTH"/>
+		<item value="657" key="DIALOG_Y_ORIGIN"/>
+		<item value="266" key="DIALOG_HEIGHT"/>
+		<item value="583" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="" key="selection"/>
+		<list key="findhistory">
+			<item value=" //Adds the topaz gem name (metadata sensitive)"/>
+			<item value=" //Adds the amethyst gem name (metadata sensitive)"/>
+			<item value=" //Adds the sapphire gem name (metadata sensitive)"/>
+			<item value="active"/>
+			<item value="fryer"/>
+			<item value="&#x09;if (par1World.getBlockLightValue(par2, par3 + 1, par4) &gt;= 8)"/>
+			<item value="onion"/>
+			<item value="pickled"/>
+		</list>
+		<list key="replacehistory">
+			<item value=""/>
+			<item value="Grinder"/>
+			<item value="egg"/>
+			<item value="Egg"/>
+			<item value="jungleTreeSeed"/>
+			<item value="birchTreeSeed"/>
+			<item value="oakTreeSeed"/>
+			<item value="spruceTreeSeed"/>
+		</list>
+	</section>
+</section>
